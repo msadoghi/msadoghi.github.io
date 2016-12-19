@@ -22,7 +22,7 @@
 		    border: none;
 		    text-align: center;
 		    outline: none;
-		    font-size: 15px;
+		    font-size: 14px;
 			  font-weight: bold;
 		    transition: 0.4s;
 		}
@@ -54,7 +54,7 @@
 
 		div.panel.show {
 		    opacity: 1;
-		    max-height: 1500px;
+		    max-height: 5000px;
 		}
 		</style>
 	</head>
@@ -237,7 +237,7 @@
 									  of this course, we will be discussing only a small subset of these papers.</b>
 								  	</p>
 
-										<button class="accordion">Distributed Transactions Overview</button>
+										<button class="accordion">Distributed Transactions: Overview</button>
 										<div class="panel">
 											<ul>
 											<li>Eric Brewer. Towards robust distributed systems. PODC'00 </li>
@@ -341,28 +341,7 @@
 												</ul>
 												</div>
 
-												<button class="accordion">Database Replication Techniques</button>
-												<div class="panel">
-												<ul>
-													<li>Bettina Kemme and Gustavo Alonso. Don’t be lazy, be consistent: Postgres-R, A new way to implement database replication. In VLDB 2000</li>
-													<li>Bettina Kemme and Gustavo Alonso. A new approach to developing and implementing eager database replication protocols. TODS’00</li>
-													<li>Bettina Kemme, Fernando Pedone, Gustavo Alonso, Andre ́ Schiper, and Matthias Wiesmann. Using optimistic atomic broadcast in transaction processing systems. IEEE Trans. Knowl. Data Eng.’03</li>
-													<li>K. Daudjee and K. Salem. Lazy database replication with ordering guarantees. In ICDE’04</li>
-													<li>Yasushi Saito and Marc Shapiro. Optimistic replication. ACM Comput. Surv.’05</li>
-													<li>Leslie Lamport. Fast Paxos. Distributed Computing’06</li>
-													<li>Yi Lin, Bettina Kemme, Ricardo Jiménez-Peris, et al. Snapshot isolation and integrity constraints in replicated databases. TODS’09</li>
-													<li>Flavio Paiva Junqueira, Benjamin C. Reed, Marco Serafini: Zab: High-performance broadcast for primary-backup systems. DSN'11</li>
-													<li>Marc Shapiro, Nuno M. Preguic ̧a, Carlos Baquero, and Marek Zawirski. Conflict-free replicated data types. SSS’11</li>
-													<li>Mihaela A. Bornea, Orion Hodson, Sameh Elnikety, and Alan Fekete. One-copy serializability with snapshot isolation under the hood. ICDE’11</li>
-													<li>Hyungsoo Jung, Hyuck Han, Alan Fekete, and Uwe Röhm. Serializable snapshot isolation for replicated databases in high-update scenarios. PVLDB’11</li>
-													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Probabilistically bounded staleness for practical partial quorums. PVLDB’12</li>
-													<li>Diego Ongaro and John Ousterhout. In search of an understandable consensus algorithm. USENIX ATC’14</li>
-													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Quantifying eventual consistency with PBS. Commun. ACM’14</li>
-													<li>Carlos Eduardo Benevides Bezerra, Fernando Pedone, Robbert van Renesse: Scalable State-Machine Replication. DSN'14</li>
-												</ul>
-											  </div>
-
-												<button class="accordion">Geo-Scale/Multi-Data Centers Transaction Protocols</button>
+												<button class="accordion">Geo-Scale Transaction Protocols</button>
 												<div class="panel">
 												<ul>
 													<li>Yair Sovran, Russell Power, Marcos K. Aguilera, and Jinyang Li. Transactional storage for geo-replicated systems. SOSP ’11</li>
@@ -385,7 +364,28 @@
 												</ul>
 												</div>
 
-												<button class="accordion">Hybrid Transactional and Analytical Systems</button>
+												<button class="accordion">Database Replication Techniques</button>
+												<div class="panel">
+												<ul>
+													<li>Bettina Kemme and Gustavo Alonso. Don’t be lazy, be consistent: Postgres-R, A new way to implement database replication. In VLDB 2000</li>
+													<li>Bettina Kemme and Gustavo Alonso. A new approach to developing and implementing eager database replication protocols. TODS’00</li>
+													<li>Bettina Kemme, Fernando Pedone, Gustavo Alonso, Andre ́ Schiper, and Matthias Wiesmann. Using optimistic atomic broadcast in transaction processing systems. IEEE Trans. Knowl. Data Eng.’03</li>
+													<li>K. Daudjee and K. Salem. Lazy database replication with ordering guarantees. In ICDE’04</li>
+													<li>Yasushi Saito and Marc Shapiro. Optimistic replication. ACM Comput. Surv.’05</li>
+													<li>Leslie Lamport. Fast Paxos. Distributed Computing’06</li>
+													<li>Yi Lin, Bettina Kemme, Ricardo Jiménez-Peris, et al. Snapshot isolation and integrity constraints in replicated databases. TODS’09</li>
+													<li>Flavio Paiva Junqueira, Benjamin C. Reed, Marco Serafini: Zab: High-performance broadcast for primary-backup systems. DSN'11</li>
+													<li>Marc Shapiro, Nuno M. Preguic ̧a, Carlos Baquero, and Marek Zawirski. Conflict-free replicated data types. SSS’11</li>
+													<li>Mihaela A. Bornea, Orion Hodson, Sameh Elnikety, and Alan Fekete. One-copy serializability with snapshot isolation under the hood. ICDE’11</li>
+													<li>Hyungsoo Jung, Hyuck Han, Alan Fekete, and Uwe Röhm. Serializable snapshot isolation for replicated databases in high-update scenarios. PVLDB’11</li>
+													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Probabilistically bounded staleness for practical partial quorums. PVLDB’12</li>
+													<li>Diego Ongaro and John Ousterhout. In search of an understandable consensus algorithm. USENIX ATC’14</li>
+													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Quantifying eventual consistency with PBS. Commun. ACM’14</li>
+													<li>Carlos Eduardo Benevides Bezerra, Fernando Pedone, Robbert van Renesse: Scalable State-Machine Replication. DSN'14</li>
+												</ul>
+												</div>
+
+												<button class="accordion">Hybrid OLTP and OLAP</button>
 												<div class="panel">
 												<ul>
 													<li>Yu Cao, Chun Chen, Fei Guo, Dawei Jiang, Yuting Lin, Beng Chin Ooi, Hoang Tam Vo, Sai Wu, and Quanqing Xu. ES2: A cloud data storage system for supporting both OLTP and OLAP. ICDE’11</li>
@@ -397,7 +397,7 @@
 												</div>
 
 
-												<button class="accordion">Modern Hardware: Non-volatile Memory (NVM), Hardware Transactional Memory (HTM), RDMA, FPGAs</button>
+												<button class="accordion">Modern Hardware: NVM, HTM, RDMA, FPGAs</button>
 												<div class="panel">
 												<ul>
 													<li>John K. Ousterhout, Parag Agrawal, David Erickson, Christos Kozyrakis, Jacob Leverich, David Mazières, Subhasish Mitra, Aravind Narayanan, Diego Ongaro, Guru M. Parulkar, Mendel Rosenblum, Stephen M. Rumble, Eric Stratmann, Ryan Stutsman: The case for RAMCloud. Commun. ACM'11</li>
