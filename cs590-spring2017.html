@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mohammad Sadoghi - CS59000: Topics in Big Data Systems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/cs-logo.gif"/>
+		<style>
+		button.accordion {
+		    background-color: #eee;
+		    color: #444;
+		    cursor: pointer;
+		    padding: 2px;
+		    width: 100%;
+		    border: none;
+		    text-align: center;
+		    outline: none;
+		    font-size: 15px;
+			  font-weight: bold;
+		    transition: 0.4s;
+		}
+
+		button.accordion.active, button.accordion:hover {
+		    background-color: #ddd;
+		}
+
+		button.accordion:after {
+    content: '\02795';
+    font-size: 14px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+		}
+
+		button.accordion.active:after {
+		    content: "\2796";
+		}
+
+		div.panel {
+		    padding: 15px 18px;
+		    background-color: white;
+		    max-height: 0;
+		    overflow: hidden;
+		    transition: 0.6s ease-in-out;
+		    opacity: 0;
+		}
+
+		div.panel.show {
+		    opacity: 1;
+		    max-height: 1500px;
+		}
+		</style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><a href="http://www.cs.purdue.edu" target="_blank"><img src="images/logo.svg" alt="" style="width: 150px"/></a></span>
+						<h1>CS59000: Topics in Big Data Systems</h1>
+						<p><b style="font-weight: bold">Spring 2017</b></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Info</a></li>
+							<li><a href="#first">Course Overview</a></li>
+							<li><a href="#second">Syllabus</a></li>
+							<li><a href="#third">Contents</a></li>
+							<li><a href="#sch">Schedule</a></li>
+							<li><a href="#forth">Announcements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>CS59000: Topics in Big Data Systems</h2>
+										</header>
+
+										<div class="table-wrapper">
+											<table class="alt">
+												<tbody>
+													<tr>
+														<td align="left">
+															<p>
+															<b style="font-weight: bold">Instructor: </b><a href="https://msadoghi.github.io" target="_blank">Mohammad Sadoghi</a><br>
+															<b style="font-weight: bold">E-mail:</b> msadoghi@purdue.edu<br>
+															<b style="font-weight: bold">Office:</b> Lawson 2116N<br>
+															<b style="font-weight: bold">Office Hours:</b> By email appointments
+															</p>
+														</td>
+														<!--
+														<td align="left">
+															<p>
+															<b style="font-weight: bold">Teaching Fellow:</b> <br>
+															  <b style="font-weight: bold">Email:</b> <br>
+																<b style="font-weight: bold">Office:</b> <br>
+															  <b style="font-weight: bold">Office Hours:</b>
+															</p>
+														</td>
+													-->
+													</tr>
+													<tr>
+														<td colspan="2" align="left">
+															<p>
+															<b style="font-weight: bold">Time:</b> TueThr 9:00 am - 10:15 am <br>
+															<b style="font-weight: bold">Location:</b> Lawson Computer Science Building, Room LWSN-B134
+															</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- First Section -->
+
+							<section id="first" class="main special">
+								<header class="major">
+									<br>
+									<h2>Overview</h2>
+							</header>
+
+								<div class="row">
+									<div align="left">
+										<!--<h3>2016</h3> -->
+
+										<p>This new graduate seminar course surveys the recent developments in data management such as NoSQL (e.g., distributed key-value stores) and NewSQL (e.g., geo-distributed data stores) with respect to storage architecture (e.g., log-structured, row-oriented, and column-oriented layouts), concurrency controls (e.g., ranging from eventual consistency to full serializability), cloud computing and virtualization, the emerging commodity hardware trends (e.g., many-core and distributed main memory), modern hardware accelerators (e.g., GPUs, FPGAs, and SSDs), and types of workloads (e.g., OLTP and OLAP).</p>
+
+									</div>
+								</div>
+							</section>
+
+							<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<br>
+									<h2>Syllabus</h2>
+							</header>
+
+									<div align="left">
+										<!--<h3>2016</h3> -->
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Textbooks:</b></h3>
+								   		  <b style="font-weight: bold">Required:</b>
+												<ul>
+													<li align="left">
+														Required readings will be based on a selection of research papers list  <a href="#third">here</a>.
+													</li>
+												</ul>
+
+												<b style="font-weight: bold">Optional:</b>
+												<ul>
+													<li align="left">
+														<a href="http://www.springer.com/us/book/9781441988331" target="_blank">"Principles of Distributed Database Systems"</a>, 3rd Edition. Prentice Hall, Tamer Oszu and Patrick Valduriez.
+													</li>
+
+													<li align="left">
+															<a href="http://www.redbook.io/" target="_blank">"Readings in Database Systems"</a>, 5th Edition. Peter Bailis, Joseph M. Hellerstein, Michael Stonebraker. 2015
+													</li>
+
+													<li align="left">
+														"The Elements of Style", 4th Edition. William Strunk Jr. and E. B. White. 1999
+													</li>
+
+													<li align="left">
+														"Style: Toward Clarity and Grace". Joseph M. Williams. 1995
+													</li>
+												</ul>
+
+
+										</p>
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Workload:</b></h3>
+											The most important component of the course is a semester-long final project.
+											The project can be done either individually or in groups (no limit on the group size).
+											If the project is done in groups, then the role and contributions of each group member
+											must be clearly articulated. All projects will be supervised by the instructor. The
+											outcome of the final project will be in a form of a short research paper (with the
+											ultimate goal of submitting to a top-tier conference, of course, it is optional and
+											does not affect your final grade). Additionally, each student is expected to present
+											1 or 2 papers throughout the semester. Students must also submit a short written review
+											for each paper they present (similar to the conference-style review). The papers will
+											be selected from the papers listed in the <a href="#third">content tab</a>. Students
+											must coordinate with the instructor in advance about the time and the paper they
+											wish to present.
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Grading:</b></h3>
+											The final grade will be based upon the following components:
+											<ul>
+												<li> Paper Reviews: 10% </li>
+											  <li> Paper Presentations: 20% </li>
+												<li> Final Project: 70% </li>
+												</li>
+											</ul>
+										</p>
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Course Policy:</b></h3>
+											In this class, we adopt the course policy as prescribed <a href="http://spaf.cerias.purdue.edu/cpolicy.html" target="_blank">here</a>.<br><br>
+										</p>
+
+								</div>
+							</section>
+
+
+							<section id="third" class="main special">
+								<header class="major">
+									<br>
+									<h2>Contents</h2>
+								</header>
+
+									<div align="left">
+										<!--<h3>2016</h3> -->
+										<p>
+										Below you will find a comprehensive collection of papers related to the recent developments
+										in the area of distributed transaction processing. <b style="font-weight: bold">For the purpose
+									  of this course, we will be discussing only a small subset of papers.</b>
+								  	</p>
+
+										<button class="accordion">Distributed Transactions Overview</button>
+										<div class="panel">
+											<ul>
+											<li>Eric Brewer. Towards robust distributed systems. PODC'00 </li>
+											<li>Seth Gilbert and Nancy Lynch. Brewer’s conjecture and the feasibility of consistent, available, partition- tolerant web services. SIGACT News’02 </li>
+											<li>Pat Helland. Life beyond distributed transactions: an apostate’s opinion. CIDR’07 </li>
+											<li>Dan Pritchett. BASE: An Acid Alternative. Queue’08 </li>
+											<li>Hiroshi Wada, Alan Fekete, Liang Zhao, Kevin Lee, and Anna Liu. Data consistency properties and the trade-offs in commercial cloud storage: the consumers’ perspective. CIDR’11 </li>
+											<li>Eric Brewer. CAP twelve years later. How the “rules” have changed. Computer’12 </li>
+											<li>D. Abadi. Consistency tradeoffs in modern distributed database system design: CAP is only part of the story. Computer’12 </li>
+											<li>Peter Bailis and Ali Ghodsi. Eventual consistency today: Limitations, extensions, and beyond. ACM Queue’13 </li>
+											<li>Jeffrey Dean and Luiz André Barroso. The tail at scale. Commun. ACM’13 </li>
+											<li>Sean Hull. 20 obstacles to scalability. Commun. ACM’13 </li>
+											<li>Peter Bailis and Kyle Kingsbury. The network is reliable: An informal survey of real-world communications failures. ACM Queue’14 </li>
+											<li>Peter Bailis, Aaron Davidson, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Highly available transactions: Virtues and limitations. PVLDB’14 </li>
+											<li>Divy Agrawal, Amr El Abbadi, and Kenneth Salem. A taxonomy of partitioned replicated cloud-based database systems. IEEE Data Eng. Bull.’15 </li>
+											<li>Jose M. Faleiro and Daniel J. Abadi. FIT. A distributed database performance tradeoff. IEEE Data Eng. Bull.’15 </li>
+											<li>Rachid Guerraoui, Matej Pavlovic, Dragos-Adrian Seredinschi: Trade-offs in Replicated Systems. IEEE Data Eng. Bull.'16 </li>
+											<li>Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. The challenges of global-scale data management. SIGMOD’16 </li>
+											<li>Andrew Pavlo and Matthew Aslett. What’s really new with NewSQL? SIGMOD Rec’16 </li>
+											</ul>
+											</div>
+
+											<button class="accordion">In-memory Transaction Processing</button>
+											<div class="panel">
+											<ul>
+											<li>Per-Åke Larson, Spyros Blanas, Cristian Diaconu,Craig Freedman, Jignesh M.Patel, and MikeZwilling. High-performance concurrency control mechanisms for main-memory databases. PVLDB’11</li>
+											<li>David B. Lomet, Alan Fekete, Rui Wang, and Peter Ward. Multi-version concurrency via timestamp range conflict management. ICDE’12</li>
+											<li>Stephen Tu, Wenting Zheng, Eddie Kohler, Barbara Liskov, and Samuel Madden. Speedy transactions in multicore in-memory databases. SOSP ’13</li>
+											<li>Hyuck Han, Seongjae Park, Hyungsoo Jung, Alan Fekete, Uwe Röhm, and Heon Y. Yeom. Scalable serializable snapshot isolation for multicore systems. ICDE’14</li>
+											<li>Mohammad Sadoghi, Mustafa Canim, Bishwaranjan Bhattacharjee, Fabian Nagel, and Kenneth A. Ross. Reducing database locking contention through multi-version concurrency. PVLDB’14</li>
+											<li>Jose Faleiro, Alexander Thomson, and Daniel J Abadi. Lazy evaluation of transactions in database systems. SIGMOD’14</li>
+											<li>Jose M. Faleiro and Daniel J. Abadi. Rethinking serializable multiversion concurrency control. Proc. VLDB’15</li>
+											<li>Thomas Neumann, Tobias Mühlbauer, and Alfons Kemper. Fast serializable multi-version concurrency control for main-memory database systems. SIGMOD’15</li>
+											<li>C. Yao, D. Agrawal, G. Chen, Q. Lin, B. C. Ooi, W. F. Wong, and M. Zhang. Exploiting single-threaded model in multi-core in-memory systems. TKDE’16</li>
+											<li>Xiangyao Yu, Andrew Pavlo, Daniel Sanchez, and Srinivas Devadas. TicToc: Time traveling optimistic concurrency control. SIGMOD’16</li>
+											<li>Kangnyeon Kim, Tianzheng Wang, Ryan Johnson, and Ippokratis Pandis. ERMIA: fast memory- optimized database system for heterogeneous workloads. SIGMOD’16</li>
+											<li>Kun Ren, Jose M. Faleiro, and Daniel J. Abadi. Design principles for scaling multi-core OLTP under high contention. SIGMOD’16</li>
+											</div>
+
+											<button class="accordion">Distributed Transaction Protocols</button>
+											<div class="panel">
+											<ul>
+												<li>Leslie Lamport. Time, clocks, and the ordering of events in a distributed system.Commun. ACM’78</li>
+												<li>Jim Gray. The transaction concept: Virtues and limitations. VLDB’81</li>
+												<li>A. Chan and R. Gray. Implementing distributed read-only transactions. TSE’85</li>
+												<li>C. Mohan, Bruce G. Lindsay, Ron Obermarck: Transaction Management in the R* Distributed Database Management System. TODS'86</li>
+												<li>Jim Gray and Leslie Lamport. Consensus on transaction commit. TODS’06</li>
+												<li>Philip A. Bernstein, Alan Fekete, Hongfei Guo, Raghu Ramakrishnan, and Pradeep Tamma. Relaxed- currency serializability for middle-tier caching and replication. SIGMOD’06</li>
+												<li>Robert Kallman, Hideaki Kimura, Jonathan Natkins, Andrew Pavlo, Alex Rasin, Stanley B. Zdonik, Evan P. C. Jones, Samuel Madden, Michael Stonebraker, Yang Zhang, John Hugg, and Daniel J. Abadi. H-store: a high-performance, distributed main memory transaction processing system. PVLDB’08</li>
+												<li>Evan P.C. Jones, Daniel J. Abadi, and Samuel Madden. Low overhead concurrency control for partitioned main memory databases. SIGMOD’10</li>
+												<li>Sudipto Das, Divyakant Agrawal, and Amr El Abbadi. G-Store: a scalable data store for transactional multi key access in the cloud. SoCC’10</li>
+												<li>Carlo Curino, Evan Jones, Yang Zhang, and Sam Madden. Schism: a workload-driven approach to database replication and partitioning. VLDB’10</li>
+												<li>Philip A. Bernstein, Colin W. Reid, Ming Wu, and Xinhao Yuan. Optimistic concurrency control by melding trees. PVLDB’11</li>
+												<li>Jason Baker, Chris Bond, James C. Corbett, J. J. Furman, Andrey Khorlin, James Larson, Jean-Michel Leon, Yawei Li, Alexander Lloyd, and Vadim Yushprakh. Megastore: Providing scalable, highly available storage for interactive services. CIDR 2011</li>
+												<li>Alexander Thomson, Thaddeus Diamond, Shu-Chun Weng, Kun Ren, Philip Shao, and Daniel J. Abadi. Calvin: fast distributed transactions for partitioned database systems.  SIGMOD’12</li>
+												<li>Sudipto Das, Divyakant Agrawal, and Amr El Abbadi. ElasTraS: An elastic, scalable, and self- managing transactional database for the cloud. TODS’13</li>
+												<li>Justin J. Levandoski, David B. Lomet, Mohamed F. Mokbel, and Kevin Zhao. Deuteronomy: Transaction support for cloud data. In CIDR 2011</li>
+												<li>James A. Cowling, Barbara Liskov: Granola: Low-Overhead Distributed Transaction Coordination. USENIX ATC'12</li>
+												<li>Peter Alvaro, Neil Conway, Joseph M. Hellerstein, and David Maier. Blazes: Coordination analysis for distributed programs. ICDE’14</li>
+												<li>Hatem A. Mahmoud, Vaibhav Arora, Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. MaaT: Effective and scalable coordination of distributed transactions in the cloud. PVLDB’14</li>
+												<li>Sudip Roy, Lucja Kot, Gabriel Bender, Bailu Ding, Hossein Hojjat, Christoph Koch, Nate Foster, and Johannes Gehrke. The homeostasis protocol: Avoiding transaction coordination through program analysis. SIGMOD’15</li>
+												<li>Akon Dey, Alan Fekete, and Uwe Röhm. Scalable distributed transactions across heterogeneous stores. ICDE’15</li>
+												<li>Peter Bailis, Alan Fekete, Michael J. Franklin, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Feral concurrency control: An empirical investigation of modern application integrity. SIGMOD’15</li>
+												<li>Simon Loesing, Markus Pilman, Thomas Etter, Donald Kossmann: On the Design and Scalability of Distributed Shared-Data Databases. SIGMOD'15</li>
+												<li>Aleksandar Dragojevic, Dushyanth Narayanan, Edmund B. Nightingale, Matthew Renzelmann, Alex Shamis, Anirudh Badam, Miguel Castro: No compromises: distributed transactions with consistency, availability, and performance. SOSP'15</li>
+												<li>Philip A. Bernstein and Sudipto Das. Scaling optimistic concurrency control by approximately partitioning the certifier and log. IEEE Data Eng. Bull.’15</li>
+												<li>Mohammad Sadoghi, Martin Jergler, Hans-Arno Jacobsen, Richard Hull, and Roman Vaculín. Safe distribution and parallel execution of data-centric workflows over the publish/subscribe abstraction. TKDE’15</li>
+												<li>Peter Bailis, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Scalable atomic visibility with RAMP transactions. TODS’16</li>
+												<li>Chang Yao, Divyakant Agrawal, Gang Chen, Beng Chin Ooi, and Sai Wu. Adaptive logging: Optimizing logging and recovery costs in distributed in-memory databases. SIGMOD’16</li>
+											</ul>
+											</div>
+
+											<button class="accordion">Consistency Models</button>
+											<div class="panel">
+								        <ul class="list-group">
+												<li>S.B. Davidson, H. Garcia-Molina, and D. Skeen. Consistency in partitioned networks. ACM CSUR’85</li>
+												<li>Maurice Herlihy, Jeannette M. Wing: Linearizability: A Correctness Condition for Concurrent Objects. ACM Trans. Program. Lang. Syst.'90</li>
+												<li>Divyakant Agrawal et al. Consistency and orderability: semantics-based correctness criteria for databases. TODS’93</li>
+												<li>Rajeev Rastogi, Sharad Mehrotra, Yuri Breitbart, Henry F. Korth, and Avi Silberschatz. On correctness of non-serializable executions. PODS’93</li>
+												<li>H. Berenson, P. Bernstein, J. Gray, J. Melton, E. O’Neil, and P. O’Neil. A critique of ANSI SQL isolation levels. SIGMOD’95</li>
+												<li>Atul Adya. Weak Consistency: A Generalized Theory and Optimistic Implementations for Distributed Transactions. PhD Thesis. MIT'99</li>
+												<li>Werner Vogels. Eventually consistent. Queue’08</li>
+												<li>Alan David Fekete and Krithi Ramamritham. Consistency models for replicated data. In Replication: Theory and Practice’10</li>
+												<li>Wyatt Lloyd, Michael J. Freedman, Michael Kaminsky, and David G. Andersen. Don’t settle for eventual: Scalable causal consistency for wide-area storage with COPS. SOSP ’11</li>
+												<li>Peter Alvaro, Neil Conway, Joseph M. Hellerstein, and William R. Marczak. Consistency analysis in Bloom: a CALM and collected approach. CIDR’11</li>
+												<li>David Bermbach and Stefan Tai. Eventual consistency: How soon is eventual? An evaluation of Amazon S3’s consistency behavior. MW4SOC’11</li>
+												<li>Lisa Glendenning, Ivan Beschastnikh, Arvind Krishnamurthy, Thomas E. Anderson: Scalable consistency in Scatter. SOSP'11</li>
+												<li>Sebastian Burckhardt, Daan Leijen, Manuel Fähndrich, and Mooly Sagiv. Eventually consistent transactions. ESOP’12</li>
+												<li>Neil Conway, William R Marczak, Peter Alvaro, Joseph M Hellerstein, and David Maier. Logic and lattices for distributed programming. SoCC’12</li>
+												<li>Kamal Zellag and Bettina Kemme. How consistent is your cloud application? SoCC’12</li>
+												<li>Peter Bailis, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. The potential dangers of causal consistency and an explicit solution. SoCC ’12</li>
+												<li>Peter Alvaro, Peter Bailis, Neil Conway, and Joseph M. Hellerstein. Consistency without borders. SoCC’13</li>
+												<li>Peter Bailis, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Bolt-on causal consistency. SIGMOD’13</li>
+												<li>Peter Bailis, Alan Fekete, Michael J. Franklin, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Coordination avoidance in database systems. PVLDB’14</li>
+												<li>Valter Balegas, Sérgio Duarte, Carla Ferreira, Rodrigo Rodrigues, Nuno Preguiça, Mahsa Najafzadeh, and Marc Shapiro. Putting consistency back into eventual consistency. EuroSys’15</li>
+												<li>Marek Zawirski, Nuno Preguiça, Sérgio Duarte, Annette Bieniusa, Valter Balegas, and Marc Shapiro. Write fast, read in the past: Causal consistency for client-side applications. Middleware’15</li>
+												<li>Irene Zhang, Naveen Kr. Sharma, Adriana Szekeres, Arvind Krishnamurthy, Dan R. K. Ports: Building consistent transactions with inconsistent replication. SOSP'15</li>
+												<li>Valter Balegas, Cheng Li, Mahsa Najafzadeh, Daniel Porto, Allen Clement, Sérgio Duarte, Carla Ferreira, Johannes Gehrke, João Leitão, Nuno M. Preguiça, Rodrigo Rodrigues, Marc Shapiro, Viktor Vafeiadis: Geo-Replication: Fast If Possible, Consistent If Necessary. IEEE Data Eng. Bull.’16</li>
+												<li>Paolo Viotti, Marko Vukolic: Consistency in Non-Transactional Distributed Storage Systems. ACM Comput. Surv.'16</li>
+												<li>Natacha Crooks, Youer Pu, Nancy Estrada, Trinabh Gupta, Lorenzo Alvisi, Allen Clement: TARDiS: A Branch-and-Merge Approach To Weak Consistency. SIGMOD'16</li>
+												</ul>
+												</div>
+
+												<button class="accordion">Database Replication Techniques</button>
+												<div class="panel">
+												<ul>
+													<li>Bettina Kemme and Gustavo Alonso. Don’t be lazy, be consistent: Postgres-R, A new way to implement database replication. In VLDB 2000</li>
+													<li>Bettina Kemme and Gustavo Alonso. A new approach to developing and implementing eager database replication protocols. TODS’00</li>
+													<li>Bettina Kemme, Fernando Pedone, Gustavo Alonso, Andre ́ Schiper, and Matthias Wiesmann. Using optimistic atomic broadcast in transaction processing systems. IEEE Trans. Knowl. Data Eng.’03</li>
+													<li>K. Daudjee and K. Salem. Lazy database replication with ordering guarantees. In ICDE’04</li>
+													<li>Yasushi Saito and Marc Shapiro. Optimistic replication. ACM Comput. Surv.’05</li>
+													<li>Leslie Lamport. Fast Paxos. Distributed Computing’06</li>
+													<li>Yi Lin, Bettina Kemme, Ricardo Jiménez-Peris, et al. Snapshot isolation and integrity constraints in replicated databases. TODS’09</li>
+													<li>Flavio Paiva Junqueira, Benjamin C. Reed, Marco Serafini: Zab: High-performance broadcast for primary-backup systems. DSN'11</li>
+													<li>Marc Shapiro, Nuno M. Preguic ̧a, Carlos Baquero, and Marek Zawirski. Conflict-free replicated data types. SSS’11</li>
+													<li>Mihaela A. Bornea, Orion Hodson, Sameh Elnikety, and Alan Fekete. One-copy serializability with snapshot isolation under the hood. ICDE’11</li>
+													<li>Hyungsoo Jung, Hyuck Han, Alan Fekete, and Uwe Röhm. Serializable snapshot isolation for replicated databases in high-update scenarios. PVLDB’11</li>
+													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Probabilistically bounded staleness for practical partial quorums. PVLDB’12</li>
+													<li>Diego Ongaro and John Ousterhout. In search of an understandable consensus algorithm. USENIX ATC’14</li>
+													<li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Quantifying eventual consistency with PBS. Commun. ACM’14</li>
+													<li>Carlos Eduardo Benevides Bezerra, Fernando Pedone, Robbert van Renesse: Scalable State-Machine Replication. DSN'14</li>
+												</ul>
+											  </div>
+
+												<button class="accordion">Geo-Scale/Multi-Data Centers Transaction Protocols</button>
+												<div class="panel">
+												<ul>
+													<li>Yair Sovran, Russell Power, Marcos K. Aguilera, and Jinyang Li. Transactional storage for geo-replicated systems. SOSP ’11</li>
+													<li>Stacy Patterson, Aaron J. Elmore, Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. Serializability, not serial: Concurrency control and availability in multi-datacenter datastores. PVLDB’12</li>
+													<li>C. Li, D. Porto, A. Clement, J. Gehrke, N. Preguiça, and R. Rodrigues. Making geo-replicated systems fast as possible, consistent when necessary. OSDI’12</li>
+													<li>Hatem Mahmoud, Faisal Nawab, Alexander Pucher, Divyakant Agrawal, and Amr El Abbadi. Low- latency multi-datacenter databases using replicated commit. PVLDB’13</li>
+													<li>Tim Kraska, Gene Pang, Michael J. Franklin, Samuel Madden, and Alan Fekete. MDCC: multi-data center consistency. EuroSys ’13</li>
+													<li>Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. Message futures: Fast commitment of trans- actions in multi-datacenter environments. CIDR’13</li>
+													<li>Zhe Wu, Michael Butkiewicz, Dorian Perkins, Ethan Katz-Bassett, and Harsha V. Madhyastha. Spanstore: Cost-effective geo-replicated storage spanning multiple cloud services. SOSP ’13</li>
+													<li>Yang Zhang, Russell Power, Siyuan Zhou, Yair Sovran, Marcos K. Aguilera, and Jinyang Li. Transaction chains: achieving serializability with low latency in geo-distributed storage systems. SOSP’13</li>
+													<li>Wyatt Lloyd, Michael J. Freedman, Michael Kaminsky, and David G. Andersen.</li>
+													<li>Stronger semantics for low-latency geo-replicated storage. NSDI’13</li>
+													<li>Hatem A. Mahmoud, Faisal Nawab, Alexander Pucher, Divyakant Agrawal, Amr El Abbadi: Low-Latency Multi-Datacenter Databases using Replicated Commit. PVLDB'13</li>
+													<li>Gene Pang, Tim Kraska, Michael J. Franklin, and Alan Fekete. PLANET: making progress with commit processing in unpredictable environments. SIGMOD’14</li>
+													<li>Dan Dobre, Paolo Viotti, Marko Vukolic: Hybris: Robust Hybrid Cloud Storage. SoCC'14</li>
+													<li>Faisal Nawab, Vaibhav Arora, Divyakant Agrawal, and Amr El Abbadi. Chariots: A scalable shared log for data management in multi-datacenter cloud environments. EDBT’15</li>
+													<li>Faisal Nawab, Vaibhav Arora, Divyakant Agrawal, and Amr El Abbadi. Minimizing commit latency of transactions in geo-replicated data stores. SIGMOD’15</li>
+													<li>Alexander Thomson and Daniel J. Abadi. CalvinFS: Consistent WAN replication and scalable metadata management for distributed file systems. FAST’15</li>
+													<li>Ashish Gupta, Fan Yang, Jason Govig, Adam Kirsch, Kelvin Chan, Kevin Lai, Shuo Wu, Sandeep Govind Dhoot, Abhilash Rajesh Kumar, Ankur Agiwal, Sanjay Bhansali, Mingsheng Hong, Jamie Cameron, Masood Siddiqi, David Jones, Jeff Shute, Andrey Gubarev, Shivakumar Venkatara- man, and Divyakant Agrawal. Mesa: a geo-replicated online data warehouse for Google’s advertising system. Commun. ACM’16</li>
+												</ul>
+												</div>
+
+												<button class="accordion">Hybrid Transactional and Analytical Systems</button>
+												<div class="panel">
+												<ul>
+													<li>Yu Cao, Chun Chen, Fei Guo, Dawei Jiang, Yuting Lin, Beng Chin Ooi, Hoang Tam Vo, Sai Wu, and Quanqing Xu. ES2: A cloud data storage system for supporting both OLTP and OLAP. ICDE’11</li>
+													<li>A. Kemper and T. Neumann. HyPer: A hybrid OLTP and OLAP main memory database system based on virtual memory snapshots. ICDE’11</li>
+													<li>John Meehan, Nesime Tatbul, Stan Zdonik, Cansu Aslantas, Ugur Cetintemel, Jiang Du, Tim Kraska, Samuel Madden, David Maier, Andrew Pavlo, Michael Stonebraker, Kristin Tufte, and Hao Wang. S-Store: Streaming meets transaction processing. Proc. VLDB’14</li>
+													<li>Joy Arulraj, Andrew Pavlo, and Prashanth Menon. Bridging the archipelago between row-stores and column-stores for hybrid workloads. SIGMOD’16</li>
+													<li>Mohammad Sadoghi, Souvik Bhattacherjee, Bishwaranjan Bhattacharjee, and Mustafa Canim. L-Store: A real-time OLTP and OLAP system. CoRR’16</li>
+												</ul>
+												</div>
+
+
+												<button class="accordion">Modern Hardware: Non-volatile Memory (NVM), Hardware Transactional Memory (HTM), RDMA, FPGAs</button>
+												<div class="panel">
+												<ul>
+													<li>John K. Ousterhout, Parag Agrawal, David Erickson, Christos Kozyrakis, Jacob Leverich, David Mazières, Subhasish Mitra, Aravind Narayanan, Diego Ongaro, Guru M. Parulkar, Mendel Rosenblum, Stephen M. Rumble, Eric Stratmann, Ryan Stutsman: The case for RAMCloud. Commun. ACM'11</li>
+													<li>Diego Ongaro, Stephen M. Rumble, Ryan Stutsman, John K. Ousterhout, Mendel Rosenblum: Fast crash recovery in RAMCloud. SOSP'11</li>
+													<li>Viktor Leis, Alfons Kemper, and Thomas Neumann. Exploiting hardware transactional memory in main- memory databases. ICDE’14</li>
+													<li>Aleksandar Dragojevic, Dushyanth Narayanan, Miguel Castro, Orion Hodson: FaRM: Fast Remote Memory. NSDI'14</li>
+													<li>Stephen M. Rumble, Ankita Kejriwal, John K. Ousterhout: Log-structured memory for DRAM-based storage. FAST'14</li>
+													<li>Andrew Pavlo. Emerging hardware trends in large-scale transaction processing. IEEE Internet Computing’15</li>
+													<li>Marius Poke, Torsten Hoefler: DARE: High-Performance State Machine Replication on RDMA Networks. HPDC'15</li>
+													<li>Mohammadreza Najafi, Mohammad Sadoghi, Hans-Arno Jacobsen: The FQP Vision: Flexible Query Processing on a Reconfigurable Computing Fabric. SIGMOD Record'15</li>
+													<li>Mohammad Sadoghi, Kenneth A. Ross, Mustafa Canim, Bishwaranjan Bhattacharjee: Exploiting SSDs in operational multiversion databases. VLDB J.'16</li>
+													<li>Peter Bailis, Joy Arulraj, and Andrew Pavlo. Research for practice: distributed consensus and implications of NVM on database management systems. Commun. ACM’16</li>
+													<li>Zsolt István, David Sidler, and Gustavo Alonso, Marko Vukolić. Consensus in a Box: Inexpensive Coordination in Hardware. NSDI'16</li>
+												</ul>
+												</div>
+								</div>
+							</section>
+
+							<!-- Thrid Section -->
+								<section id="sch" class="main special">
+									<header class="major">
+										<br>
+										<h2>Tentative Schedule</h2>
+									</header>
+										<div align="left" style="font-style: normal">
+
+										</div>
+									</section>
+
+						<!-- Thrid Section -->
+							<section id="forth" class="main special">
+								<header class="major">
+									<br>
+									<h2>Announcements</h2>
+								</header>
+									<div align="left" style="font-style: normal">
+										<b style="font-weight: bold">December 20, 2016:</b> Welcome to CS 590. The first class will be on Thursday, January 12, 2017 (no class on January 10).
+									</div>
+								</section>
+
+						<!-- Get Started -->
+							<section id="fifth" class="main special">
+								<header class="major">
+									<br>
+									<h2>Handouts</h2>
+								</header>
+									<p align="left" style="font-style: normal">Course materials/grades will be made available on your <b style="font-weight: bold"><a href="https://mycourses.purdue.edu/" target="_blank">Blackboard</a></b> account.</p>
+
+								<!--
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="generic.html" class="button special">Get Started</a></li>
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							-->
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>About Instructor</h2>
+							<p>
+							<b style="font-weight: bold"><a href="https://msadoghi.github.io" target="_blank">Mohammad Sadoghi, PhD</a></b><br>
+							Assistant Professor <br>
+							<a href="http://cs.purdue.edu" target="_blank">Department of Computer Science</a><br>
+							<a href="http://purdue.edu" target="_blank">Purdue University</a>
+							<ul class="icons">
+								<li><a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" style="text-decoration:none"><img src="images/dblp-logo.png" style="width: 120px"/></a></li>
+								<li><a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" style="text-decoration: none;"><img src="images/google-scholar-logo.png" style="width: 120px"/></a></li>
+								<li><a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" style="text-decoration: none;"><img src="images/researchgate-logo-small.png" style="width: 45px"/></a></li>
+							</ul>
+						 </p>
+
+						 <!--
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn More</a></li>
+							</ul>
+						-->
+
+						</section>
+						<section>
+							<h2>Contact Information</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>305 N. University Street &bull; West Lafayette, IN &bull; 47907 &bull; USA</dd>
+								<dt>Office</dt>
+								<dd>2116N</dd>
+								<dt>Phone</dt>
+								<dd>(765) 494-9160</dd>
+								<dt>Email</dt>
+								<dd><a href="#">msadoghi@purdue.edu</a></dd>
+							</dl>
+						</section>
+						<p class="copyright">&copy; <b style="font-weight: bold">Mohammad Sadoghi</b> - <a href="https://html5up.net">HTML5 UP</a>. <br><br>
+<span align="center" class="logo"><a href="http://www.purdue.edu" target="_blank"><img src="images/purdue-logo.png" alt="" style="width: 120px"/></a></span>
+
+						</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			    acc[i].onclick = function(){
+			        this.classList.toggle("active");
+			        this.nextElementSibling.classList.toggle("show");
+			  }
+			}
+			</script>
+
+	</body>
+</html>
