@@ -237,11 +237,11 @@
 								   		  <b style="font-weight: bold">Required:</b>
 												<ul>
 													<li align="left">
-														"Database Management Systems", <b style="font-weight: bold">3rd Edition</b>. Raghu Ramakrishnan and J. Gehrke. McGraw Hill, 2003, ISBN 0-07-246563-8.
+														"Database Management Systems" <i>(referred to as DB)</i>, <b style="font-weight: bold">3rd Edition</b>. Raghu Ramakrishnan and J. Gehrke. McGraw Hill, 2003, ISBN 0-07-246563-8.
 													</li>
 
 													<li align="left">
-															<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">"Transaction Processing on Modern Hardware"</a>, 1st Edition. Mohammad Sadoghi and Spyros Blanas. <i>[Free online access when accessed within the UC Davis network]</i>
+															<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">"Transaction Processing on Modern Hardware"</a> <i>(referred to as TP)</i>, 1st Edition. Mohammad Sadoghi and Spyros Blanas. <i>[Free online access when accessed within the UC Davis network]</i>
 													</li>
 
 
@@ -384,12 +384,17 @@
 										<ol>
 
 										<li>
-											Introduction to Database Systems (<a href="lectures/chapter1-intro.pdf" target="_blank">Chapter 1</a>)
+											Introduction to Database Systems
 										</li>
 
 											<ul>
+
+												<li>
+													Database Management Systems (<a href="lectures/chapter1-intro.pdf" target="_blank">DB.Chapter 1</a>)
+												</li>
+
 											<li>
-												The Relational Model (<a href="lectures/chapter3.pdf" target="_blank">Chapter 3</a>)
+												The Relational Model (<a href="lectures/chapter3.pdf" target="_blank">DB.Chapter 3</a>)
 											</li>
 
 											<li>
@@ -404,7 +409,7 @@
 
 											<ul>
 											<li>
-												Relational Algebra (<a href="lectures/chapter4a.pdf" target="_blank">Chapter 4a</a>)
+												Relational Algebra (<a href="lectures/chapter4a.pdf" target="_blank">DB.Chapter 4a</a>)
 											</li>
 
 <!--
@@ -413,7 +418,7 @@
 											</li>
 -->
 											<li>
-												SQL: Queries, Programming, and Triggers (<a href="lectures/chapter5.pdf" target="_blank">Chapter 5</a>)
+												SQL: Queries, Programming, and Triggers (<a href="lectures/chapter5.pdf" target="_blank">DB.Chapter 5</a>)
 											</li>
 
 											<li>
@@ -434,27 +439,31 @@
 											<ul>
 
 											<li>
-												Disks and Files (<a href="lectures/chapter7.pdf" target="_blank">Chapter 7</a>)
+												Disks and Files (<a href="lectures/chapter7.pdf" target="_blank">DB.Chapter 7</a>)
 										  </li>
 
 											<li>
-												File Organization and Indexing (<a href="lectures/chapter8.pdf" target="_blank">Chapter 8</a>)
+												File Organization and Indexing (<a href="lectures/chapter8.pdf" target="_blank">DB.Chapter 8</a>)
 											</li>
 
 											<li>
-												Tree-Structured Indexes (<a href="lectures/chapter9.pdf" target="_blank">Chapter 9</a>)
+											Lineage-based Storage Architecture (L-Store: <a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>, <a href="papers/l-store-slides.pdf" target="_blank">Slides</a>)
 											</li>
 
 											<li>
-												Hash-Based Indexes (<a href="lectures/chapter10.pdf" target="_blank">Chapter 10</a>)
+												Tree-Structured Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; <a href="lectures/chapter9.pdf" target="_blank">DB.Chapter 9</a>)
 											</li>
 
 											<li>
-												Database Design &amp; Index Selection (<a href="lectures/chapter16a.pdf" target="_blank">Chapter 20a</a>, <a href="lectures/chapter16b.pdf" target="_blank">Chapter 20b</a>)
+												Hash-Based Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; <a href="lectures/chapter10.pdf" target="_blank">DB.Chapter 10</a>)
 											</li>
 
 											<li>
-												Optional Advanced Topics: Latch-free, In-memory Indexes (<a href="https://www.microsoft.com/en-us/research/publication/the-bw-tree-a-b-tree-for-new-hardware/" target="_blank">Bw-Tree</a>: <a href="http://dl.acm.org/citation.cfm?id=2510649.2511251" target="_blank">Paper</a>, <a href="http://www.slideserve.com/jacqueline-bowers/the-bw-tree-a-b-tree-for-new-hardware-platforms" target="_blank">Slides</a>)
+												Database Design &amp; Index Selection (<a href="lectures/chapter16a.pdf" target="_blank">DB.Chapter 20a</a>, <a href="lectures/chapter16b.pdf" target="_blank">Chapter 20b</a>)
+											</li>
+
+											<li>
+												Optional Advanced Topics: Latch-free, In-memory Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; <a href="https://www.microsoft.com/en-us/research/publication/the-bw-tree-a-b-tree-for-new-hardware/" target="_blank">Bw-Tree</a>: <a href="http://dl.acm.org/citation.cfm?id=2510649.2511251" target="_blank">Paper</a>, <a href="http://www.slideserve.com/jacqueline-bowers/the-bw-tree-a-b-tree-for-new-hardware-platforms" target="_blank">Slides</a>)
 											</li>
 											<li>
 												Optional Advanced Topics: 	In-memory, High-dimensional Indexes
@@ -477,28 +486,28 @@
 										<ul>
 
 											<li>
-												Transaction Properties (<a href="lectures/chapter18.pdf" target="_blank">Chapter 18</a>)
+												Transaction Properties (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 2</a> &amp; <a href="lectures/chapter18.pdf" target="_blank">DB.Chapter 18</a>)
 											</li>
 
 
 										<li>
-											Concurrency Control (<a href="lectures/chapter19.pdf" target="_blank">Chapter 19</a>)
+											Concurrency Control (<a href="lectures/chapter19.pdf" target="_blank">DB.Chapter 19</a> &amp; <a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapters 3-5</a>)
 										</li>
 
 										<li>
-											Crash Recovery (<a href="lectures/chapter20.pdf" target="_blank">Chapter 20</a>)
+											Optional Advanced Topics: Crash Recovery (<a href="lectures/chapter20.pdf" target="_blank">DB.Chapter 20</a>)
 										</li>
 
 										<li>
-											Optional Advanced Topics: In-memory Databases (Microsoft Hekaton: <a href="http://dl.acm.org/citation.cfm?id=2095689" target="_blank">Paper</a>)
+											Optional Advanced Topics: In-memory Databases (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 3</a> &amp; Microsoft Hekaton: <a href="http://dl.acm.org/citation.cfm?id=2095689" target="_blank">Paper</a>)
 										</li>
 
 										<li>
-											Optional Advanced Topics: Deterministic Concurrency Control (QueCC: <a href="https://www.researchgate.net/publication/329625027_QueCC_A_Queue-oriented_Control-free_Concurrency_Architecture" target="_blank">Paper</a>)
+											Optional Advanced Topics: Multi-version Optimistic Concurrency Control (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 3</a> &amp; 2VCC: <a href="http://dl.acm.org/citation.cfm?id=2733006" target="_blank">Paper</a>)
 										</li>
 
 										<li>
-											Optional Advanced Topics: Multi-version Optimistic Concurrency Control (2VCC: <a href="http://dl.acm.org/citation.cfm?id=2733006" target="_blank">Paper</a>)
+											Optional Advanced Topics: Deterministic Concurrency Control (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 5</a> &amp; QueCC: <a href="https://www.researchgate.net/publication/329625027_QueCC_A_Queue-oriented_Control-free_Concurrency_Architecture" target="_blank">Paper</a>)
 										</li>
 
 										<li>
@@ -506,11 +515,11 @@
 										</li>
 
 										<li>
-											Optional Advanced Topics: Distributed Deterministic Transactions (Calvin: <a href="http://dl.acm.org/citation.cfm?id=2213838" target="_blank">Paper</a>, Distributed Workflow: <a href="http://ieeexplore.ieee.org/document/7097086/" target="_blank">Paper</a>)
+											Optional Advanced Topics: Distributed Deterministic Transactions (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 4</a> &amp; Calvin: <a href="http://dl.acm.org/citation.cfm?id=2213838" target="_blank">Paper</a>, Distributed Workflow: <a href="http://ieeexplore.ieee.org/document/7097086/" target="_blank">Paper</a>)
 										</li>
 
 										<li>
-											Optional Advanced Topics: Avoiding Distributed Coordination Using Partitioning &amp; Replication (Schism: <a href="http://dl.acm.org/citation.cfm?id=1920853" target="_blank">Paper</a>)
+											Optional Advanced Topics: Avoiding Distributed Coordination Using Partitioning &amp; Replication (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; Schism: <a href="http://dl.acm.org/citation.cfm?id=1920853" target="_blank">Paper</a>)
 										</li>
 									</ul>
 
@@ -522,11 +531,11 @@
 										<ul>
 
 											<li>
-												The Entity-Relationship Model (<a href="lectures/chapter2.pdf" target="_blank">Chapter 2</a>)
+												The Entity-Relationship Model (<a href="lectures/chapter2.pdf" target="_blank">DB.Chapter 2</a>)
 											</li>
 
 											<li>
-												Schema Refinement and Normal Forms (<a href="lectures/chapter15.pdf" target="_blank">Chapter 19</a>)
+												Schema Refinement and Normal Forms (<a href="lectures/chapter15.pdf" target="_blank">DB.Chapter 19</a>)
 											</li>
 										</ul>
 
@@ -538,15 +547,15 @@
 											<ul>
 
 											<li>
-												External Sorting (<a href="lectures/chapter11.pdf" target="_blank">Chapter 11</a>)
+												External Sorting (<a href="lectures/chapter11.pdf" target="_blank">DB.Chapter 11</a>)
 											</li>
 
 											<li>
-												Evaluation of Relational Operators (<a href="lectures/chapter12a.pdf" target="_blank">Chapter 12a [Join]</a>, <a href="lectures/chapter12b.pdf" target="_blank">Chapter 12b [Selection, Projection, etc.]</a>)
+												Evaluation of Relational Operators (<a href="lectures/chapter12a.pdf" target="_blank">DB.Chapter 12a [Join]</a>, <a href="lectures/chapter12b.pdf" target="_blank">DB.Chapter 12b [Selection, Projection, etc.]</a>)
 											</li>
 
 											<li>
-												Relational Query Optimization (<a href="lectures/chapter14.pdf" target="_blank">Chapters 13 &amp; 14</a>)
+												Relational Query Optimization (<a href="lectures/chapter14.pdf" target="_blank">DB.Chapters 13 &amp; 14</a>)
 											</li>
 											<li>
 												Optional Advanced Topics: Materialized Views (<a href="http://dl.acm.org/citation.cfm?id=767151" target="_blank">Survey Paper</a>, <a href="http://www.slideserve.com/giza/answering-queries-using-views-a-survey" target="_blank">Slides</a>)
@@ -567,10 +576,6 @@
 										<li>
 											Optional Advanced Topics: Resilient Distributed Datasets (RDDs: <a href="https://www.usenix.org/node/162809" target="_blank">Paper</a>, <a href="https://people.csail.mit.edu/matei/talks/2012/nsdi_rdds.pdf" target="_blank">Slides</a>)
 										</li>
-
-										<li>
-											Optional Advanced Topics: Lineage-based Storage Architecture (L-Store: <a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>, <a href="papers/l-store-slides.pdf" target="_blank">Slides</a>)
-										</li>
 									</ul>
 
 									<li>
@@ -581,6 +586,12 @@
 										<li>
 											Optional Advanced Topics: Blockchain Landscape and AI Renaissance: The Bright Path Forward.
  										 [Tutorial: <a href="papers/bc-part-1.pdf" target="_blank">Part 1</a>, <a href="papers/bc-part-2.pdf" target="_blank">Part 2</a>]
+										</li>
+
+
+										<li>
+											Optional Advanced Topics: An In-Depth Look of BFT Consensus in Blockchain: Challenges and Opportunities.
+											[<a href="https://www.researchgate.net/publication/337411293_An_In-Depth_Look_of_BFT_Consensus_in_Blockchain_Challenges_and_Opportunities" target="_blank">Paper</a>, Slides: <a href="papers/Consensus-MW-2019-Slide-System.pdf" target="_blank">System</a>, <a href="papers/Consensus-MW-2019-Slide-Theory.pdf" target="_blank">Theory</a>]
 										</li>
 
 										<li>
