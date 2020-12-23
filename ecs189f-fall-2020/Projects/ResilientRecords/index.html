@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<!--
+Solid State by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>ResilientRecords - ECS189F</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1><a href="index.html">Resilient Records</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Index</h2>
+				<ul class="links">
+					<li><a href="index.html">Top</a></li>
+					<li><a href="#intro">Introduction</a></li>
+					<li><a href="#deliverables">Deliverables</a></li>
+					<li><a href="#avenues">Avenues Explored</a></li>
+					<li><a href="#conclusions">Key Takeaways and Next Steps</a></li>
+					<li><a href="#timeline">Timeline</a></li>
+					<li><a href="#about_us">About Us</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div class="logo"><span class="icon fa-gem"></span></div>
+				<h2>Resilient Records</h2>
+				<p>Dynamic Access Control using ResilientDB</p>
+			</div>
+		</section>
+
+		<!-- Introduction -->
+		<section id="wrapper">
+			<a name="intro"></a>
+
+			<!-- OUR MISSION -->
+			<section class="wrapper spotlight style1">
+				<div class="inner">
+					<a href="#" class="image"><img src="images\kisspng-white-symmetry-black-pattern-science-and-technology-blue-lines-background-vecto-5aa22f4b6e8720.5568042415205783794527.png" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Our Mission</h2>
+						<p>To use blockchain technology to safely and securely store patient medical data that is completely in control of the patient, as well as provide the means to easily give access to the records between various healthcare providers. The current healthcare system makes transfer of healthcare information difficult, failing to fulfill the needs of patients switching insurance systems or healthcare providers. To bridge this gap, we propose Resilient Records, to allow dynamic transfer of medical data.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- OUR SCOPE/WORK -->
+			<section class="wrapper alt spotlight style2">
+				<div class="inner">
+					<a href="#" class="image"><img src="images\kisspng-download-triangular-shape-background-shading-5a9d5af0640ab7.4153059615202618724098.png" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Our Work</h2>
+						<p>Our focus was researching different avenues to enable the user to dynamically and securely give access to files or data to multiple users in a public blockchain network; and to integrate such mechanisms within ResilientDB.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ALTERNATIVE USE CASES -->
+			<section class="wrapper spotlight style3">
+				<div class="inner">
+					<a href="#" class="image"><img src="images\kisspng-black-and-white-line-angle-point-bokeh-png-transparent-image-5a71d2adac90f7.2052715615174089417068.png" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Use Cases</h2>
+						<p>In addition to transfer of medical data from a patient to a hospital, ResilientRecords can help you transfer data in an encrypted format for your use case.</p>
+						<p>Potential use cases include managing the amount of data different people have access to, transferring self employed/gig worker history to a customer(eg. Uber drivers use blockchain to control their own history), and sharing location data logs for travel based occupations.</p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Main -->
+		<section id="wrapper">
+
+			<!-- DELIVERABLES -->
+			<a name="deliverables"></a>
+			<section class="wrapper alt style1" >
+				<div class="inner " >
+					<header id="subtitle">
+					<h2 class="major">Deliverables</h2>
+					<p>What our team learned and built during Fall2020</p>
+					</header>
+					<section class="features">
+						<article>
+							<a href="#" class="image opaque"><img src="images/pyumbrl.png" alt="" /></a>
+							<h3 class="major">Proxy Re-Encryption through PyUmbral</h3>
+							<p>Adaptation of pyUmbral threshold re-encryption through a C++ interface.</p>
+							<a href="https://github.com/zachmorris-ucd/PRE-pyUmbral-CPP" class="special">Visit GitHub</a>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/resilientdb.png" alt="" /></a>
+							<h3 class="major">Smart Contracts through ResilientDB</h3>
+							<p>Introduction of two smart contracts that send/receive information to/from worker nodes.</p>
+							<a href="https://github.com/zachmorris-ucd/resilientdb" class="special">Visit GitHub</a>
+						</article>
+					</section>
+				</div>
+			</section>
+
+			<!-- Initial Model Plan -->
+			<section class="wrapper style4">
+				<div class="inner">
+					<h3 class="major">Initial Model Plan</h3>
+					<p>Alice-Bob Interaction Diagram</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-12"><span class="image fit opaque"><img src="images/Resilient Records Architecture P1.png" alt="" /></span></div>
+							<div class="col-12"><span class="image fit opaque"><img src="images/Resilient Records Architecture P2.png" alt="" /></span></div>
+						<div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- PRE -->
+			<section class="wrapper alt style2">
+				<div class="inner">
+					<h3 class="major">What is Proxy Re-Encryption?</h3>
+					<p>Proxy re-encryption (PRE) allows someone to encrypt data using a public key and then give access to that encrypted data to someone else without ever sharing a user’s personal private key. PRE achieves this by using a proxy as a middleman that performs re-encryption on that encrypted data. Re-encryption is the process of taking a conversion key and using it to swap the encrypted file from being encrypted by one public key to being encrypted by a different public key. </p>
+					<p>To elaborate, the owner of the encrypted data takes their personal private key and the public key of the recipient they’re trying to give access to. They take the private and public key and create a conversion key. The importance of the conversion key is that, if it used to encrypt the already encrypted file, it will remove the owner’s existing encryption and convert the file to being encrypted with the public key of the recipient. The process of re-encryption using the conversion key is relevant and necessary because the proxy that is performing the re-encryption is not capable of un-encrypting the original file: encrypting with the conversion key directly converts the encrypted file from the owner’s encryption to the recipient’s encryption. This is important because it means that none of the proxies have to be trusted, as it’s impossible to decrypt the file with the conversion key.</p>
+
+					<h3 class="major">How does Proxy Re-Encryption Fit into Our Model?</h3>
+					<p>We are building this system using the ResilientDB architecture which means that we have to fit PRE into the ResilientDB architecture somehow. So, in the scheme of PRE, the proxy will be the ResilientDB nodes/miners. That means that the ResilientDB nodes miners will be responsible for storing the conversion key that is generated when access to an encrypted file is given. Additionally, the ResilientDB nodes/miners will be responsible for the re-encryption of a given file using the conversion key that is stored on the blockchain. The blockchain will be responsible for removing conversion keys when the owner of an encrypted file requests to revoke permission to a recipient.</p>
+
+				</div>
+			</section>
+
+			<!-- ResilientDB -->
+			<section class="wrapper style5">
+				<div class="inner">
+					<h3 class="major">ResilientDB</h3>
+					<p>We will be using ResilientDB as the system that handles consensus as well as the blockchain. We plan to fit ResilientDB to handle the inputs after running PRE and output to a distributed file storage using IPFS. With the multithreaded pipeline that ResilientDB employs using batch, worker, execute, and checkpoint threads, we believe that it should be sufficient for high throughput dynamic access control.</p>
+
+					<h3 class="major">What we modified on ResilientDB</h3>
+					<p>The first thing that we did is learn how the entire ResilientDB network works: how the client creates batch requests and messages, sends them to a primary thread, distributes the messages to the other worker node, and return a result back to the client node.</p>
+					<p>We created a smart contract that uploads an encrypted message as well as a re-encryption key to ResilientDB to be stored so that others can be given access to a specific person’s files.</p>
+					<p>We created a smart contract that allows people who have access to a file retrieve the encrypted message as well as retrieve the re-encryption key so that they can decrypt the file to plaintext and read it.</p>
+				</div>
+			</section>
+
+			<!-- OTHER AVENUES -->
+			<a name="avenues"></a>
+			<section class="wrapper alt style3">
+				<div class="inner">
+					<h2 class="major">Avenues Explored</h2>
+					<p>Several weeks were spent researching other platforms, networks and cryptographic engines in order to find a solution model that matches our initial implementation model closely; or could be used tangentially with our design plan for ResilientDB for a stronger development project within the scope of ten weeks.</p>
+					<section class="features">
+
+						<!-- NuCypher -->
+						<article>
+							<a href="#" class="image opaque"><img src="images/nucypher-vector-logo.png" alt="" /></a>
+							<h3 class="major">NuCypher</h3>
+							<p><h5>What</h5>
+							Cryptographic Infrastructure for Privacy-Preserving Applications. Uses pyUmbral PRE under the hood to dynamically give or revoke access from multiple users.</p>
+							<p><h5>Pros</h5>
+							Fits our initial Alice-Bob model very well.</br>
+							Has its own engine for PRE.</p>
+							<p><h5>Cons</h5>
+							Limited Documentation for integrating to networks other than Ethereum.</p>
+						</article>
+
+						<!-- HyperLedger -->
+						<article>
+							<a href="#" class="image"><img src="images/hyperledger.png" alt="" /></a>
+							<h3 class="major">HyperLedger</h3>
+							<p><h5>What</h5>
+							Suite of stable frameworks, tools and libraries for blockchain deployments. Focus: HyperLedger Fabric distributed ledger software.</p>
+							<p><h5>Pros</h5>
+							Many capabilities similar to dynamic access control.</p>
+							<p><h5>Cons</h5>
+							Setting up personal private channels is a huge barrier to entry for individuals.</br>
+							The intent of the private channels is so that large corporations can manage them whisch is against our mission.</p>
+						</article>
+
+						<!-- IPFS -->
+						<article>
+							<a href="#" class="image opaque"><img src="images\ipfs.png" alt="" /></a>
+							<h3 class="major">IPFS</h3>
+							<p><h5>What</h5>
+							Flexible framework that provides reliable and secure, decentralized solutions to storing and accessing sensitive information.</p>
+							<p><h5>Pros</h5>
+							Easy to implement.</br>
+							Robust control over the data uploaded.</br>
+							Added layer of encyption.</p>
+							<p><h5>Cons</h5>
+							Written in python, while our work is primarily in C++.</br>
+							Complexity to integrate with ResilientDB fell out of scope.</p>
+						</article>
+
+						<!-- PRE Schemes -->
+						<article>
+							<a href="#" class="image opaque"><img src="images/pyumbrl.png" alt="" /></a>
+							<h3 class="major">PRE schemes</h3>
+							<p><h5>What</h5>
+							Performing proxy re-encryption uses an incredibly complex and specific hashing algorithm, one that uses elliptical curves. We explored several other PREs before settling on pyUmbral.</p>
+							<p><h5>Pros</h5>
+							If found, can be used to create C++ program to manually re-encrypt files as needed.</br>
+							Will require a deep dive into ResilientDB's architecure to implement, which enriches learning experience.</p>
+							<p><h5>Cons</h5>
+							Difficult to find a cryptographic algorithm that uses elliptical curves AND can be easily integrated with a C++ program.</br>
+						</article>
+
+					</section>
+				</div>
+			</section>
+		</section>
+
+		<!-- CONCLUSION -->
+		<a name="conclusions"></a>
+		<section id="wrapper">
+
+			<!-- KEY TAKEAWAYS -->
+			<section class="wrapper style1">
+				<div class="inner" id="subtitle">
+					<h2 class="major">Key Takeaways and Next Steps</h2>
+				</div>
+			</section>
+
+			<!-- IMPACT -->
+			<section class="wrapper alt spotlight style1">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">Project Impact</h2>
+						<p>Worked with ResilientDB and Proxy Re-encryption to implement a way to encrypt messages.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- FUTURE -->
+			<section class="wrapper spotlight style2">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">Future</h2>
+						<p> We want to integrate IPFS to store large amounts of data in file format. We also want to integrate the proxy re-encryption code into ResilientDB. The reason that wasn't achieved is because the proxy re-encryption implementation we created relies on pyUmbral which is written in Python. We really struggled to figure out how to get Python running on the ResilientDB docker containers. If Python was installed on the docker containers, integrating the PRE code we created into ResilientDB would be really easy because we already created the smart contracts that would run the PRE code.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- LEARNED -->
+			<section class="wrapper alt spotlight style3">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">What we learned</h2>
+						<p> We studied and researched different blockchain networks, learned how to set up nodes, work with large codebases, integrating different technologies together. We learned from industry level experts and built teamwork skills.</p>
+					</div>
+				</div>
+			</section>
+
+		</section>
+
+		<!-- TIMELINE -->
+		<a name="timeline"></a>
+		<section class="wrapper style1">
+			<div class="inner" id="subtitle">
+				<h2 class="major">Development Timeline</h2>
+				<p>What we're doing in and out of lecture</p>
+
+				<!-- TABLE -->
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th>Week</th>
+								<th>Project Goals</th>
+								<th>Course Goals</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Week One</td>
+								<td>Forming Team</td>
+								<td>Blockchain At Expolab: Our Resilient Journey, Vision, Bitcoin Radio</br>What Is Being Built Today, What Companies Are Looking For?</td>
+							</tr>
+							<tr>
+								<td>Week Two</td>
+								<td>Brainstorming Ideas</td>
+								<td>Introduction To Distributed Consensus</br>Principle Foundations Of Bitcoin</br>How Ethereum Works</td>
+							</tr>
+							<tr>
+								<td>Week Three</td>
+								<td>Solidified Team Project Idea: Permissions Based Medical Data Access</td>
+								<td>Innovating With Bitcoin</br>Principle Foundations Of Ethereum</td>
+							</tr>
+							<tr>
+								<td>Week Four</td>
+								<td>Created Project Proposal Document</td>
+								<td>Introduction To Decentralized Applications</br>Developing Decentralized Applications</td>
+							</tr>
+							<tr>
+								<td>Week Five</td>
+								<td>Researched Ethereum, Hyperledger, ResilientDB, NuCypher</td>
+								<td>Ethereum 2.0: Serenity</br>Why Only Permissioned Blockchains Matter: A Realist’s Perspective</td>
+							</tr>
+							<tr>
+								<td>Week Six</td>
+								<td>Research proxy re-encryption schemes, Hyperledger, NuCypher</br>Run ResilientDB</td>
+								<td>Principle Foundations Of Hyperledger Fabric</br>Principle Foundations Of LedgerDB</br>The History & Philosophy Behind Consensys</td>
+							</tr>
+							<tr>
+								<td>Week Seven</td>
+								<td>Teams set up respective tools in proxy re-encryption, ResilientDB</br>Research IPFS</br>Midpoint Check in</td>
+								<td>Principle Foundations Of R3 Corda</br>Intro To Zero-knowledge Proofs</br>Principle Foundations Of Radix</td>
+							</tr>
+							<tr>
+								<td>Week Eight</td>
+								<td>Proxy re-encryption: wrote python and C++ script that works with PyUmbral</br>ResilientDB: meeting with Suyash about messages</br>Set up IPFS</td>
+								<td>Principle Foundations Of Hedera Hashgraph</br>Principle Foundations Of Near: Sharding Revisited</br>Economics Of Proof Of Stake & Sharding In Polkadot</td>
+							</tr>
+							<tr>
+								<td>Week Nine</td>
+								<td>Finished Proxy Re-encryption script</br>ResilientDB focus on implementing smart contracts</td>
+								<td>Introduction To Decentralized Applications</br>Developing Decentralized Applications/td>
+							</tr>
+							<tr>
+								<td>Week Ten</td>
+								<td>Created smart contracts which can send and receive messages</br>ResilientDB: Meeting with Sujjad about smart contracts</br>Final Project Presentation</td>
+								<td>Intro To Decentralized Finance</br>Principle Foundations Of Libra</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<a name="about_us"></a>
+			<div class="inner">
+				<h2 class="major">About Team</h2>
+				<p>ECS189F Fall 2020</br>
+					Professor Mohammad Sadoghi</br>
+					TA Suyash Gupta</p>
+				<!-- TABLE -->
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th>Team Members</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Oorjit Chib</td>
+							</tr>
+							<tr>
+								<td>Mohammed Haque</td>
+							</tr>
+							<tr>
+								<td>Zachary Morris</td>
+							</tr>
+							<tr>
+								<td>Preeti Naidu</td>
+							</tr>
+							<tr>
+								<td>Tejvir Sohi</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<ul class="contact">
+					<li class="icon solid fa-home">
+						University of California, Davis<br />
+						Davis, CA
+					</li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; ResilientRecords. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
