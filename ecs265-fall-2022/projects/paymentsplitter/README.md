@@ -1,7 +1,7 @@
 
 ## Live demo
 
-Check the live demo here 👉️ [https://vancelot7789.github.io/paymentsplitter/)
+Check the live demo here 👉️ [https://expolab.org/ecs265-fall-2022/projects/paymentsplitter/)
 
 
 
