@@ -1,0 +1,954 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mohammad Sadoghi - ECS 165A: Database Systems</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/expolab-icon-only.png"/>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo">
+						<span class="logo"><a href="https://msadoghi.github.io/" target="_blank"><img src="images/expolab-icon.png" alt="" style="width: 350px"/></a></span>
+						<h1>ECS 165A: Database Systems</h1>
+						<p><b style="font-weight: bold">Winter 2023</b><br>
+						[Previous Offerings: <a href="https://expolab.org/ecs165a-winter2019.html" target="_blank">Winter 2019</a>,
+						                     <a href="https://expolab.org/ecs165a-winter2020.html" target="_blank">Winter 2020</a>,
+																 <a href="https://expolab.org/ecs165a-winter2021.html" target="_blank">Winter 2021</a>,
+																 <a href="https://expolab.org/ecs165a-winter2022.html" target="_blank">Winter 2022</a>]</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<!-- <li><a href="#intro" class="active">Schedule</a></li> -->
+							<li><a href="#first">Course Overview</a></li>
+							<li><a href="#second">Syllabus</a></li>
+							<li><a href="#third">Contents</a></li>
+							<li><a href="#sch">Schedule</a></li>
+							<li><a href="#forth">Announcements</a></li>
+							<li><a href="#presentations">Top Presentations</a></li>
+							<li><a href="#grades">Grades</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>ECS 165A: Database Systems</h2>
+										</header>
+
+										<div class="table-wrapper">
+											<table class="alt">
+												<tbody>
+													<tr>
+														<td colspan="2" align="left">
+															<p>
+															<b style="font-weight: bold">Instructor: </b><a href="https://msadoghi.github.io" target="_blank">Mohammad Sadoghi</a><br>
+															<b style="font-weight: bold">E-mail:</b> msadoghi@ucdavis.edu<br>
+															<b style="font-weight: bold">Office:</b> Remote<br>
+															<b style="font-weight: bold">Office Hours:</b> Wednesday 4:00-6:00pm
+															</p>
+														</td>
+													</tr>
+														<tr>
+															<td align="left">
+																<p>
+																<b style="font-weight: bold">Teaching Fellow:</b> Junchao Chen<br>
+																  <b style="font-weight: bold">Email:</b> jucchen@ucdavis.edu<br>
+																	<b style="font-weight: bold">Office:</b> Remote<br>
+																  <b style="font-weight: bold">Office Hours:</b> [TBA]
+																</p>
+															</td>
+														<td align="left">
+															<p>
+															<b style="font-weight: bold">Teaching Fellow:</b> Dakai Kang<br>
+															  <b style="font-weight: bold">Email:</b> dakang@ucdavis.edu<br>
+																<b style="font-weight: bold">Office:</b> Remote <br>
+															  <b style="font-weight: bold">Office Hours:</b> [TBA]
+															</p>
+														</td>
+													</tr>
+													<tr>
+														<td align="left">
+															<p>
+															<b style="font-weight: bold">Lecture</b> (Until January 28 on Zoom)<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time: Tue/Thu 3:10-1:30pm<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Location:</b> Giedt 1002
+															</p>
+														</td>
+														<td align="left">
+															<p>
+															<b style="font-weight: bold">Discussions Sessions</b> (Until January 28 on Zoom)<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A1<b style="font-weight: bold"></b> Thursdays 2:10-3:00pm (Cruess Hall 107)<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2<b style="font-weight: bold"></b> Wednesdays 11:00-11:50am (Olson Hall 147)<br>
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A3<b style="font-weight: bold"></b> Tuesdays 2:10-3:00pm (Olson Hall 205)
+															</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- First Section -->
+
+							<section id="first" class="main special">
+								<header class="major">
+									<br>
+									<h2>Overview</h2>
+							</header>
+
+								<div class="row">
+									<div align="left">
+										<!--<h3>2016</h3> -->
+
+										<p>
+											This is an innovative data management course that provides an introduction
+                      to the design and development of fundamental concepts in relational database
+                      management systems (DBMS). You will learn the theory and design behind database
+											systems, the issues that affect their functionality and performance, and
+											most importantly, what it takes to effectively utilize modern databases in practice.
+
+											<br><br>
+
+                      The course has completely been redesigned, all students are expected to work
+                      in a group of five on an exciting, open-ended, data-oriented, quarter-long project,
+                      in a sense, operating and simulating startup environments. Needless to say,
+                      this rewarding experience is accompanied by a significant development effort (in Python)
+                      that spans hands-on experience on concepts such as memory and disk management,
+											synchronization and concurrency, logging and recovery, and query optimization
+											and evaluation, to name a few. To materialize these objectives, together this quarter,
+											we will be building simplified <b style="font-weight: bold">L-Store</b>
+											[<a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>, <a href="ecs165a-winter2022/lectures/L-Store Storage Architecture.pdf" target="_blank">Slides</a>]
+											from scratch, an Hybrid Transactional and Analytical Processing (HTAP) database.
+
+											<br><br>
+
+                      The course work is complementary to the classical well-formed, prescriptive
+											model of assignments/projects that are indeed effective and invaluable in practice.
+                      Instead by design, the project is intended to be open-ended, namely, minimal
+                      instructions and requirements will be provided, as such it rewards and values
+                      research & development, taking risks, above all, it is aimed to foster and
+                      tap into the creativity of each individual.
+
+											<br><br>
+
+                      The quarter-long project is broken into a set of three milestones, all milestones will be
+											graded both orally (50% of the grade) and using autograder (the remaining 50% of the grade).
+											The presentation is done by all five group members, and each group member must be
+											ready to answer questions about any aspect of the project; the latter is the utmost
+											importance to ensure comprehensive learning experience and fair division of work
+											among all members. Furthermore, in each milestone, a bonus of up to 10% can be
+											gained to further encourage taking a risk, going the extra mile, and to just be
+											curious &amp; creative. Part of the bonus is reserved for fastest and the
+											most optimized implementation of L-Store in class, e.g., how many read/write
+											operations per second (adjusted based on the number of cores, CPU clock frequency,
+											amount of memory, cache size, and other hardware metrics to ensure comparable
+											results).
+
+											<br><br>
+
+                      A fact of life, when there is group work, whether at school or in society,
+                      there are occasional conflicts; and it is crucial to learn how to
+                      resolve our differences and be receptive, open, and kind to one another. In
+                      kindness and reflection, we shall aim to resolve all conflicts. It is the group
+											responsibility to handle all internal affairs, and only when absolutely necessary
+											involving the instructor. But note, only under very rare exceptional circumstances,
+											a group re-structuring would be granted because once the group is formed, at least
+											for 10 weeks, we must learn how to work with each other in harmony.
+
+											<br><br>
+
+                      For each group, it is recommended that each member lead one aspect of the project
+											while contributing and learning about other parts; roughly, the main components
+											are
+											(1) memory management (e.g., bufferpool),
+											(2) disk management (e.g., persistence and logging),
+											(3) in-memory indexing (e.g., hashing or tree),
+											(4) data access methods (e.g., APIs and query language),
+											(5) multi-threading and synchronization (e.g., data structures latching),
+											(6) transaction and concurrency (e.g., record-level locking), and
+											(7) testing and benchmarking (correctness verification and performance measurements).
+
+											<br><br>
+
+											As for the lectures, the list of topics covered would include but not limited to:
+
+											<ul>
+
+											<li>
+											DBMS Concepts and Architecture
+											</li>
+
+											<li>
+											Storage and Indexing
+											</li>
+
+											<li>
+											Query Languages (Relational Algebra and SQL)
+											</li>
+
+											<li>
+											Query Evaluation and Optimization
+											</li>
+
+											<li>
+											Concurrency Control and Recovery
+											</li>
+
+											<li>
+											Database Design, the E-R Model, Normalization, and Tuning
+											</li>
+
+											<li>
+											Database Security, Blockchain
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</section>
+
+							<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<br>
+									<h2>Syllabus</h2>
+							</header>
+
+									<div align="left">
+										<!--<h3>2019</h3> -->
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Textbooks:</b></h3>
+								   		  <b style="font-weight: bold">Required:</b>
+												<ul>
+													<li align="left">
+														"Database Management Systems" <i>(referred to as DB)</i>, <b style="font-weight: bold">3rd Edition</b>. Raghu Ramakrishnan and J. Gehrke. McGraw Hill, 2003, ISBN 0-07-246563-8.
+													</li>
+
+													<li align="left">
+															<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">"Transaction Processing on Modern Hardware"</a> <i>(referred to as TP)</i>,
+															Mohammad Sadoghi and Spyros Blanas.
+															<i>Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2019.
+															<i>[Free online access when accessed within the UC Davis network]</i>.
+													</li>
+
+													<li align="left">
+															<a href="https://www.morganclaypool.com/doi/abs/10.2200/S01068ED1V01Y202012DTM065" target="_blank"><i>"Fault-tolerant Distributed Transactions on Blockchain"</i></a>. <i>(referred to as BC)</i>
+															Suyash Gupta, Jelle Hellings and Mohammad Sadoghi.
+															<i>Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2021.
+															<i>[Free online access when accessed within the UC Davis network]</i>.
+													</li>
+
+													<li align="left">
+														Additionally, a list of research papers will be added later as part of the optional reading for the enthusiastic students.
+													</li>
+												</ul>
+
+												<b style="font-weight: bold">Optional:</b>
+												<ul>
+													<li align="left">
+														"Readings in Database Systems", 4th Edition. Joseph M. Hellerstein, Michael Stonebraker. 2005
+													</li>
+
+														<li align="left">
+															ResilientDB Fabric Resources:
+															<a href="https://resilientdb.com/" target="_blank">Website</a>,
+															<a href="http://www.vldb.org/pvldb/vol13/p868-gupta.pdf" target="_blank">Architecture</a>
+															<a href="https://www.youtube.com/embed/whgGTSQttds" target="_blank">Journey</a>,
+															<a href="https://www.youtube.com/watch?v=frXpHYf_kSI" target="_blank">Vision</a>/<a href="papers/ResilientDB.pdf" target="_blank">Slides</a>,
+															<a href="https://www.youtube.com/watch?v=jSDv4IXqsAA" target="_blank">Bitcoin Radio</a>,
+															<a href="https://arxiv.org/abs/1911.09208" target="_blank">Lessons</a>
+															<a href="http://www.vldb.org/pvldb/vol13/p2893-rahnama.pdf" target="_blank">Demo</a>,
+															Tutorial Slides: [<a href="papers/Tutorial - Theory - VLDB 2020.pdf" target="_blank">Theory</a> | <a href="papers/Tutorial - System - VLDB 2020.pptx" target="_blank">System</a>, <a href="https://youtu.be/Jj6hVs1SF3E" target="_blank">Video</a>],
+															<a href="https://github.com/resilientdb/resilientdb" target="_blank">Code</a>,
+															<a href="https://youtu.be/cBn142Uz_J0" target="_blank">Hands-on</a>,
+															<a href="https://github.com/resilientdb/resilientdb/wiki" target="_blank">Wiki</a>,
+															<a href="https://resilientdb.com/blog/" target="_blank">Blog</a>.
+														</li>
+
+													<li align="left">
+														"The Elements of Style", 4th Edition. William Strunk Jr. and E. B. White. 1999
+													</li>
+
+													<li align="left">
+														"Style: Toward Clarity and Grace". Joseph M. Williams. 1995
+													</li>
+												</ul>
+
+
+										</p>
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Workload:</b></h3>
+
+											The key component of the course is the quarter-long group project that is broken
+											into a set of three main milestones. All milestones will be graded orally (unless
+											specified otherwise), where the progress is presented by all group members, and
+											each group member must be ready to answer questions about any aspect of the project;
+											the latter is the utmost importance to ensure comprehensive learning experience and fair
+											division of work among all members. Therefore, for each milestone, a portion of the
+											grade is devoted to the presented project as a whole on which all members receive the
+											same grade (60% of the grade), but the remaining portion is individualized (40% of the grade),
+											so for each milestone, not all group members may receive the same grade. For
+											each milestone, a bonus of up to 10% can be rewarded.<br><br>
+
+											The presentation for the oral evaluation is limited to at most 15 minutes per team,
+											the time is strictly enforced. The breakdown of 15 minutes is as follows:
+
+											<ul>
+
+											<li>
+											The milestone overview: the design and solution, what was accomplished and how? (8 minutes)
+											</li>
+
+											<li>
+											Q/A: Questions about various aspects of the project (4 minutes)
+											</li>
+
+											<li>
+											Demo: A live demonstration of the code, which includes adding, modifying, and querying the data (3 minutes)
+											</li>
+
+											</ul>
+
+											Additionally, there will be a pre-milestone individual assignment, for which each student
+											is expected to think about and explore all aspects of the project. In other words,
+											each student for his/herself, need to think about what it is required to make a HTAP
+											database and to document their finding in a few pages. Of course, it is highly
+											recommended to search the web for tutorials and other useful materials.  As for part this
+											pre-milestone phase, (1) the group must be formed, namely, when each student submit their
+											report, the name of their group members and their <i>team name</i> must be submitted;
+											and (2) each student must decide which aspect of the project he/she wishes to lead based
+											on the research. If you need help to form your group and look for partners, kindly
+											contact the TAs. Note any group assignment by TAs will be random. Additionally,
+											an online form will be made available to submit your team details.
+
+											<br><br>
+
+											All milestone presentations will be done on Zoom.
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Grading:</b> (tentative and subject to change due to COVID and UWA Strikes)</h3>
+											The final grade will be based upon the following components (all submissions are due at midnight):
+											<ul>
+												<li> <a href="ecs165a-winter2023/milestones/PreMilestone.pdf" target="_blank"><b style="font-weight: bold">Individual Pre-milestone Assignment:</b></a> 5% (Due on January 24, 2023)</li>
+											  <li> <b style="font-weight: bold">Group Project (three milestones):</b> 60%
+														<ul>
+																<br>
+																<li><a href="ecs165a-winter2023/milestones/Milestone1.pdf" target="_blank"><b style="font-weight: bold">Milestone 1</b> (20%):</a> Single-threaded, In-memory L-Store (Due on February 14); Oral Eval on February 17 (8:00am-7:00pm)</li>
+																<li><a href="ecs165a-winter2023/milestones/Milestone2.pdf" target="_blank"><b style="font-weight: bold">Milestone 2</b> (20%):</a> Single-threaded, In-memory &amp; Durable L-Store (Due on February 28); Oral Eval on March 3 (8:00am-7:00pm)</li>
+																<li><a href="ecs165a-winter2023/milestones/Milestone3.pdf" target="_blank"><b style="font-weight: bold">Milestone 3</b> (20%):</a> Multi-threaded, In-memory &amp; Durable L-Store (Due on March 14); Oral Eval on March 17 (8:00am-7:00pm)</li>
+														</ul>
+												<li> <b style="font-weight: bold">In-class Midterm:</b> 10% (February 23, 2022) </li>
+												<li> <b style="font-weight: bold">Final Exam:</b> 25% (March 20, 2023 at 3:30pm)</li>
+											</ul>
+										</p>
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Communication:</b></h3>
+											For communication with the instructor, please use email (<a href="#">msadoghi@ucdavis.edu</a>)
+											and not Canvas. The instructor will not check/reply to Canvas messages.
+
+											<br>
+											<br>
+
+											For group communication (monitored by TAs) and other students, we will rely on
+											<a href="piazza.com/ucdavis/winter2023/ecs165a" target="_blank">Piazza</a>.
+										</p>
+
+
+										<p>
+											<h3 align="left"><b style="font-weight: bold">Course Policy:</b></h3>
+											In this class, we adopt the UC Davis Code of Academic Conduct available <a href="http://sja.ucdavis.edu/cac.html" target="_blank">here</a>.<br><br>
+
+											In addition, late submission will result in a 10% penalty for each day
+											late; at most an extension of up to two days may be granted. Students are
+											strongly advised that any act of cheating will result in a score of 0
+											for the entire milestone (or the course) and offenses will be
+											reported to the Office of the Dean of Students. You are encouraged to discuss
+											problems and ideas but the final solution or code must be your own. In the
+											event of a major campus emergency, course requirements, deadlines, and grading
+											percentages are subject to changes that may be necessitated by a revised quarter
+											calendar. If such	unusual circumstances arise, students may determine any such
+											changes by contacting the instructor.
+										</p>
+
+								</div>
+							</section>
+
+
+							<section id="third" class="main special">
+								<header class="major">
+									<br>
+									<h2>Contents</h2>
+								</header>
+
+									<div align="left">
+										<!--<h3>2019</h3> -->
+										<p>
+										<h3 align="left"><b style="font-weight: bold">List of Topics (tentative):</b></h3>
+
+										<ol>
+
+										<li>
+											Introduction to Database Systems
+										</li>
+
+											<ul>
+
+											<li>
+												Database Management Systems (<a href="ecs165a-winter2022/lectures/chapter1.pdf" target="_blank">DB.Chapter 1</a>)
+											</li>
+
+											<li>
+												The Relational Model (<a href="ecs165a-winter2022/lectures/chapter3.pdf" target="_blank">DB.Chapter 3</a>, <a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 2</a>)
+											</li>
+
+											<li>
+												Optional Advanced Topics: Overview of Modern Distributed Data Processing Systems (<a href="http://hadoop.apache.org/" target="_blank">Hadoop</a>, <a href="http://spark.apache.org/" target="_blank">Spark</a>)
+											</li>
+
+											</ul>
+
+										<li>
+											Storage and Indexing
+										</li>
+
+											<ul>
+
+											<li>
+												Disks and Files (<a href="ecs165a-winter2022/lectures/chapter8.pdf" target="_blank">DB.Chapter 8</a>)
+										  </li>
+
+											<li>
+												File Organization and Indexing (<a href="ecs165a-winter2022/lectures/chapter9.pdf" target="_blank">DB.Chapter 9</a>)
+											</li>
+
+											<li>
+											Lineage-based Storage Architecture (L-Store: <a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>, <a href="ecs165a-winter2022/lectures/L-Store Storage Architecture.pdf" target="_blank">Slides</a>)
+											</li>
+
+											<li>
+												Tree-Structured Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a>, <a href="ecs165a-winter2021/lectures/chapter9.pdf" target="_blank">DB.Chapter 9</a>, and <a href="https://visualgo.net/" target="_blank">Intuitive and Simple Visual</a>)
+											</li>
+
+											<li>
+												Hash-Based Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; <a href="ecs165a-winter2020/lectures/chapter10.pdf" target="_blank">DB.Chapter 10</a>)
+											</li>
+
+											<li>
+												Database Design &amp; Index Selection (<a href="ecs165a-winter2020/lectures/chapter16a.pdf" target="_blank">DB.Chapter 20a</a>, <a href="ecs165a-winter2020/lectures/chapter16b.pdf" target="_blank">Chapter 20b</a>)
+											</li>
+
+											<li>
+												Optional Advanced Topics: Latch-free, In-memory Indexes (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; <a href="https://www.microsoft.com/en-us/research/publication/the-bw-tree-a-b-tree-for-new-hardware/" target="_blank">Bw-Tree</a>: <a href="http://dl.acm.org/citation.cfm?id=2510649.2511251" target="_blank">Paper</a>, <a href="http://www.slideserve.com/jacqueline-bowers/the-bw-tree-a-b-tree-for-new-hardware-platforms" target="_blank">Slides</a>)
+											</li>
+											<li>
+												Optional Advanced Topics: Index Maintenance (Indirection: <a href="http://dl.acm.org/citation.cfm?id=2536226" target="_blank">Paper</a>)
+											</li>
+
+											<li>
+												Optional Advanced Topics: Resilient Distributed Datasets (RDDs: <a href="https://www.usenix.org/node/162809" target="_blank">Paper</a>, <a href="https://people.csail.mit.edu/matei/talks/2012/nsdi_rdds.pdf" target="_blank">Slides</a>)
+											</li>
+											<li>
+												Optional Advanced Topics: In-memory, High-dimensional Indexes
+												<ul>
+												<li>
+											  	BE-Tree: <a href="http://dl.acm.org/citation.cfm?id=1989390" target="_blank">Paper</a>, <a href="http://msrg.org/papers/moSIGMOD11" target="_blank">Slides</a>
+												</li>
+												<li>
+												Parallel Compressed Traversal over BE-Tree: <a href="http://ieeexplore.ieee.org/abstract/document/6816665" target="_blank">Paper</a>, <a href="http://msrg.org/papers/parallelbetree" target="_blank">Slides</a>
+												</li>
+												</ul>
+										  </li>
+										</ul>
+
+
+										<li>
+											Transaction Management
+										</li>
+
+										<ul>
+
+											<li>
+												Transaction Properties (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 2</a> &amp; <a href="ecs165a-winter2022/lectures/chapter16.pdf" target="_blank">DB.Chapter 16</a>)
+											</li>
+
+
+										<li>
+											Concurrency Control (<a href="ecs165a-winter2022/lectures/chapter17.pdf" target="_blank">DB.Chapter 17</a> &amp; <a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapters 3-5</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Crash Recovery (<a href="ecs165a-winter2020/lectures/chapter20.pdf" target="_blank">DB.Chapter 20</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: In-memory Databases (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 3</a> &amp; Microsoft Hekaton: <a href="http://dl.acm.org/citation.cfm?id=2095689" target="_blank">Paper</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Multi-version Optimistic Concurrency Control (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 3</a> &amp; 2VCC: <a href="http://dl.acm.org/citation.cfm?id=2733006" target="_blank">Paper</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Deterministic Concurrency Control (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 5</a> &amp; QueCC: <a href="https://www.researchgate.net/publication/329625027_QueCC_A_Queue-oriented_Control-free_Concurrency_Architecture" target="_blank">Paper</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Distributed Non-blocking Transactions (EasyCommit: <a href="https://www.researchgate.net/publication/324089842_EasyCommit_A_Non-blocking_Two-phase_Commit_Protocol" target="_blank">Paper</a>, <a href="papers/easy-commit-slides.pdf" target="_blank">Slides</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Distributed Deterministic Transactions (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 4</a> &amp; Calvin: <a href="http://dl.acm.org/citation.cfm?id=2213838" target="_blank">Paper</a>, Distributed Workflow: <a href="http://ieeexplore.ieee.org/document/7097086/" target="_blank">Paper</a>)
+										</li>
+
+										<li>
+											Optional Advanced Topics: Avoiding Distributed Coordination Using Partitioning &amp; Replication (<a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">TP.Chapter 6</a> &amp; Schism: <a href="http://dl.acm.org/citation.cfm?id=1920853" target="_blank">Paper</a>)
+										</li>
+									</ul>
+
+
+									<li>
+										Database Query Languages
+									</li>
+
+									<ul>
+									<li>
+										Relational Algebra (<a href="ecs165a-winter2022/lectures/chapter4.pdf" target="_blank">DB.Chapter 4</a>)
+									</li>
+
+<!--
+									<li>
+										Relational Calculus (<a href="lectures/chapter4b.pdf" target="_blank">Chapter 4b</a>)
+									</li>
+-->
+									<li>
+										SQL: Queries, Programming, and Triggers (<a href="ecs165a-winter2022/lectures/chapter5.pdf" target="_blank">DB.Chapter 5</a>)
+									</li>
+
+									<li>
+										Optional Advanced Topics: Hive (<a href="http://dl.acm.org/citation.cfm?id=1687609" target="_blank">Paper</a>, Slides by <a href="http://www.slideshare.net/zshao/hive-data-warehousing-analytics-on-hadoop-presentation" target="_blank">Facebook</a> &amp; <a href="http://www.slideshare.net/cwsteinbach/hive-quick-start-tutorial" target="_blank">Cloudera</a>)
+									</li>
+
+									<li>
+										Optional Advanced Topics: SparkSQL (<a href="http://dl.acm.org/citation.cfm?id=2742797" target="_blank">Paper</a>, Slides by <a href="http://www.slideshare.net/jeykottalam/spark-sqlamp-camp2014" target="_blank">UC, Berkeley, AMPlab</a> &amp; <a href="http://www.slideshare.net/databricks/spark-sql-deep-dive-melbroune" target="_blank">databricks</a>)
+									</li>
+
+									</ul>
+
+
+										<li>
+											Schema Design (tentative)
+										</li>
+
+										<ul>
+
+											<li>
+												The Entity-Relationship Model (<a href="ecs165a-winter2020/lectures/chapter2.pdf" target="_blank">DB.Chapter 2</a>)
+											</li>
+
+											<li>
+												Schema Refinement and Normal Forms (<a href="ecs165a-winter2020/lectures/chapter15.pdf" target="_blank">DB.Chapter 19</a>)
+											</li>
+										</ul>
+
+
+										<li>
+											Query Evaluation (tentative)
+										</li>
+
+											<ul>
+
+											<li>
+												External Sorting (<a href="ecs165a-winter2020/lectures/chapter11.pdf" target="_blank">DB.Chapter 11</a>)
+											</li>
+
+											<li>
+												Evaluation of Relational Operators (<a href="ecs165a-winter2020/lectures/chapter12a.pdf" target="_blank">DB.Chapter 12a [Join]</a>, <a href="ecs165a-winter2020/lectures/chapter12b.pdf" target="_blank">DB.Chapter 12b [Selection, Projection, etc.]</a>)
+											</li>
+
+											<li>
+												Relational Query Optimization (<a href="ecs165a-winter2020/lectures/chapter14.pdf" target="_blank">DB.Chapters 13 &amp; 14</a>)
+											</li>
+											<li>
+												Optional Advanced Topics: Materialized Views (<a href="http://dl.acm.org/citation.cfm?id=767151" target="_blank">Survey Paper</a>, <a href="http://www.slideserve.com/giza/answering-queries-using-views-a-survey" target="_blank">Slides</a>)
+											</li>
+
+											</ul>
+
+
+									<li>
+										Secure Transactions &amp; Blockchain (tentative)
+									</li>
+									<ul>
+
+										<li>
+											Optional Advanced Topics: Blockchain Transaction Processing.
+ 										  [Encyclopedia: <a href="https://www.researchgate.net/publication/325116198_Blockchain_Transaction_Processing" target="_blank">Preprint</a>]
+									   </li>
+
+										 <li>
+										 	Optional Advanced Topics: <a href="https://resilientdb.com/" target="_blank">ResilientDB</a>:
+										<a href="https://resilientdb.com/" target="_blank">Website</a>,
+										<a href="http://www.vldb.org/pvldb/vol13/p868-gupta.pdf" target="_blank">Architecture</a>
+										<a href="https://www.youtube.com/embed/whgGTSQttds" target="_blank">Journey</a>,
+										<a href="https://www.youtube.com/watch?v=frXpHYf_kSI" target="_blank">Vision</a>/<a href="papers/ResilientDB.pdf" target="_blank">Slides</a>,
+										<a href="https://www.youtube.com/watch?v=jSDv4IXqsAA" target="_blank">Bitcoin Radio</a>,
+										<a href="https://arxiv.org/abs/1911.09208" target="_blank">Lessons</a>
+										<a href="http://www.vldb.org/pvldb/vol13/p2893-rahnama.pdf" target="_blank">Demo</a>,
+										Tutorial Slides: [<a href="papers/Tutorial - Theory - VLDB 2020.pdf" target="_blank">Theory</a> | <a href="papers/Tutorial - System - VLDB 2020.pptx" target="_blank">System</a>, <a href="https://youtu.be/Jj6hVs1SF3E" target="_blank">Video</a>],
+										<a href="https://github.com/resilientdb/resilientdb" target="_blank">Code</a>,
+										<a href="https://youtu.be/cBn142Uz_J0" target="_blank">Hands-on</a>,
+										<a href="https://github.com/resilientdb/resilientdb/wiki" target="_blank">Wiki</a>,
+										<a href="https://resilientdb.com/blog/" target="_blank">Blog</a>.
+										</li>
+
+										<li>
+											Optional Advanced Topics: Blockchain Landscape and AI Renaissance: The Bright Path Forward.
+										 [Tutorial: <a href="papers/bc-part-1.pdf" target="_blank">Part 1</a>, <a href="papers/bc-part-2.pdf" target="_blank">Part 2</a>]
+										</li>
+
+
+									</ul>
+
+									</ol>
+									</p>
+
+								</div>
+							</section>
+
+
+							<!-- Thrid Section -->
+								<section id="sch" class="main special">
+									<header class="major">
+										<br>
+										<h2>Tentative Schedule</h2>
+										[Previous Lecture Recordings: <a href="https://expolab.org/ecs165a-winter2020.html" target="_blank">Winter 2020</a>,
+																				  <a href="https://expolab.org/ecs165a-winter2021.html" target="_blank">Winter 2021</a>]
+									</header>
+										<div align="left" style="font-style: normal">
+
+
+											<b style="font-weight: bold">January 10, 2023:</b>
+											<ul>
+												<li>Overview</li>
+											</ul>
+
+											<b style="font-weight: bold">January 12, 2023:</b> [<a href="https://youtu.be/dA8Vv8OjFWY" target="_blank">Lecture Recording:</a>]
+											<ul>
+												<li>Introduction to Relational Databases (DB.Chapter 1)</li>
+											</ul>
+
+											<b style="font-weight: bold">January 17, 2023:</b> [<a href="https://youtu.be/2NrCJEOGzNY" target="_blank">Lecture Recording:</a>]
+											<ul>
+												<li>The Relational Model (DB.Chapter 3)</li>
+											</ul>
+
+											<b style="font-weight: bold">January 19, 2023:</b> [<a href="https://youtu.be/7tGjqAiHdfk" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>Indexing in Modern Databases</li>
+											</ul>
+
+											<b style="font-weight: bold">January 24, 2023:</b> [<a href="https://youtu.be/qMY00SlVQAQ" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>Storage and Indexing (DB.Chapter 8)</li>
+												<i>(Individual Pre-milestone Assignment is due on January 24)</i>
+											</ul>
+
+											<b style="font-weight: bold">January 26, 2023:</b> [<a href="https://youtu.be/yzxD7QglyTE" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>Storing Data: Disks and Files (DB.Chapter 9)</li>
+											</ul>
+
+											<b style="font-weight: bold">February 2, 2023:</b> [<a href="https://youtu.be/UwwScAbnjE4" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>L-Store - Lineage-based Storage Architecture (TP.Chapters 3.1.3, 3.4, 5.2.1)</li>
+											</ul>
+
+											<b style="font-weight: bold">February 7, 2023:</b> [Lecture Recording: <a href="https://youtu.be/pOZxdGr07hM" target="_blank">Part 1</a>, <a href="https://youtu.be/IEqww81MRTE" target="_blank">Part 2</a>]
+											<ul>
+												<li>L-Store - Lineage-based Storage Architecture - Continued (TP.Chapters 3.1.3, 3.4, 5.2.1)</li>
+											</ul>
+
+											<b style="font-weight: bold">February 14, 2023:</b> [<a href="https://youtu.be/4-qF7D62OMk" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>Transaction Management Overview (TP.Chapter 2 &amp; DB.Chapter 16)</li>
+												<i>(Milestone 1 is due)</i>
+											</ul>
+
+											<b style="font-weight: bold">February 16, 2023:</b> [<a href="https://youtu.be/4-qF7D62OMk" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>Transaction Management Overview - Continued (TP.Chapter 2 &amp; DB.Chapter 16)</li>
+											</ul>
+
+											<b style="font-weight: bold">February 21, 2023:</b> [Lecture Recordings: <a href="https://youtu.be/zcQVmd0HrKs" target="_blank">Part 1</a>, <a href="https://youtu.be/wF5cP_cPoto" target="_blank">Part 2</a>]
+											<ul>
+												<li>Overview of Concurrency in L-Store: 2VCC - Two-version Concurrency Control (TP.Chapters 3.1.3) </li>
+											</ul>
+
+											<b style="font-weight: bold">February 23, 2023:</b>
+											<ul>
+												<i>In-class Midterm</i>
+											</ul>
+
+											<b style="font-weight: bold">February 28, 2023:</b> [<a href="https://youtu.be/qff3RBINcq4" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>L-Store Concurrency Controls: QueCC - A Queue-oriented, Control-free Concurrency Architecture (TP.Chapters 5.1.6)</li>
+												<i>(Milestone 2 is due)</i>
+											</ul>
+
+											<b style="font-weight: bold">March 2, 2023:</b> [<a href="https://youtu.be/_AH8A9mRb7w" target="_blank">Lecture Recording: CC.Part 1</a>]
+											<ul>
+												<li>Concurrency Control: Theory & Multi-granularity Locking (DB.Chapter 17 &amp; TP.Chapters 3-5)</li>
+											</ul>
+
+											<b style="font-weight: bold">March 7, 2023:</b> [<a href="https://youtu.be/A1vWYvYhbqU" target="_blank">Lecture Recording: CC.Part 2</a>]
+											<ul>
+												<li>Concurrency Control: Optimistic and Timestamp (DB.Chapter 17 &amp; TP.Chapters 3-5)</li>
+											</ul>
+
+											<b style="font-weight: bold">March 9, 2023:</b> [<a href="https://youtu.be/DBfvmDmlhM4" target="_blank">Lecture Recording: CC.Part 3</a>]
+											<ul>
+													<li>Concurrency Control: Multi-version CC (DB.Chapter 17 &amp; TP.Chapters 3-5)</li>
+											</ul>
+
+											<b style="font-weight: bold">March 14, 2023:</b> [Lecture Recording: <a href="https://youtu.be/bnOwf43Duzw" target="_blank">Part 1</a>, <a href="https://youtu.be/TZU1kwq_Yj4" target="_blank">Part 2</a>]
+											<ul>
+												<li>Relational Algebra Query Language (DB.Chapter 4) </li>
+												<i>(Milestone 3 is due)</i>
+											</ul>
+
+											<b style="font-weight: bold">March 16, 2023:</b> [<a href="https://youtu.be/WvdLFcp4Lno" target="_blank">Lecture Recording</a>]
+											<ul>
+												<li>SQL: Queries, Programming, and Triggers (DB.Chapter 5) </li>
+											</ul>
+
+										</div>
+									</section>
+
+						<!-- Thrid Section -->
+							<section id="forth" class="main special">
+								<header class="major">
+									<br>
+									<h2>Announcements</h2>
+								</header>
+									<div align="left" style="font-style: normal">
+										<!--
+										<b style="font-weight: bold">March 11, 2022:</b> <a href="ecs165a-winter2022/milestones/PostMilestone.pdf" target="_blank">Take-home Final Exam</a> is out. It is due on Wednesday, March 16 through Canvas. No late submission are accepted. <br>  <br>
+										<b style="font-weight: bold">February 22, 2022:</b> <a href="ecs165a-winter2022/milestones/Milestone3.pdf" target="_blank">Milestone #3</a> is out. It is due on Tuesday, March 8 through Canvas. For this milestone, there will be NO late penalty, but after two late days, the assignment will not be accepted. <br>  <br>
+										<b style="font-weight: bold">February 8, 2022:</b> <a href="ecs165a-winter2022/milestones/Milestone2.pdf" target="_blank">Milestone #2</a> is out. It is due on Tuesday, February 22 through Canvas. There will be a 10% penalty for each late day. After two late days, the assignment will not be accepted. <br>  <br>
+										<b style="font-weight: bold">January 18, 2022:</b> <a href="ecs165a-winter2022/milestones/Milestone1.pdf" target="_blank">Milestone #1</a> is out. It is due on Tuesday, February 8 through Canvas. There will be a 10% penalty for each late day. After two late days, the assignment will not be accepted. <br>  <br>
+
+										-->
+										<b style="font-weight: bold">January 1, 2023:</b> <a href="ecs165a-winter2023/milestones/PreMilestone.pdf" target="_blank">Pre-milestone Homework</a> is out. It is due on Tuesday, January 24 through Canvas. There will be a 10% penalty for each late day. After two late days, the assignment will not be accepted. <br> <br>
+										<b style="font-weight: bold">January 1, 2023:</b> Welcome to ECS 165A. Kindly note that the lecture starts on January 10, and the discussion starts on the week of January 16. Looking forward to an amazing quarter.
+									</div>
+								</section>
+
+<!--
+							<section id="presentations" class="main special" style="text-align: left;">
+								<header class="major" style="text-align: center;">
+									<br>
+									<h2>Top Presentations</h2>
+								</header>
+								<h2 style="text-align: center; font-weight: bolder;">First Milestone</h2>
+								<div>
+									<ul>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Froyo Team</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Heming Ma, Brian Lai, Roy Yi, Ruyi Yang, Yongxin Xu
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M1/1.pdf">[Slides]</a>
+											</b>
+										</li>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">The B Team</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Natheenthorn Teachaurangchit, Michael Shaw, Stuart Feng, Henry Chou, Eric Wang
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M1/2.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 16</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Yingchen Gu, Glenn Chen Rishika Roy, Kaleb Crans, Ryan Kim
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M1/3.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 20</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Alana Rufer, Eseosa Omorogieva, Nina Gopal, Riddhi Barbhaiya, Kushaal Rao
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M1/4.pdf">[Slides]</a>
+											</b>
+										</li>
+
+									</ul>
+								</div>
+
+								<h2 style="text-align: center; font-weight: bolder;">Second Milestone</h2>
+								<div>
+									<ul>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 22</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Michael Pitts, Jericho Mata, Ethan Yu, Ryan Cen and Yuyi Li
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M2/1.pdf">[Slides]</a>
+											</b>
+										</li>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 20</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Alana Rufer, Eseosa Omorogieva, Nina Gopal, Riddhi Barbhaiya, Kushaal Rao
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M2/2.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">The B Team</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Natheenthorn Teachaurangchit, Michael Shaw, Stuart Feng, Henry Chou, Eric Wang
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M2/3.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 16</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Yingchen Gu, Glenn Chen Rishika Roy, Kaleb Crans, Ryan Kim
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M2/4.pdf">[Slides]</a>
+											</b>
+										</li>
+
+									</ul>
+								</div>
+
+								<h2 style="text-align: center; font-weight: bolder;">Third Milestone</h2>
+								<div>
+									<ul>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 19</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Patrick Chan, Sonya Gomez Enriquez, Kevin Guan, Jai Malegaonkar, Donna Moon
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M3/1.pptx">[Slides]</a>
+											</b>
+										</li>
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 20</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Alana Rufer, Eseosa Omorogieva, Nina Gopal, Riddhi Barbhaiya, Kushaal Rao
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M3/2.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">The B Team</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Natheenthorn Teachaurangchit, Michael Shaw, Stuart Feng, Henry Chou, Eric Wang
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M3/3.pdf">[Slides]</a>
+											</b>
+										</li>
+
+										<li style="margin-bottom: 20px;">
+											<b style="font-size: larger;">Team 16</b><br>
+											<b style="margin-left: 5%;">Presenters:</b> Yingchen Gu, Glenn Chen Rishika Roy, Kaleb Crans, Ryan Kim
+											<b style="font-weight: bold">
+												<a href="/ecs165a-winter2022/top_presentations/M3/4.pdf">[Slides]</a>
+											</b>
+										</li>
+
+									</ul>
+								</div>
+							</section>
+-->
+							<section id="grades" class="main special">
+								<header class="major">
+									<br>
+									<h2>Grades</h2>
+								</header>
+								<p align="left" style="font-style: normal">Grades will be made available on your <b style="font-weight: bold"><a href="https://canvas.ucdavis.edu/" target="_blank">Canvas</a></b> account.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2>About Instructor</h2>
+						<p>
+						<b style="font-weight: bold"><a href="https://faculty.engineering.ucdavis.edu/sadoghi/" target="_blank">Mohammad Sadoghi, PhD</a></b><br>
+						Associate Professor <br>
+						<a href="https://www.ucdavis.edu/" target="_blank">Department of Computer Science</a><br>
+						<a href="https://www.ucdavis.edu/" target="_blank">University of California, Davis</a>
+						<ul class="icons">
+							<li><a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" style="text-decoration:none"><img src="images/dblp-logo.png" style="width: 120px"/></a></li>
+							<li><a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" style="text-decoration: none;"><img src="images/google-scholar-logo.png" style="width: 120px"/></a></li>
+							<li><a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" style="text-decoration: none;"><img src="images/researchgate-logo-small.png" style="width: 45px"/></a></li>
+						</ul>
+					 </p>
+
+					 <!--
+						<ul class="actions">
+							<li><a href="generic.html" class="button">Learn More</a></li>
+						</ul>
+					-->
+
+					</section>
+					<section>
+						<h2>Contact Information</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>Kemper Hall &bull; One Shields Avenue &bull; Davis &bull; 95616</dd>
+							<dt>Office</dt>
+							<dd>Kemper 3055</dd>
+							<dt>ExpoLab</dt> <dd>Academic Surge 2392</dd>
+							<dt>Email</dt>
+							<dd><a href="#">msadoghi@ucdavis.edu</a></dd>
+							<br>
+							<ul class="icons">
+							<li><span align="center" class="logo"><a href="https://www.ucdavis.edu/" target="_blank"><img src="images/ucdavis-logo-text.png" alt="" style="width: 180px"/></a></span></li>
+							</ul>
+						</dl>
+					</section>
+					<p class="copyright"><span align="center" class="logo"><a href="https://msadoghi.github.io/" target="_blank"><img src="images/logo-v16.png" alt="" style="width: 180px"/></a></span>  <br><br>
+					&copy; 2016-2021 <b style="font-weight: bold">Mohammad Sadoghi</b> - <a href="https://html5up.net">HTML5 UP</a>. <br><br>
+					</p>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
