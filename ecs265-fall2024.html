@@ -1,0 +1,1069 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+<head>
+    <title>Mohammad Sadoghi - ECS 265: Distributed Database Systems</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/expolab-icon-only.png"/>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <style>
+        button.accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 2px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd;
+        }
+
+        button.accordion:after {
+            content: '\02795';
+            font-size: 14px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        button.accordion.active:after {
+            content: "\2796";
+        }
+
+        div.panel {
+            padding: 20px 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.6s ease-in-out;
+            opacity: 0;
+        }
+
+        div.panel.show {
+            opacity: 1;
+            max-height: 5000px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <span class="logo"><a href="https://msadoghi.github.io/" target="_blank"><img src="images/expolab-icon.png" alt="" style="width: 350px"/></a></span>
+        <h1>ECS 265: Distributed Database Systems</h1>
+        <p><b style="font-weight: bold">Fall 2024</b><br>
+        [Previous Offerings:
+        <a href="https://expolab.org/ecs265-winter2017.html" target="_blank">Winter 2018</a>,
+        <a href="https://expolab.org/ecs265-fall2018.html" target="_blank">Fall 2018</a>,
+        <a href="https://expolab.org/ecs265-fall2019.html" target="_blank">Fall 2019</a>,
+        <a href="https://expolab.org/ecs265-fall2020.html" target="_blank">Fall 2020</a>,
+        <a href="https://expolab.org/ecs265-fall2021.html" target="_blank">Fall 2021</a>,
+        <a href="https://expolab.org/ecs265-fall2022.html" target="_blank">Fall 2022</a>,
+        <a href="https://expolab.org/ecs265-fall2023.html" target="_blank">Fall 2023</a>]</p>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="#intro" class="active">Info</a></li>
+            <li><a href="#first">Course Overview</a></li>
+            <li><a href="#second">Syllabus</a></li>
+            <li><a href="#third">Contents</a></li>
+            <li><a href="#sch">Schedule</a></li>
+            <li><a href="#projects">Top Projects</a></li>
+            <li><a href="#grades">Grades</a></li>
+            <!--  <li><a href="#forth">Announcements</a></li>-->
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Introduction -->
+        <section id="intro" class="main">
+            <div class="spotlight">
+                <div class="content">
+                    <header class="major">
+                        <h2>ECS 265: Distributed Database Systems</h2>
+                    </header>
+
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <tbody>
+                            <tr>
+                                <td align="left">
+                                    <p>
+                                        <b style="font-weight: bold">Instructor: </b><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a><br>
+                                        <b style="font-weight: bold">E-mail:</b> msadoghi@ucdavis.edu<br>
+                                        <b style="font-weight: bold">Office:</b> Kemper Hall 3055<br>
+                                        <b style="font-weight: bold">Office Hours (Zoom):</b> Fridays 3:00pm - 5:00pm (by appointments)
+                                    </p>
+                                </td>
+
+                                <td align="left">
+                                    <p>
+                                        <b style="font-weight: bold">Teaching Fellow:</b> <a href="https://dakaikang.github.io" target="_blank">Dakai Kang</a><br>
+                                        <b style="font-weight: bold">Email:</b> dakang@ucdavis.edu <br>
+                                        <!-- <b style="font-weight: bold">Office:</b> (TBA)<br> -->
+                                        <b style="font-weight: bold">Office Hours:</b> Fridays 10:00am - 12:00pm<br>
+                                        <b style="font-weight: bold">Location:</b> Academic Surge 2392
+                                    </p>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="left">
+                                    <p>
+                                        <b style="font-weight: bold">Lecture Time:</b> MonWedFri 1:10pm - 2:00pm <br>
+                                        <b style="font-weight: bold">Location:</b> Art 204
+                                    </p>
+
+                                    <p>
+                                        <b style="font-weight: bold">Discussion (Final Project Progress Meeting):</b> Fri 2:10pm - 3:00pm <br>
+                                        <b style="font-weight: bold">Location:</b> Wellman Hall 212 <br>
+                                        <b style="font-weight: bold">Note:</b> At least one team member must attend the progress meeting every week. <br>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Section -->
+
+        <section id="first" class="main special">
+            <header class="major">
+                <br>
+                <h2>Overview</h2>
+            </header>
+
+            <div class="row">
+                <div align="left">
+                    <!--<h3>2016</h3> -->
+
+                    <p>This graduate seminar course surveys the recent developments in data management
+                        with the primary focus centered around Blockchain covering topics such as storage architecture,
+                        concurrency controls, agreement protocols, byzantine fault-tolerant protocols, secure
+                        transactions,	distributed ledgers, decentralized and resilient infrastructures,
+                        and trusted execution.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Second Section -->
+        <section id="second" class="main special">
+            <header class="major">
+                <br>
+                <h2>Syllabus</h2>
+            </header>
+
+            <div align="left">
+                <!--<h3>2016</h3> -->
+                <p>
+                <h3 align="left"><b style="font-weight: bold">Textbooks:</b></h3>
+                <b style="font-weight: bold">Required</b>: <i>(majority are freely available when accessed from UCD network)</i>
+                <ul>
+                  <li><a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank"><b style="font-weight: bold">Consensus in Data Management: From Distributed Commit to Blockchain.</a> [<a href="images/Sadoghi_CBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank">eBook/Print</a>]</b></br>
+                    F. Nawab and <i>Mohammad Sadoghi</i>.
+                    <i><a href="https://www.nowpublishers.com/DBS" target="_blank">Foundations and Trends® in Databases</a></i>. 2023. <br>
+                    <i><b style="font-weight: bold">Book Slides:</b> <a href="https://nawab.me/main/consensus-in-data-management-book/" target="_blank">here</a>.</i>
+                  </li>
+
+                  <li><a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank"><b style="font-weight: bold">Fault-tolerant Distributed Transactions on Blockchain. </a>[<a href="images/Sadoghi_BBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank">eBook/Print</a>]</b></br>
+                    S. Gupta, J. Hellings, and <i>Mohammad Sadoghi</i>.
+                    <i><a href="https://www.springer.com/series/16903" target="_blank">Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2021. <br>
+                    <i><b style="font-weight: bold">Book Slides:</b> <a href="papers/BB-chapter1.pdf" target="_blank">Chapter 1</a>, <a href="papers/BB-chapter2.pdf" target="_blank">Chapter 2</a>, <a href="papers/BB-chapter3.pdf" target="_blank">Chapter 3</a>, <a href="papers/BB-chapter4.pdf" target="_blank">Chapter 4</a></i>
+                  </li>
+
+                  <li><a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank"><b style="font-weight: bold">Transaction Processing on Modern Hardware.</a> [<a href="images/Sadoghi_TBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank">eBook/Print</a>]</b></br>
+                  <i>Mohammad Sadoghi</i>, S. Blanas.
+                  <i><a href="https://www.springer.com/series/16903" target="_blank">Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2019.
+                  </li>
+
+                  <li align="left">
+                    <i><a href="https://www.springer.com/gp/book/9783030262525" target="_blank">Principles of Distributed Database Systems</a></i>. 4th Edition.
+                    Tamer Oszu and Patrick Valduriez. <i>Prentice Hall. 2020.</i>
+                  </li>
+                  <li align="left">
+                      <a href="handouts/beautiful-presentation.pdf" target="_blank">Creating beautiful presentations</a>. Ryan Johnson. University of Toronto.
+                  </li>
+                  <li align="left">
+                      Required readings will be based on a selection of research papers listed <a href="#third">here</a>.
+                  </li>
+                </ul>
+
+                <b style="font-weight: bold">ResilientDB Resources:</b>
+                <ul>
+                <li>Research Paper - ResilientDB: Global Scale Resilient Blockchain Fabric.
+                    S. Gupta, S. Rahnama, J. Hellings, M. Sadoghi. <i>PVLDB 2020</i>.
+                    [<a href="http://www.vldb.org/pvldb/vol13/p868-gupta.pdf" target="_blank">Paper</a>, <a href="papers/GeoBFT-VLDB20.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/FL1KXEvR-84" target="_blank">Video</a>]
+                </li>
+
+                <li>Research Paper - RingBFT: Resilient Consensus over Sharded Ring Topology.
+                    S. Rahnama, S. Gupta, R. Sogani, D. Krishnan, M. Sadoghi. <i>EDBT 2022</i>.
+                    [<a href="https://openproceedings.org/2022/conf/edbt/paper-73.pdf" target="_blank">Paper</a>]
+                </li>
+
+                <li>Demo Paper - Scalable, Resilient and Configurable Permissioned Blockchain Fabric.
+                    S. Rahnama, S. Gupta, T. Qadah, J. Hellings, M. Sadoghi. <i>PVLDB 2020</i>.
+                    [<a href="http://www.vldb.org/pvldb/vol13/p2893-rahnama.pdf" target="_blank">Paper</a>, <a href="papers/ResilientDB-Demo-VLDB2020.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/By4Ga1Lemm4" target="_blank">Video</a>]
+                </li>
+
+                <li>Tutorial - Building High Throughput Permissioned Blockchain Fabrics: Challenges and Opportunities.
+                    S. Gupta, S. Rahnama, J. Hellings, <i>Mohammad Sadoghi</i>. <i>PVLDB 2020</i>.
+                    [<a href="http://www.vldb.org/pvldb/vol13/p3441-gupta.pdf" target="_blank">Paper</a>, Slides: <a href="papers/Tutorial - Theory - VLDB 2020.pdf" target="_blank">Theory</a> | <a href="papers/Tutorial - System - VLDB 2020.pptx" target="_blank">System</a>, <a href="https://youtu.be/Jj6hVs1SF3E" target="_blank">Video</a>]
+                </li>
+
+                <li>Architecture - Permissioned Blockchain Through the Looking Glass: Architectural and Implementation Lessons Learned.
+                    S. Gupta, S. Rahnama, <i>Mohammad Sadoghi</i>. <i>ICDCS 2020</i>.
+                    [<a href="https://arxiv.org/abs/1911.09208" target="_blank">Preprint</a>, <a href="papers/EvalPaper-FAB20.pdf" target="_blank">Slides</a>, <a href="https://youtu.be/lvftXtpxEEc" target="_blank">Video</a>]
+                </li>
+
+                <li>Others -
+                  <a href="https://resilientdb.com/" target="_blank">ResilientDB Fabric Website</a>,
+                  <a href="https://www.youtube.com/embed/whgGTSQttds" target="_blank">Journey</a>,
+                  <a href="https://www.youtube.com/watch?v=frXpHYf_kSI" target="_blank">Vision</a>/<a href="papers/ResilientDB.pdf" target="_blank">Slides</a>,
+                  <a href="https://www.discoveringacademia.com/episodes/mohammad-sadoghi" target="_blank">Podcast</a>,
+                  <a href="https://www.youtube.com/watch?v=jSDv4IXqsAA" target="_blank">Bitcoin Radio</a>,
+                  <a href="https://github.com/resilientdb/resilientdb" target="_blank">Code</a>,
+                  <a href="https://blog.resilientdb.com/" target="_blank">Blog</a>.
+                </i>
+                </li>
+
+                </ul>
+
+                <span align="center">
+                  <div align=center><a href="https://resilientdb.com/" target="_blank"><img align="center" src="images/resilientdb_logo_light-text-modern.svg"  style="width: 220px"/></a><br>
+                    <a class="github-button" href="https://github.com/resilientdb/resilientdb/fork" data-color-scheme="no-preference: light; light: dark_high_contrast; dark: light;" data-show-count="true" aria-label="Fork resilientdb/resilientdb on GitHub">Fork</a>
+                    <a class="github-button" href="https://github.com/resilientdb/resilientdb" data-color-scheme="no-preference: light; light: dark_high_contrast; dark: light;" data-show-count="true" aria-label="Star resilientdb/resilientdb on GitHub">Star</a>
+                  </div>
+                  </span><br>
+
+
+                <b style="font-weight: bold">Optional:</b>
+                <ul>
+                  <li align="left">
+  									<i><a href="http://www.redbook.io/" target="_blank">Readings in Database Systems</a></i>. 5th Edition. Joseph M. Hellerstein, Michael Stonebraker. 2015
+  								</li>
+
+  								<li align="left">
+  									<i>The Elements of Style</i>. 4th Edition. William Strunk Jr. and E. B. White. 1999
+  								</li>
+
+  								<li align="left">
+  									<i>Style: Toward Clarity and Grace</i>. Joseph M. Williams. 1995
+  								</li>
+                  </ul>
+
+                </p>
+
+                <p>
+                <h3 align="left"><b style="font-weight: bold" id="project">Project Description:</b></h3>
+                The most important component of the course is a quarter-long creative project on
+                topics broadly related to distributed transactions, consensus protocols, and distributed
+                ledgers (blockchain fabrics).
+                The project must be done in groups of five students, and the role and contributions of each
+                group member must be clearly articulated. The outcome of the final project will consist of the following.
+                (1) Designing novel consensus protocols; benchmarking and studying existing consensus
+                protocols; developing novel techniques or architectures to improve the performance
+                of a blockchain fabric (e.g., sharding, cross-chain, hybrid protocols);
+                or developing novel applications for blockchain (e.g., DeFi applications).
+                (2) Writing a grant proposal for startup seed funding or a short research paper with the
+                ultimate goal of submitting to a top-tier conference, of course, submission is optional
+                and does not affect your final grade. All project reports must be written in LaTex using
+                <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM templates</a>
+                or in a form of detailed and accessible blog or professional website
+                (e.g., <a href="https://resilientdb.com/blog/2021/08/21/PBFT_Commit.html" target="_blank">Blog</a>,
+                         <a href="https://expolab.org/ecs189f-fall-2020/Projects/CryptoLunch/index.html" target="_blank">CryptoLunch</a>,
+                         <a href="https://expolab.org/ecs189f-fall-2020/Projects/ResilientRecords/index.html" target="_blank">Resilient Record</a>).
+                <i> All projects must be approved and supervised by the instructor and all projects must
+                utilize <a href="https://resilientdb.com/" target="_blank">ResilientDB Fabric</a>
+                unless prior approval of the instructor is granted.
+                </i>
+                <p>
+
+                <h4>Grant Proposal Track</h4>
+                Whether you choose the grant proposal or research paper route, there needs to be a proof-of-concept
+                prototype of your ideas in order to demonstrate <i>feasibility</i> or <i>effectiveness</i>. For the
+                <a href="https://www.nsf.gov/pubs/2021/nsf21562/nsf21562.htm" target="_blank">grant proposal</a> track,
+                we will adopt the well-known
+                <a href="https://seedfund.nsf.gov/" target="_blank">Small Business Innovation Research (SBIR)</a>
+                program that fosters commercialization of research ideas by small businesses. SBIR project
+                description template can be found
+                <a href="https://www.nsf.gov/pubs/2021/nsf21562/nsf21562.htm#ProjectDesc" target="_blank">here</a>.
+                </p>
+
+                <p>
+                <h4>Research Track</h4>
+                For the research track, we adopt standard conference-style paper such as
+                (<a href="http://vldb.org/pvldb/contributions_vol14.html" target="_blank">PVLDB</a> or
+                <a href="https://2021.sigmod.org/calls_papers_sigmod_research.shtml" target="_blank">SIGMOD</a>).
+                An example of a well-written blockchain research paper would be
+                <a href="http://www.vldb.org/pvldb/vol13/p868-gupta.pdf" target="_blank">ResilientDB</a>, and
+                many more examples can be found in our <a href="https://expolab.org/ecs265-fall2020.html" target="_blank">ECS265</a> course.
+              </p>
+
+
+                <h5>Research Paper</h5>
+                A research paper (and/or presentation slides) would consist of the following key components
+
+                <ol>
+
+                <li>Motivation (why this problem is important and interesting)</li>
+
+                <li>Gap (what are the challenges and what are the shortcomings of the most relevant work)</li>
+
+                <li>Problem statement</li>
+
+                <li>Key intuitions behind your proposed approach and sketch of the solution in a top-down approach</li>
+
+                <li>Key benefits of your proposed approach</li>
+
+                <li>Overall architecture/design of your solution</li>
+
+                <li>Details of your solution</li>
+
+                <li>Analytical correctness and complexity results</li>
+
+                <li>Implementation Details</li>
+
+                <li>Evaluation methodology and plans (competing algorithms, datasets, platforms, etc.)</li>
+
+                <li>Empirical results (e.g., latency, throughput, precision, recall, f-measure, etc.)</li>
+
+                <li>List of contributions and their importance (both scientific and technical contributions)</li>
+
+                <li>Conclusions</li>
+
+                <li>Future Directions/Next Steps</li>
+              </ol>
+
+                <h5>Benchmarking Paper</h5>
+                A benchmarking paper (and/or presentation slides) would consist of the following key components
+
+                <ol>
+
+                <li>Motivation (why this problem is important and interesting)</li>
+
+                <li>Gap (what are the challenges and what are the shortcomings of the most relevant benchmarking work)</li>
+
+                <li>Problem statement</li>
+
+                <li>A brief survey/discussion of relevant approaches/systems</li>
+
+                <li>Justification for choosing these approaches/systems</li>
+
+                <li>Evaluation Methodology: <br>
+                  machines/cluster requirements &amp; setup,
+                  single-node and multi-nodes configurations
+                  in-memory vs. disk-based approaches,
+                  selected systems/engines,
+                  data workloads (synthetic data and/or real data),
+                  query workloads,
+                  types of experiments.
+                </li>
+
+                <li>List of your contributions and their importance (both scientific and technical contributions)</li>
+
+                <li>Conclusions</li>
+
+                <li>Future Directions/Next Steps</li>
+                </ol>
+
+                <h3 align="left"><b style="font-weight: bold">Weekly Progress Meetings:</b></h3>
+                <p>
+                It is important that tangible progress is made every week. Progress
+                must be captured in slides and can be any of the following categories.
+                To make healthy progress, we need to satisfy one or more of the categories
+                below each week. Of course, there could be an exception if you have several
+                tests/exams, etc. in one week. But generally, it is important to have a
+                consistent and healthy momentum.
+
+                To make steady progress, at least one of the categories below must
+                be fulfilled each week.
+                <ul>
+                  <li>Proposing a new well-thought idea (captured clearly on the slide),</li>
+                  <li>Solidifying an existing idea or algorithm (captured clearly on the slide),</li>
+                  <li>Providing correctness or time/space complexity proofs of the proposed algorithms/protocols,</li>
+                  <li>Formulating a set of new challenges with partial solutions (also captured clearly on the slides),</li>
+                  <li>Developing a module of the ongoing research prototype,</li>
+                  <li>Reporting detailed implementation progress,</li>
+                  <li>Evaluating and presenting a set of experimental results, and/or</li>
+                  <li>Completing the write-up for several sections of a research paper</li>
+                </ul>
+
+                <h3 align="left"><b style="font-weight: bold">Weekly Presentation:</b></h3>
+
+                Each student is expected to present 1 (or 2 depending on the number of students taking
+                the course) papers throughout the semester. All presentations are done in groups, so up
+                to 4 students need to coordinate, study, and present the paper together. Students
+                must also submit their presentation slides to be posted on the website.
+                Students must coordinate with the TA in advance for the paper they wish to present
+                (we will adopt the first-come, first-served when assigning papers). All paper selection
+                must be sent to the TA before October 2, if no selection is received by the due date,
+                a random assignment will be adopted by the TA.
+                We will start the student presentation starting October 7, 2024. Each week, we will have two
+                presentations, one on Monday and one on Wednesday. We dedicate the Friday of each week to
+                have an even deeper discussion on the papers presented during the week. The two groups of
+                presenters will lead the Friday discussion, so it is expected that all of them coordinate and
+                prepare before the Friday meeting. Please note that the two papers selected for each week are
+                highly related to ensure a coherent and exciting discussion.
+
+                <br><br>
+
+                Furthermore, everyone is expected to attend all lectures, namely, participating and attending
+                when your peers (other students in the class) are presenting their papers. So half of the presentation
+                grade will be reserved for giving a high-quality presentation and the other half would be dedicated
+                to class participation, i.e., attending every lecture and asking insightful questions!
+
+                <br><br>
+
+                Additionally, every week, each student must choose one paper among the papers that are being
+                presented that week and write a conference-style review. A standard template for writing a review
+                consists of (1) explaining the paper in your own words in one or two paragraphs;
+                (2) three strong points; (3) three weak points; (4) detailed concise comments that
+                expand upon the weak points and beyond. When writing strong and weak points please avoid
+                general comments such as weak motivations or poor writings and be as specific as possible. In
+                your detailed comments, in the end, you could include such general comments.
+                <p>
+
+                <p id="section1">* With prior permission from the instructor, the projects can be
+                    done individually if there is sufficient justification.</p>
+
+
+                <h3 align="left"><b style="font-weight: bold">Team Dynamics:</b></h3>
+                <p>
+                For each group, it is recommended that each member lead one aspect of the project while
+                contributing and learning about other parts. It is further recommended a project manager
+                is elected within a group to coordinate all efforts and manage the group dynamics in addition
+                to making technical contributions to the project.
+                </p>
+
+                <p>
+                A fact of life, when there is group work, whether at school or in society, there are
+                occasional conflicts; and it is crucial to learn how to resolve our differences and be
+                receptive, open, and kind to one another. In kindness and reflection, we shall aim to
+                resolve all conflicts. It is the group's responsibility to handle all internal affairs,
+                and only when absolutely necessary involving the instructor. But note, only under very
+                rare exceptional circumstances, a group re-structuring would be granted because once the
+                group is formed, at least for 10 weeks, we must learn how to work with each other in harmony.
+                </p>
+
+                <h3 align="left"><b style="font-weight: bold">Communication</b></h3>
+                <p>
+                  For communication with the instructor, please use email <a href="mailto:msadoghi@ucdavis.edu">[msadoghi@ucdavis.edu]</a>
+                  and not Canvas. The instructor will not check/reply to Canvas messages. For group communication (monitored
+                  by TAs) and other students, we will utilize
+                  <a href="https://discord.gg/46PVJMwWjP" target="_blank">ResilientDB's Discord Channel</a>.
+                </p>
+                <br>
+
+                <h3 align="left"><b style="font-weight: bold">Grading/Timeline</b></h3>
+                The final grade will be based upon the following components:
+
+                <ul>
+                  <li><b style="font-weight: bold">Paper Reviews: </b> 10% (Due on Sundays)</li>
+                  <li><b style="font-weight: bold">Paper Presentations: </b> 10% (Selection due on October 2, 2024)</li>
+                  <li><b style="font-weight: bold">Pop Quizzes: </b> 10% </li>
+                <li>
+                    <b style="font-weight: bold">Project Proposal Report (2 pages): </b> &nbsp; 20% (Due on October 25, 2024) <br>
+                    [<a href="https://seedfund.nsf.gov/project-pitch/" target="_blank">Project Pitch Template</a>]
+                </li>
+
+                <li>
+                    <b style="font-weight: bold">Mid-term Progress Report (4 pages): </b>
+                    &nbsp; 20% (Due on November 15, 2024) <br>
+                    [Building upon project proposal, identifying key milestones/objectives broken down into activities
+                    and tasks, timelines, and associated risks, and what has been achieved so far...]
+                </li>
+
+                <li>
+                    <b style="font-weight: bold">Final Review Report (8 pages): </b>
+                    &nbsp; 30% (Due on December 6, 2024)  <br>
+                    [<a href="https://www.nsf.gov/pubs/2021/nsf21562/nsf21562.htm#ProjectDesc" target="_blank">SBIR Project Description Template</a>,
+                    <a href="http://www.vldb.org/pvldb/vol13/p868-gupta.pdf" target="_blank">Research Paper</a>] OR
+                    [<a href="https://resilientdb.com/blog/2021/08/21/PBFT_Commit.html" target="_blank">Blog</a>,
+                           Websites: <a href="https://expolab.org/ecs189f-fall-2020/Projects/CryptoLunch/index.html" target="_blank">CryptoLunch</a>,
+                           <a href="https://expolab.org/ecs189f-fall-2020/Projects/ResilientRecords/index.html" target="_blank">Resilient Record</a>]
+
+                </li>
+              </ul>
+
+                <p>
+                <h3 align="left"><b style="font-weight: bold">Course Policy:</b></h3>
+                In this class, we adopt the UC Davis Code of Academic Conduct available <a href="http://sja.ucdavis.edu/cac.html" target="_blank">here</a>.<br><br>
+                </p>
+
+            </div>
+        </section>
+
+
+        <section id="third" class="main special">
+            <header class="major">
+                <br>
+                <h2>Contents</h2>
+            </header>
+
+            <div align="left">
+                <!--<h3>2016</h3> -->
+                <p>
+                    Below you will find a comprehensive collection of papers related to the recent developments
+                    in the broad area of distributed transaction processing. For the purpose of this course.
+                    We will be discussing only a small subset of these papers. Students are encouraged to
+                    identify other relevant papers as well.
+                </p>
+
+                <button class="accordion"><b style="font-weight: bold"><font color="#2B547E">Distributed Transactions: Overview</font></b></button>
+                <div class="panel">
+                    <ul>
+                        <li>Eric Brewer. Towards robust distributed systems. PODC'00 </li>
+                        <li>Seth Gilbert and Nancy Lynch. Brewer’s conjecture and the feasibility of consistent, available, partition- tolerant web services. SIGACT News’02 </li>
+                        <li>Pat Helland. Life beyond distributed transactions: an apostate’s opinion. CIDR’07 </li>
+                        <li>Dan Pritchett. BASE: An Acid Alternative. Queue’08 </li>
+                        <li>Hiroshi Wada, Alan Fekete, Liang Zhao, Kevin Lee, and Anna Liu. Data consistency properties and the trade-offs in commercial cloud storage: the consumers’ perspective. CIDR’11 </li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Eric Brewer. CAP twelve years later. How the “rules” have changed. Computer’12 </font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">D. Abadi. Consistency tradeoffs in modern distributed database system design: CAP is only part of the story. Computer’12 </font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Peter Bailis and Ali Ghodsi. Eventual consistency today: Limitations, extensions, and beyond. ACM Queue’13 </font></b></li>
+                        <li>Jeffrey Dean and Luiz André Barroso. The tail at scale. Commun. ACM’13 </li>
+                        <li>Sean Hull. 20 obstacles to scalability. Commun. ACM’13 </li>
+                        <li>Peter Bailis and Kyle Kingsbury. The network is reliable: An informal survey of real-world communications failures. ACM Queue’14 </li>
+                        <li>Peter Bailis, Aaron Davidson, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Highly available transactions: Virtues and limitations. PVLDB’14 </li>
+                        <li>Divy Agrawal, Amr El Abbadi, and Kenneth Salem. A taxonomy of partitioned replicated cloud-based database systems. IEEE Data Eng. Bull.’15 </li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Jose M. Faleiro and Daniel J. Abadi. FIT: A distributed database performance tradeoff. IEEE Data Eng. Bull.’15 </font></b></li>
+                        <li>Rachid Guerraoui, Matej Pavlovic, Dragos-Adrian Seredinschi: Trade-offs in Replicated Systems. IEEE Data Eng. Bull.'16 </li>
+                        <li>M. K. Aguilera, D. B. Terry. The Many Faces of Consistency. IEEE Data Eng. Bull. 39(1): 3-13 (2016)</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. The challenges of global-scale data management. SIGMOD’16 </font></b></li>
+                        <li>Andrew Pavlo and Matthew Aslett. What’s really new with NewSQL? SIGMOD Rec’16 </li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Concurrency Control Protocols</button>
+                <div class="panel">
+                    <ul>
+                        <li>H. Berenson, P. A. Bernstein, J. Gray, J. Melton, E. J. O'Neil, P. E. O'Neil. A Critique of ANSI SQL Isolation Levels. SIGMOD'95</li>
+                        <li>Jim Gray. The transaction concept: Virtues and limitations. VLDB’81</li>
+                        <li>Per-Åke Larson, Spyros Blanas, Cristian Diaconu,Craig Freedman, Jignesh M.Patel, and MikeZwilling. High-performance concurrency control mechanisms for main-memory databases. PVLDB’11</li>
+                        <li>David B. Lomet, Alan Fekete, Rui Wang, and Peter Ward. Multi-version concurrency via timestamp range conflict management. ICDE’12</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Stephen Tu, Wenting Zheng, Eddie Kohler, Barbara Liskov, and Samuel Madden. Speedy transactions in multicore in-memory databases. SOSP ’13</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammad Sadoghi, Kenneth A. Ross, Mustafa Canim, and Bishwaranjan Bhattacharjee. Making updates disk-I/O friendly using SSDs. PVLDB’13 [<a href="https://www.researchgate.net/publication/262394013_Making_updates_disk-IO_friendly_using_SSDs" target="_blank">Paper</a>]</font></b></li>
+                        <li>Hyuck Han, Seongjae Park, Hyungsoo Jung, Alan Fekete, Uwe Röhm, and Heon Y. Yeom. Scalable serializable snapshot isolation for multicore systems. ICDE’14</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammad Sadoghi, Mustafa Canim, Bishwaranjan Bhattacharjee, Fabian Nagel, and Kenneth A. Ross. Reducing database locking contention through multi-version concurrency. PVLDB’14 [<a href="https://www.researchgate.net/publication/276465234_Reducing_database_locking_contention_through_multi-version_concurrencyP" target="_blank">Paper</a>]</font></b></li>
+                        <li>Jose Faleiro, Alexander Thomson, and Daniel J Abadi. Lazy evaluation of transactions in database systems. SIGMOD’14</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Xiangyao Yu, George Bezerra, Andrew Pavlo, Srinivas Devadas, Michael Stonebraker: Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores. PVLDB'14</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Jose M. Faleiro and Daniel J. Abadi. Rethinking serializable multiversion concurrency control. Proc. VLDB’15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Thomas Neumann, Tobias Mühlbauer, and Alfons Kemper. Fast serializable multi-version concurrency control for main-memory database systems. SIGMOD’15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">John Meehan, Nesime Tatbul, Stan Zdonik, Cansu Aslantas, Ugur Çetintemel, Jiang Du, Tim Kraska, Samuel Madden, David Maier, Andrew Pavlo, Michael Stonebraker, Kristin Tufte, Hao Wang: S-Store: Streaming Meets Transaction Processing. PVLDB'15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">H. Kimura. FOEDUS: OLTP engine for a thousand cores and NVRAM. SIGMOD'15.</font></b></li>
+                        <li>Yuan Yuan, Kaibo Wang, Rubao Lee, Xiaoning Ding, Jing Xing, Spyros Blanas, Xiaodong Zhang: BCC: Reducing False Aborts in Optimistic Concurrency Control with Low Cost for In-Memory Databases. PVLDB'16</li>
+                        <li>C. Yao, D. Agrawal, G. Chen, Q. Lin, B. C. Ooi, W. F. Wong, and M. Zhang. Exploiting single-threaded model in multi-core in-memory systems. TKDE’16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Xiangyao Yu, Andrew Pavlo, Daniel Sanchez, and Srinivas Devadas. TicToc: Time traveling optimistic concurrency control. SIGMOD’16</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Kangnyeon Kim, Tianzheng Wang, Ryan Johnson, and Ippokratis Pandis. ERMIA: fast memory-optimized database system for heterogeneous workloads. SIGMOD’16</font></b></li>
+                        <li>Kun Ren, Jose M. Faleiro, and Daniel J. Abadi. Design principles for scaling multi-core OLTP under high contention. SIGMOD’16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Tianzheng Wang, Hideaki Kimura: Mostly-Optimistic Concurrency Control for Highly Contended Dynamic Workloads on a Thousand Cores. PVLDB'17</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">T. Qadah, M. Sadoghi. QueCC: A Queue-oriented, Control-free Concurrency Architecture. Middleware 2018. [<a href="papers/quecc.pdf" target="_blank">Paper</a>]</font></b></li>
+                    </ul>
+                </div>
+
+                <button class="accordion"><b style="font-weight: bold"><font color="#2B547E">Distributed Transaction Protocols</font></b></button>
+                <div class="panel">
+                    <ul>
+                        <li>Leslie Lamport. Time, clocks, and the ordering of events in a distributed system. Commun. ACM’78</li>
+                        <li>A. Chan and R. Gray. Implementing distributed read-only transactions. TSE’85</li>
+                        <li>C. Mohan, Bruce G. Lindsay, Ron Obermarck: Transaction Management in the R* Distributed Database Management System. TODS'86</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Jim Gray and Leslie Lamport. Consensus on transaction commit. TODS’06</font></b></li>
+                        Philip A. Bernstein, Alan Fekete, Hongfei Guo, Raghu Ramakrishnan, and Pradeep Tamma. Relaxed-currency serializability for middle-tier caching and replication. SIGMOD’06</li>
+                        <li>Robert Kallman, Hideaki Kimura, Jonathan Natkins, Andrew Pavlo, Alex Rasin, Stanley B. Zdonik, Evan P. C. Jones, Samuel Madden, Michael Stonebraker, Yang Zhang, John Hugg, and Daniel J. Abadi. H-store: a high-performance, distributed main memory transaction processing system. PVLDB’08</li>
+                        <li>Evan P.C. Jones, Daniel J. Abadi, and Samuel Madden. Low overhead concurrency control for partitioned main memory databases. SIGMOD’10</li>
+                        <li>Sudipto Das, Divyakant Agrawal, and Amr El Abbadi. G-Store: a scalable data store for transactional multi key access in the cloud. SoCC’10</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Carlo Curino, Evan Jones, Yang Zhang, and Sam Madden. Schism: a workload-driven approach to database replication and partitioning. VLDB’10</font></b></li>
+                        <li>Philip A. Bernstein, Colin W. Reid, Ming Wu, and Xinhao Yuan. Optimistic concurrency control by melding trees. PVLDB’11</li>
+                        <li>Jason Baker, Chris Bond, James C. Corbett, J. J. Furman, Andrey Khorlin, James Larson, Jean-Michel Leon, Yawei Li, Alexander Lloyd, and Vadim Yushprakh. Megastore: Providing scalable, highly available storage for interactive services. CIDR 2011</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Alexander Thomson, Thaddeus Diamond, Shu-Chun Weng, Kun Ren, Philip Shao, and Daniel J. Abadi. Calvin: fast distributed transactions for partitioned database systems. SIGMOD’12</font></b></li>
+                        <li>Sudipto Das, Divyakant Agrawal, and Amr El Abbadi. ElasTraS: An elastic, scalable, and self- managing transactional database for the cloud. TODS’13</li>
+                        <li>Justin J. Levandoski, David B. Lomet, Mohamed F. Mokbel, and Kevin Zhao. Deuteronomy: Transaction support for cloud data. In CIDR 2011</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">James A. Cowling, Barbara Liskov: Granola: Low-Overhead Distributed Transaction Coordination. USENIX ATC'12</font></b></li>
+                        <li>Peter Alvaro, Neil Conway, Joseph M. Hellerstein, and David Maier. Blazes: Coordination analysis for distributed programs. ICDE’14</li>
+                        <li>Hatem A. Mahmoud, Vaibhav Arora, Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. MaaT: Effective and scalable coordination of distributed transactions in the cloud. PVLDB’14</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Sudip Roy, Lucja Kot, Gabriel Bender, Bailu Ding, Hossein Hojjat, Christoph Koch, Nate Foster, and Johannes Gehrke. The homeostasis protocol: Avoiding transaction coordination through program analysis. SIGMOD’15</font></b></li>
+                        <li>Akon Dey, Alan Fekete, and Uwe Röhm. Scalable distributed transactions across heterogeneous stores. ICDE’15</li>
+                        <li>Peter Bailis, Alan Fekete, Michael J. Franklin, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Feral concurrency control: An empirical investigation of modern application integrity. SIGMOD’15</li>
+                        <li>Simon Loesing, Markus Pilman, Thomas Etter, Donald Kossmann: On the Design and Scalability of Distributed Shared-Data Databases. SIGMOD'15</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Aleksandar Dragojevic, Dushyanth Narayanan, Edmund B. Nightingale, Matthew Renzelmann, Alex Shamis, Anirudh Badam, Miguel Castro: No compromises: distributed transactions with consistency, availability, and performance. SOSP'15</font></b></li>
+                        <li>Philip A. Bernstein and Sudipto Das. Scaling optimistic concurrency control by approximately partitioning the certifier and log. IEEE Data Eng. Bull.’15</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammad Sadoghi, Martin Jergler, Hans-Arno Jacobsen, Richard Hull, and Roman Vaculín. Safe distribution and parallel execution of data-centric workflows over the publish/subscribe abstraction. TKDE’15 [<a href="https://www.researchgate.net/publication/276127286_Safe_Distribution_and_Parallel_Execution_of_Data-Centric_Workflows_over_the_PublishSubscribe_Abstraction" target="_blank">Paper</a>]</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Peter Bailis, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Scalable atomic visibility with RAMP transactions. TODS’16</font></b></li>
+                        <li>Chang Yao, Divyakant Agrawal, Gang Chen, Beng Chin Ooi, and Sai Wu. Adaptive logging: Optimizing logging and recovery costs in distributed in-memory databases. SIGMOD’16</li>
+                        <li>Tamer Eldeeb, Phil Bernstein. Transactions for Distributed Actors in the Cloud. MSR TechReport'16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Rachael Harding, Dana Van Aken, Andrew Pavlo, Michael Stonebraker. An Evaluation of Distributed Concurrency Control. VLDB'17</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">S. Gupta, M. Sadoghi. EasyCommit: A Non-blocking Two-phase Commit Protocol. EDBT'18 [<a href="https://www.researchgate.net/publication/324089842_EasyCommit_A_Non-blocking_Two-phase_Commit_Protocol" target="_blank">Paper</a>]</font></b></li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Consistency Models</button>
+                <div class="panel">
+                    <ul class="list-group">
+                        <li>S.B. Davidson, H. Garcia-Molina, and D. Skeen. Consistency in partitioned networks. ACM CSUR’85</li>
+                        <li>Maurice Herlihy, Jeannette M. Wing: Linearizability: A Correctness Condition for Concurrent Objects. ACM Trans. Program. Lang. Syst.'90</li>
+                        <li>Divyakant Agrawal et al. Consistency and orderability: semantics-based correctness criteria for databases. TODS’93</li>
+                        <li>Rajeev Rastogi, Sharad Mehrotra, Yuri Breitbart, Henry F. Korth, and Avi Silberschatz. On correctness of non-serializable executions. PODS’93</li>
+                        <li>Atul Adya. Weak Consistency: A Generalized Theory and Optimistic Implementations for Distributed Transactions. PhD Thesis. MIT'99</li>
+                        <li>Werner Vogels. Eventually consistent. Queue’08</li>
+                        <li>Alan David Fekete and Krithi Ramamritham. Consistency models for replicated data. In Replication: Theory and Practice’10</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Wyatt Lloyd, Michael J. Freedman, Michael Kaminsky, and David G. Andersen. Don’t settle for eventual: Scalable causal consistency for wide-area storage with COPS. SOSP ’11</font></b></li>
+                        <li>Peter Alvaro, Neil Conway, Joseph M. Hellerstein, and William R. Marczak. Consistency analysis in Bloom: a CALM and collected approach. CIDR’11</li>
+                        <li>David Bermbach and Stefan Tai. Eventual consistency: How soon is eventual? An evaluation of Amazon S3’s consistency behavior. MW4SOC’11</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Lisa Glendenning, Ivan Beschastnikh, Arvind Krishnamurthy, Thomas E. Anderson: Scalable consistency in Scatter. SOSP'11</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Sebastian Burckhardt, Daan Leijen, Manuel Fähndrich, and Mooly Sagiv. Eventually consistent transactions. ESOP’12</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Neil Conway, William R Marczak, Peter Alvaro, Joseph M Hellerstein, and David Maier. Logic and lattices for distributed programming. SoCC’12</font></b></li>
+                        <li>Kamal Zellag and Bettina Kemme. How consistent is your cloud application? SoCC’12</li>
+                        <li>Peter Bailis, Alan Fekete, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. The potential dangers of causal consistency and an explicit solution. SoCC ’12</li>
+                        <li>Peter Alvaro, Peter Bailis, Neil Conway, and Joseph M. Hellerstein. Consistency without borders. SoCC’13</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Peter Bailis, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Bolt-on causal consistency. SIGMOD’13</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Peter Bailis, Alan Fekete, Michael J. Franklin, Ali Ghodsi, Joseph M. Hellerstein, and Ion Stoica. Coordination avoidance in database systems. PVLDB’14</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Valter Balegas, Sérgio Duarte, Carla Ferreira, Rodrigo Rodrigues, Nuno Preguiça, Mahsa Najafzadeh, and Marc Shapiro. Putting consistency back into eventual consistency. EuroSys’15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Marek Zawirski, Nuno Preguiça, Sérgio Duarte, Annette Bieniusa, Valter Balegas, and Marc Shapiro. Write fast, read in the past: Causal consistency for client-side applications. Middleware’15</font></b></li>
+                        <li>Paolo Viotti, Marko Vukolic: Consistency in Non-Transactional Distributed Storage Systems. ACM Comput. Surv.'16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Natacha Crooks, Youer Pu, Nancy Estrada, Trinabh Gupta, Lorenzo Alvisi, Allen Clement: TARDiS: A Branch-and-Merge Approach To Weak Consistency. SIGMOD'16</font></b></li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Geo-Scale Transaction Protocols</button>
+                <div class="panel">
+                    <ul>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Yair Sovran, Russell Power, Marcos K. Aguilera, and Jinyang Li. Transactional storage for geo-replicated systems. SOSP ’11</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Stacy Patterson, Aaron J. Elmore, Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. Serializability, not serial: Concurrency control and availability in multi-datacenter datastores. PVLDB’12</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">C. Li, D. Porto, A. Clement, J. Gehrke, N. Preguiça, and R. Rodrigues. Making geo-replicated systems fast as possible, consistent when necessary. OSDI’12</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Tim Kraska, Gene Pang, Michael J. Franklin, Samuel Madden, and Alan Fekete. MDCC: multi-data center consistency. EuroSys ’13</font></b></li>
+                        <li>Faisal Nawab, Divyakant Agrawal, and Amr El Abbadi. Message futures: Fast commitment of transactions in multi-datacenter environments. CIDR’13</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Zhe Wu, Michael Butkiewicz, Dorian Perkins, Ethan Katz-Bassett, and Harsha V. Madhyastha. Spanstore: Cost-effective geo-replicated storage spanning multiple cloud services. SOSP ’13</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Yang Zhang, Russell Power, Siyuan Zhou, Yair Sovran, Marcos K. Aguilera, and Jinyang Li. Transaction chains: achieving serializability with low latency in geo-distributed storage systems. SOSP’13</font></b></li>
+                        <li>Wyatt Lloyd, Michael J. Freedman, Michael Kaminsky, David G. Andersen. Stronger semantics for low-latency geo-replicated storage. NSDI’13</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Hatem A. Mahmoud, Faisal Nawab, Alexander Pucher, Divyakant Agrawal, Amr El Abbadi: Low-Latency Multi-Datacenter Databases using Replicated Commit. PVLDB'13</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Gene Pang, Tim Kraska, Michael J. Franklin, and Alan Fekete. PLANET: making progress with commit processing in unpredictable environments. SIGMOD’14</font></b></li>
+                        <li>Dan Dobre, Paolo Viotti, Marko Vukolic: Hybris: Robust Hybrid Cloud Storage. SoCC'14</li>
+                        <li>Faisal Nawab, Vaibhav Arora, Divyakant Agrawal, and Amr El Abbadi. Chariots: A scalable shared log for data management in multi-datacenter cloud environments. EDBT’15</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Faisal Nawab, Vaibhav Arora, Divyakant Agrawal, and Amr El Abbadi. Minimizing commit latency of transactions in geo-replicated data stores. SIGMOD’15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Alexander Thomson and Daniel J. Abadi. CalvinFS: Consistent WAN replication and scalable metadata management for distributed file systems. FAST’15</font></b></li>
+                        <li>Ashish Gupta, Fan Yang, Jason Govig, Adam Kirsch, Kelvin Chan, Kevin Lai, Shuo Wu, Sandeep Govind Dhoot, Abhilash Rajesh Kumar, Ankur Agiwal, Sanjay Bhansali, Mingsheng Hong, Jamie Cameron, Masood Siddiqi, David Jones, Jeff Shute, Andrey Gubarev, Shivakumar Venkatara- man, and Divyakant Agrawal. Mesa: a geo-replicated online data warehouse for Google’s advertising system. Commun. ACM’16</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Database Replication Techniques</button>
+                <div class="panel">
+                    <ul>
+                        <li>Bettina Kemme and Gustavo Alonso. Don’t be lazy, be consistent: Postgres-R, A new way to implement database replication. In VLDB 2000</li>
+                        <li>Bettina Kemme and Gustavo Alonso. A new approach to developing and implementing eager database replication protocols. TODS’00</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Bettina Kemme, Fernando Pedone, Gustavo Alonso, André Schiper, and Matthias Wiesmann. Using optimistic atomic broadcast in transaction processing systems. IEEE Trans. Knowl. Data Eng.’03</font></b></li>
+                        <li>K. Daudjee and K. Salem. Lazy database replication with ordering guarantees. In ICDE’04</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Robbert van Renesse and Fred B. Schneider. Chain Replication for Supporting High Throughput and Availability. OSDI’04.</font></b></li>
+                        <li>Yasushi Saito and Marc Shapiro. Optimistic replication. ACM Comput. Surv.’05</li>
+                        <li>Yi Lin, Bettina Kemme, Ricardo Jiménez-Peris, et al. Snapshot isolation and integrity constraints in replicated databases. TODS’09</li>
+                        <li>Flavio Paiva Junqueira, Benjamin C. Reed, Marco Serafini: Zab: High-performance broadcast for primary-backup systems. DSN'11</li>
+                        <li>Marc Shapiro, Nuno M. Preguiça, Carlos Baquero, and Marek Zawirski. Conflict-free replicated data types. SSS’11</li>
+                        <li>Mihaela A. Bornea, Orion Hodson, Sameh Elnikety, and Alan Fekete. One-copy serializability with snapshot isolation under the hood. ICDE’11</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Hyungsoo Jung, Hyuck Han, Alan Fekete, and Uwe Röhm. Serializable snapshot isolation for replicated databases in high-update scenarios. PVLDB’11</font></b></li>
+                        <li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Probabilistically bounded staleness for practical partial quorums. PVLDB’12</li>
+                        <li>Diego Ongaro and John Ousterhout. In search of an understandable consensus algorithm. USENIX ATC’14</li>
+                        <li>Peter Bailis, Shivaram Venkataraman, Michael J. Franklin, Joseph M. Hellerstein, and Ion Stoica. Quantifying eventual consistency with PBS. Commun. ACM’14</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Carlos Eduardo Benevides Bezerra, Fernando Pedone, Robbert van Renesse: Scalable State-Machine Replication. DSN'14</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Irene Zhang, Naveen Kr. Sharma, Adriana Szekeres, Arvind Krishnamurthy, Dan R. K. Ports: Building consistent transactions with inconsistent replication. SOSP'15</font></b></li>
+                        <li>Valter Balegas, Cheng Li, Mahsa Najafzadeh, Daniel Porto, Allen Clement, Sérgio Duarte, Carla Ferreira, Johannes Gehrke, João Leitão, Nuno M. Preguiça, Rodrigo Rodrigues, Marc Shapiro, Viktor Vafeiadis: Geo-Replication: Fast If Possible, Consistent If Necessary. IEEE Data Eng. Bull.’16</li>
+                    </ul>
+                </div>
+
+                <button class="accordion"><b style="font-weight: bold"><font color="#2B547E">Fault-tolerant Protocols</font></b></button>
+                <div class="panel">
+                    <ul>
+                        <li>Leslie Lamport. The Part-time Parliament. ACM Trans. Comput. Syst.'98.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">M. Castro, B. Liskov: Practical Byzantine Fault Tolerance. OSDI'99</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Leslie Lamport, Paxos Made Simple, Microsoft Tech Report'01</font></b></li>
+                        <li>Klaus Kursawe. Optimistic Byzantine Agreement. SRDS’02.</li>
+                        <li>Miguel Correia, Nuno Ferreira Neves, and Neves Paulo VerÃŋssimo. How to Tolerate Half Less One Byzantine Nodes in Practical Distributed Systems. SRDS’02.</li>
+                        <li>Jian Yin, Jean-Philippe Martin, Arun Venkataramani, Lorenzo Alvisi, and Mike Dahlin. Separating Agreement from Execution for Byzantine Fault Tolerant Services. SOSP ’03.</li>
+                        <li>Miguel Castro, Rodrigo Rodrigues, and Barbara Liskov. BASE: Using Abstraction to Improve Fault Tolerance. ACM Trans. Comput. Syst.'03.</li>
+                        <li>Ramakrishna Kotla and Mike Dahlin. High Throughput Byzantine Fault Tolerance. DSN’04.</li>
+                        <li>Barbara Liskov and Rodrigo Rodrigues. Byzantine Clients Rendered Harmless. DISC’05.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Michael Abd-El-Malek, Gregory R. Ganger, Garth R. Goodson, Michael K. Reiter, and Jay J. Wylie. Fault-scalable Byzantine Fault-tolerant Services. SOSP’05</font></b></li>
+                        <li>James Cowling, Daniel Myers, Barbara Liskov, Rodrigo Rodrigues, and Liuba Shrira. HQ Replication: A Hybrid Quorum Protocol for Byzantine Fault Tolerance. OSDI’06.</li>
+                        <li>Jean-Philippe Martin and Lorenzo Alvisi. Fast Byzantine Consensus. IEEE Trans. Dependable Secur. Comput'06.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Leslie Lamport. Fast Paxos. Distributed Computing’06</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Ramakrishna Kotla, Lorenzo Alvisi, Michael Dahlin, Allen Clement, Edmund L. Wong: Zyzzyva: speculative byzantine fault tolerance. SOSP'07</font></b></li>
+                        <li>A. Singh, P. Maniatis, P. Druschel, and T. Roscoe. Conflict-free Quorum-based BFT Protocols. Max Planck Technical Report'07.</li>
+                        <li>Byung-Gon Chun, Petros Maniatis, Scott Shenker, and John Kubiatowicz. Attested Append-only Memory: Making Adversaries Stick to Their Word. SOSP’07.</li>
+                        <li>Allen Clement,Edmund Wong,Lorenzo Alvisi,Mike Dahlin,and Mirco Marchetti. Making Byzantine Fault Tolerant Systems Tolerate Byzantine Faults. NSDI’09.</li>
+                        <li>Giuliana Santos Veronese, Miguel Correia, Alysson Neves Bessani, and Lau Cheuk Lung. Spin One’s Wheels? Byzantine Fault Tolerance with a Spinning Primary. SRDS’09.</li>
+                        <li>Marco Sera ni, Péter Bokor, Dan Dobre, Matthias Majuntke, and Neeraj Suri. Scrooge: Reducing the costs of fast Byzantine repli- cation in presence of unresponsive replicas. DSN'10.</li>
+                        <li>J. Kirsch, B. Coan, Y. Amir, and J. Lane. Prime: Byzantine Replication under Attack. TDSC'10.</li>
+                        <li>Timothy Wood, Rahul Singh, Arun Venkataramani, Prashant Shenoy, and Emmanuel Cecchet. ZZ and the Art of Practical BFT Execution. EuroSys’11.</li>
+                        <li>Rüdiger Kapitza, Johannes Behl, Christian Cachin, Tobias Distler, Simon Kuhnle, Seyed Vahid Mohammadi, Wolfgang Schröder-Preikschat, and Klaus Stengel. CheapBFT: Resource-efficient Byzantine Fault Tolerance. EuroSys’12.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Manos Kapritsos, Yang Wang, Vivien Quéma, Allen Clement, Lorenzo Alvisi, Mike Dahlin: All about Eve: Execute-Verify Replication for Multi-Core Servers. OSDI'12</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Pierre-Louis Aublin, Sonia Ben Mokhtar, and Vivien Quéma. RBFT: Redundant Byzantine Fault Tolerance. ICDCS'13.</font></b></li>
+                        <li>Giuliana Santos Veronese, Miguel Correia, Alysson Neves Bessani, Lau Cheuk Lung, and Paulo Verissimo. Efficient Byzantine Fault-Tolerance. IEEE Trans. Comput.'13.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Sisi Duan, Hein Meling, Sean Peisert, Haibin Zhang. BChain: Byzantine Replication with High Throughput and Embedded Reconfiguration. OPODIS'14.</font></b></li>
+                        <li>Diego Ongaro and John Ousterhout. In Search of an Understandable Consensus Algorithm. USENIX ATC’14.</li>
+                        <li>Bessani, Alysson, João Sousa, and Eduardo EP Alchieri. "State machine replication for the masses with BFT-SMaRt." DSN'14</li>
+                        <li>Sisi Duan, Sean Peisert, and Karl N. Levitt. hBFT: Speculative Byzantine Fault Tolerance with Minimum Cost. TDSC'15.</li>
+                        <li>Johannes Behl, Tobias Distler, and Rüdiger Kapitza. Hybrids on Steroids: SGX-Based High Performance BFT. EuroSys’17.</li>
+                        <li>Maofan Yin, Dahlia Malkhi, Michael K. Reiter, Guy Golan Gueta, Ittai Abraham. "HotStuff: BFT Consensus in the Lens of Blockchain" PODC'19</li>
+                        <li>Michael J. Fischer, Nancy A. Lynch, and Michael S. Paterson. Impossibility of distributed consensus with one faulty process. Journal of the ACM, 32(2)</li>
+                        <li>Leslie Lamport, Robert Shostak, and Marshall Pease. The byzantine generals problem. ACM Transactions on Programming Languages and Systems</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Suyash Gupta, Jelle Hellings and Mohammad Sadoghi: Brief Announcement: revisiting consensus protocols through wait-free parallelization DISC'19</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Jelle Hellings and Mohammad Sadoghi: Brief Announcement: the fault-tolerant cluster-sending problem DISC'19</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Faisal Nawab and Mohammad Sadoghi: Blockplane: A Global-Scale Byzantizing Middleware, ICDE'19</font></b></li>
+
+                    </ul>
+                </div>
+
+                <button class="accordion"><b style="font-weight: bold"><font color="#2B547E">Blockchain (Distributed Ledger)</font></b></button>
+                <div class="panel">
+                    <ul>
+                        <li>Markus Jakobsson and Ari Juels. 1999. Proofs of Work and Bread Pudding Protocols. CMS’99.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">S. Nakamoto. Bitcoin: A peer-to-peer electronic cash system. 2008</font></b></li>
+                        <li>Sunny King and Scott Nadal. PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake. 2012.</li>
+                        <li>David Schwartz, Noah Youngs, and Arthur Britto. The Ripple Protocol Consensus Algorithm. 2014.</li>
+                        <li>Giuseppe Ateniese, Ilario Bonacina, Antonio Faonio, Nicola Galesi. Proofs of Space: When Space Is of the Essence. SCN'14.</li>
+                        <li>J. Bonneau, A. Miller, J. Clark, A. Narayanan, J. A. Kroll, E. W. Felten. SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies. IEEE SP'15</li>
+                        <li>M. Vukolic. The Quest for Scalable Blockchain Fabric: Proof-of-Work vs. BFT Replication. iNetSeC'15</li>
+                        <li>Sunoo Park, Krzysztof Pietrzak, Albert Kwon, Joël Alwen, Georg Fuchsbauer, Peter Gazi. Spacemint: A Cryptocurrency Based on Proofs of Space. IACR Cryptology ePrint Archive'15.</li>
+                        <li>Gavin Wood. Ethereum: A secure decentralised generalised transaction ledger. 2015.</li>
+                        <li>M. Pilkington. Blockchain Technology: Principles and Applications. 2016</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">C. Decker, J. Seidel, R. Wattenhofer. Bitcoin meets strong consistency. ICDCN'16</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">I. Eyal, A. Efe Gencer, E. Gün Sirer, R. v. Renesse: Bitcoin-NG: A Scalable Blockchain Protocol. NSDI'16</font></b></li>
+                        <li>A. Hari, T. V. Lakshman. The Internet Blockchain: A Distributed, Tamper-Resistant Transaction Framework for the Internet. HotNets'16</li>
+                        <li>T. McConaghy, R. Marques, A. Muller, D. De Jonghe, T. Troy McConaghy, G. McMullen, R. Henderson, S. Bellemare, and A. Granzotto. BigchainDB: A Scalable Blockchain Database. White Paper 2016.</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Andrew Miller, Yu Xia, Kyle Croman, Elaine Shi, Dawn Song: The Honey Badger of BFT Protocols. CCS'16: 31-42</font></b></li>
+                        <li>Eleftherios Kokoris Kogias, Philipp Jovanovic, Nicolas Gailly, Ismail Kho , Linus Gasser, and Bryan Ford. 2016. Enhancing Bitcoin Security and Performance with Strong Consistency via Collective Signing. USENIX Security'16.</li>
+                        <li>T. Dinh, J. Wang, G. Chen, R. Liu, B. Chin Ooi, K.-L. Tan: BlockBench: A Framework for Analyzing Private Blockchains. SIGMOD'17</li>
+                        <li>E. Cecchetti, F. Zhang, Y. Ji, A. E. Kosba, A. Juels, E. Shi: Solidus: Confidential Distributed Ledger Transactions via PVORM. CCS'17</li>
+                        <li>C. Cachin, M. Vukolic. Blockchain Consensus Protocols in the Wild (Keynote Talk). DISC'17</li>
+                        <li>Dinh, Tien Tuan Anh, et al. "Untangling blockchain: A data processing view of blockchain systems." TKDE'17</li>
+                        <li>Wang, Jiaping, and Hao Wang. "Monoxide: Scale out Blockchains with Asynchronous Consensus Zones." NSDI'19</li>
+                        <li>Duan, Sisi, Michael K. Reiter, and Haibin Zhang. "BEAT: Asynchronous BFT made practical." CCS'18</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Yossi Gilad, Rotem Hemo, Silvio Micali, Georgios Vlachos, Nickolai Zeldovich. Algorand: Scaling Byzantine Agreements for Cryptocurrencies. SOSP'17</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mahdi Zamani, Mahnush Movahedi, and Mariana Raykova. "Rapidchain: Scaling blockchain via full sharding." CCS '18.</font></b></li>
+                        <li>Diksha Gupta, Jared Saia, and Maxwell Young. Proof of Work Without All the Work. ICDCN’18.</li>
+                        <li>Parity Technologies. Parity Ethereum Blockchain. 2018.
+                        <li>Maurice Herlihy. Blockchains from a distributed computing perspective. Communications of the ACM, 62(2)</li>
+                        <li>Arvind Narayanan and Jeremy Clark. Bitcoin’s academic pedigree. Communications of the ACM, 60(12)</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">S. Gupta, M. Sadoghi. Blockchain Transaction Processing. Encyclopedia of Big Data Technologies. Springer'18 [<a href="https://www.researchgate.net/publication/325116198_Blockchain_Transaction_Processing" target="_blank">Paper</a>]</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">	Elli Androulaki et al. Hyperledger fabric: a distributed operating system for permissioned blockchains. EuroSys'18</font></b></li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Hybrid OLTP and OLAP</button>
+                <div class="panel">
+                    <ul>
+                        <li>Yu Cao, Chun Chen, Fei Guo, Dawei Jiang, Yuting Lin, Beng Chin Ooi, Hoang Tam Vo, Sai Wu, and Quanqing Xu. ES2: A cloud data storage system for supporting both OLTP and OLAP. ICDE’11</li>
+                        <li>A. Kemper and T. Neumann. HyPer: A hybrid OLTP and OLAP main memory database system based on virtual memory snapshots. ICDE’11</li>
+                        <li>Joy Arulraj, Andrew Pavlo, and Prashanth Menon. Bridging the archipelago between row-stores and column-stores for hybrid workloads. SIGMOD’16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammad Sadoghi, Souvik Bhattacherjee, Bishwaranjan Bhattacharjee, and Mustafa Canim. L-Store: A real-time OLTP and OLAP system. EDBT'18 [<a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>]</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">J. Giceva, M. Sadoghi. Hybrid OLTP and OLAP. Encyclopedia of Big Data Technologies. Springer'18 [<a href="https://www.researchgate.net/publication/325152834_Hybrid_OLTP_and_OLAP" target="_blank">Paper</a>]</font></b></li>
+                    </ul>
+                    å</div>
+
+                <button class="accordion">NoSQL and NewSQL</button>
+                <div class="panel">
+                    <ul>
+                        <li>Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Michael Burrows, Tushar Chandra, Andrew Fikes, and Robert Gruber. Bigtable: A distributed storage system for structured data. OSDI’06</li>
+                        <li>Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall, and Werner Vogels. Dynamo: amazon’s highly available key-value store. SOSP’07</li>
+                        <li>Brian F. Cooper, Raghu Ramakrishnan, Utkarsh Srivastava, Adam Silberstein, Philip Bohannon, Hans- Arno Jacobsen, Nick Puz, Daniel Weaver, and Ramana Yerneni. PNUTS: yahoo!’s hosted data serving platform. PVLDB’08</li>
+                        <li>Hoang Tam Vo, Sheng Wang, Divyakant Agrawal, Gang Chen, and Beng Chin Ooi. LogBase: A scalable log-structured database system in the cloud. PVLDB’12</li>
+                        <li>James C. Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher Frost, JJ Furman, Sanjay Ghemawat, Andrey Gubarev, Christopher Heiser, Peter Hochschild, Wilson Hsieh, Sebastian Kanthak, Eugene Kogan, Hongyi Li, Alexander Lloyd, Sergey Melnik, David Mwaura, David Nagle, Sean Quinlan, Rajesh Rao, Lindsay Rolig, Yasushi Saito, Michal Szymaniak, Christopher Taylor, Ruth Wang, and Dale Woodford. Spanner: Google’s Globally-Distributed Database. OSDI’12</li>
+                        <li>Jeff Shute, Radek Vingralek, Bart Samwel, Ben Handy, Chad Whipkey, Eric Rollins, Mircea Oancea, Kyle Littlefield, David Menestrina, Stephan Ellner, John Cieslewicz, Ian Rae, Traian Stancescu, and Himani Apte. F1: A distributed SQL database that scales. PVLDB’13</li>
+                        <li>Lin Qiao et al. On brewing fresh Espresso: LinkedIn’s distributed data serving platform. SIGMOD’13</li>
+                    </ul>
+                </div>
+
+                <button class="accordion">Modern Hardware: NVM, RDMA, HTM, FPGAs</button>
+                <div class="panel">
+                    <ul>
+                        <li>John K. Ousterhout, Parag Agrawal, David Erickson, Christos Kozyrakis, Jacob Leverich, David Mazières, Subhasish Mitra, Aravind Narayanan, Diego Ongaro, Guru M. Parulkar, Mendel Rosenblum, Stephen M. Rumble, Eric Stratmann, Ryan Stutsman: The case for RAMCloud. Commun. ACM'11</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Diego Ongaro, Stephen M. Rumble, Ryan Stutsman, John K. Ousterhout, Mendel Rosenblum: Fast crash recovery in RAMCloud. SOSP'11</font></b></li>
+                        <li>Viktor Leis, Alfons Kemper, and Thomas Neumann. Exploiting hardware transactional memory in main-memory databases. ICDE’14</li>
+                        <li>Aleksandar Dragojevic, Dushyanth Narayanan, Miguel Castro, Orion Hodson: FaRM: Fast Remote Memory. NSDI'14</li>
+                        <li>Hyeontaek Lim, Dongsu Han, David G. Andersen, Michael Kaminsky. MICA: A Holistic Approach to Fast In-Memory Key-Value Storage. NSDI'14</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Stephen M. Rumble, Ankita Kejriwal, John K. Ousterhout: Log-structured memory for DRAM-based storage. FAST'14</font></b></li>
+                        <li>Andrew Pavlo. Emerging hardware trends in large-scale transaction processing. IEEE Internet Computing’15</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Marius Poke, Torsten Hoefler: DARE: High-Performance State Machine Replication on RDMA Networks. HPDC'15</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammadreza Najafi, Mohammad Sadoghi, Hans-Arno Jacobsen: The FQP Vision: Flexible Query Processing on a Reconfigurable Computing Fabric. SIGMOD Record'15 [<a href="https://www.researchgate.net/publication/282892649_The_FQP_Vision_Flexible_Query_Processing_on_a_Reconfigurable_Computing_Fabric" target="_blank">Paper</a>]</font></b></li>
+                        <li>Kai Zhang, Kaibo Wang, Yuan Yuan, Lei Guo, Rubao Lee, Xiaodong Zhang: Mega-KV: A Case for GPUs to Maximize the Throughput of In-Memory Key-Value Stores. PVLDB'15</li>
+                        <li>Yandong Wang, Li Zhang, Jian Tan, Min Li, Yuqing Gao, Xavier Guerin, Xiaoqiao Meng, and Shicong Meng. HydraDB: A resilient RDMA-driven key-value middleware for in-memory cluster computing. SC’15</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Alexander Matveev, Nir Shavit, Pascal Felber, Patrick Marlier. Read-log-update: a lightweight synchronization mechanism for concurrent programming. SOSP'15</font></b></li>
+                        <li>Xingda Wei, Jiaxin Shi, Yanzhe Chen, Rong Chen, Haibo Chen. Fast in-memory transaction processing using RDMA and HTM. SOSP'15</li>
+                        <li>Yanzhe Chen, Xingda Wei, Jiaxin Shi, Rong Chen, Haibo Chen. Fast and general distributed transactions using RDMA and HTM. EuroSys'16</li>
+                        <li>Sheng Li, Hyeontaek Lim, Victor W. Lee, Jung Ho Ahn, Anuj Kalia, Michael Kaminsky, David G. Andersen, Seongil O, Sukhan Lee, Pradeep Dubey. Achieving One Billion Key-Value Requests per Second on a Single Server. IEEE Micro'16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammad Sadoghi, Kenneth A. Ross, Mustafa Canim, Bishwaranjan Bhattacharjee: Exploiting SSDs in operational multiversion databases. VLDB J.'16 [<a href="https://www.researchgate.net/publication/284141811_Exploiting_SSDs_in_operational_multiversion_databases" target="_blank">Paper</a>]</font></b></li>
+                        <li>Peter Bailis, Joy Arulraj, and Andrew Pavlo. Research for practice: distributed consensus and implications of NVM on database management systems. Commun. ACM’16</li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Zsolt István, David Sidler, and Gustavo Alonso, Marko Vukolić. Consensus in a Box: Inexpensive Coordination in Hardware. NSDI'16</font></b></li>
+                        <li><b style="font-weight: bold"><font color="#2B547E">Mohammadreza Najafi, Mohammad Sadoghi, Hans-Arno Jacobsen. Hardware Acceleration Landscape for Distributed Real-Time Analytics: Virtues and Limitations ICDCS'17 [<a href="https://www.researchgate.net/publication/317091879_Hardware_Acceleration_Landscape_for_Distributed_Real-Time_Analytics_Virtues_and_Limitations" target="_blank">Paper</a>]</font></b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thrid Section -->
+        <section id="sch" class="main special">
+            <header class="major">
+                <br>
+                <h2>Schedule</h2>
+            </header>
+            <div align="left" style="font-style: normal">
+
+                <div id="paper-list"></div>
+
+            </div>
+        </section>
+
+        <!-- Thrid Section -->
+
+        <section id="projects" class="main special" style="text-align: left;">
+            <header class="major" style="text-align: center;">
+                <br>
+                <h2>Top Projects</h2>
+            </header>
+            <ul>
+              <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">VoteChain - Secure and transparent e-voting system</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Naitik Jain, Tanvi, Shivani, Krithika, Harshil
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="https://naitikjain3071.wixsite.com/my-site" target="_blank">[Blog]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">ResCounty - Resilient rentals begin here!</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> IshaJoglekar, Aiman, Ujjawal, Ajinkya, Thrisha
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="https://medium.com/@ajinkyajc/rescounty-resilient-land-transfers-begin-here-6d3ff5a0a9f4" target="_blank">[Blog]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+		<!--
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">ResUI - Enhancing ResilientDB with an Intuitive User Interface</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Gopal Nambiar, Dieu Anh Le, Rishika Garg, Sasha Pimento, Anubhav Mishra
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/ResUI.pdf" target="_blank">[Slides]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+		    -->
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">ResView - Creating a new visualization for Resilient's operations to show message flow</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Saipranav Kotamreddy, Madhumita Venkatesan, Nikita B. Emberi, Sriharshini D, Aunsh
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="https://blog.resilientdb.com/2023/12/06/ResView.html" target="_blank">[Blog]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">DraftRes - Sports Drafting system that helps teams select players and build their roster</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Swati Singhvi, Chris Jackson Fernandez, Apoorva Shete, Saisha Shetty, Sofiya Shaikh
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/DraftRes.pdf" target="_blank">[Pdf]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">ResVision - Visualize the Unbreakable: ResilientVision - Where BFT meets Clarity</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Aditya, Divyanshu, karamjeet, devashree, Akshit
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/ResVision.pdf" target="_blank">[Pdf]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">Res-a-Me - Education backgrounds and work experiences application based on Resilient DB</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Chen-Yu Yu, Tsung-Chieh Chen, Howard Ku, Jessica Chen, Elliot Lin
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/resame.pdf" target="_blank">[Pdf]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">AutoLedger - The Future of Car Registration is Here</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Disha, Arvind, vkotha, Radhika, Siva
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/AutoLedger.pdf" target="_blank">[Slides]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+		    
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">UTXO Lenses - Visualizing UTXO Consolidation </b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Haneul, Goodness, Darshan, Viral, Gia-Phong Nguyen
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/UTXO%20Lenses.pdf" target="_blank">[Slides]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+	     <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">ResilientX - Decentralized Social Platform of the People, by the People, for the People</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Hao-Nan Zhu, Ziyang Chen, Shujuan Chen, Tianxiao Cheng, Junlong Tang
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="ecs265-fall-2023/top projects/ResilientX.pdf" target="_blank">[Pdf]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+	      <li style="margin-bottom: 20px;">
+                  <a href="https://docs.google.com/spreadsheets/d/1C2IFp9LMloKYiIZ0JDKtn90ObEM-5K6rM0-X1UDla6A/edit?usp=sharing" target="_blank"><b style="font-size: larger;">Arrayan - Tracing and claiming by-products in the food supply chain</b></a><br>
+                  <div style="margin-left: 5%;">
+                      <b >Team:</b> Mariana, Amoolya, Manali, Shravani, Srishti
+                      <p>Contents:
+                          <b style="font-weight: bold">
+                              <a style="margin-left: 10px;" href="https://medium.com/@arrayan.resilientdb/arrayan-a-resilient-food-supply-chain-9a7ce5c7742b" target="_blank">[Blog]</a>
+                          </b>
+                      </h4>
+                  </div>
+              </li>
+
+             
+            </ul>
+        </section>
+
+        <section id="grades" class="main special">
+          <header class="major">
+            <br>
+            <h2>Grades</h2>
+          </header>
+          <p align="left" style="font-style: normal">Grades will be made available on your <b style="font-weight: bold"><a href="https://canvas.ucdavis.edu/" target="_blank">Canvas</a></b> account.</p>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>About Instructor</h2>
+            <p>
+                <b style="font-weight: bold"><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi, PhD</a></b><br>
+                Associate Professor <br>
+                <a href="https://www.ucdavis.edu/" target="_blank">Department of Computer Science</a><br>
+                <a href="https://www.ucdavis.edu/" target="_blank">University of California, Davis</a>
+            <ul class="icons">
+                <li><a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" style="text-decoration:none"><img src="images/dblp-logo.png" style="width: 120px"/></a></li>
+                <li><a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" style="text-decoration: none;"><img src="images/google-scholar-logo.png" style="width: 120px"/></a></li>
+                <li><a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" style="text-decoration: none;"><img src="images/researchgate-logo-small.png" style="width: 45px"/></a></li>
+            </ul>
+            </p>
+
+            <!--
+               <ul class="actions">
+                   <li><a href="generic.html" class="button">Learn More</a></li>
+               </ul>
+           -->
+
+        </section>
+        <section>
+            <h2>Contact Information</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>Kemper Hall &bull; One Shields Avenue &bull; Davis &bull; 95616</dd>
+                <dt>Office</dt>
+                <dd>Kemper 3055</dd>
+                <dt>ExpoLab</dt> <dd>Academic Surge 2392</dd>
+                <dt>Email</dt>
+                <dd><a href="#">msadoghi@ucdavis.edu</a></dd>
+                <br>
+                <ul class="icons">
+                    <li><span align="center" class="logo"><a href="https://www.ucdavis.edu/" target="_blank"><img src="images/ucdavis-logo-text.png" alt="" style="width: 180px"/></a></span></li>
+                </ul>
+            </dl>
+        </section>
+        <p class="copyright">
+          <span align="center" class="logo">
+            <a href="https://resilientdb.com/" target="_blank"><img align="center" src="images/resilientdb_logo_light-text-modern-v1.svg"  style="width: 200px"/></a> <br>
+            <a class="github-button" href="https://github.com/resilientdb/resilientdb/fork" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Fork resilientdb/resilientdb on GitHub">Fork</a>
+            <a class="github-button" href="https://github.com/resilientdb/resilientdb" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Star resilientdb/resilientdb on GitHub">Star</a>
+          </span>  <br><br>
+        &copy; 2016-2024 <b style="font-weight: bold">Mohammad Sadoghi</b> - <a href="https://html5up.net">HTML5 UP</a>. <br><br>
+        </p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+    $(document).ready(function(){
+        $('#paper-list').load("ecs265-fall-2024/paperlist-ecs265-f24.html");
+
+    });
+</script>
+
+</body>
+</html>
