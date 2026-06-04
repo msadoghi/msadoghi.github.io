@@ -11,6 +11,66 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Show selected items -->
+		<style>
+			li.collapsed-item  { display: none; }
+			li.list-toggle     { list-style: none; margin-top: 0.6em; }
+			a.list-toggle-link {
+				font-size: 0.8em; font-weight: 700;
+				letter-spacing: 0.08em; text-transform: uppercase;
+				cursor: pointer; border-bottom: 1px dotted currentColor;
+				text-decoration: none;
+			}
+		</style>
+
+		<style>
+			  /* Bio / paragraph show-more using native <details> */
+			  details.bio-details {
+			    margin: 1em 0;
+			  }
+
+			  summary.bio-details-toggle {
+			    display: inline-block;
+			    cursor: pointer;
+			    list-style: none;
+			    font-size: 0.85em;
+			    font-weight: 700;
+			    letter-spacing: 0.08em;
+			    text-transform: uppercase;
+			    color: #555;
+			    margin-bottom: 0.4em;
+			  }
+
+			  summary.bio-details-toggle::-webkit-details-marker { display: none; }
+
+			  summary.bio-details-toggle .bio-details-hint { font-size: 0; }
+
+			  summary.bio-details-toggle .bio-details-hint::after {
+			    font-size: 0.85rem;
+			    font-weight: 400;
+			    text-transform: none;
+			    letter-spacing: 0;
+			    content: '\25BE  show more';
+			  }
+
+			  details.bio-details[open] summary .bio-details-hint::after {
+			    content: '\25B4  show less';
+			  }
+			</style>
+
+			<style>
+		  span.inline-more-content { display: none; }
+		  a.inline-more-toggle {
+		    font-size: 0.8em;
+		    font-weight: 700;
+		    letter-spacing: 0.08em;
+		    text-transform: uppercase;
+		    white-space: nowrap;
+		    cursor: pointer;
+		    border-bottom: 1px dotted currentColor;
+		    text-decoration: none;
+		  }
+		</style>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<link rel="shortcut icon" type="image/x-icon" href="images/expolab-icon-only.png"/>
@@ -18,7 +78,6 @@
 		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</head>
 	<body>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -157,7 +216,7 @@
 		</li>
 -->
 
-		<li align="left"> <i>Blockchain: Consensus &amp; Replication</i>
+		<li align="left" data-show> <i>Blockchain: Consensus &amp; Replication</i>
 			<ul align="left" style="margin-bottom: 0px;">
 			<li align="left">Landscape:
 				<a href="https://www.researchgate.net/publication/325116198_Blockchain_Transaction_Processing" target="_blank">Blockchain Dichotomy [Springer Encyclopedia]</a>,
@@ -197,7 +256,7 @@
 
 				<li align="left">Concurrent Smart Contract Execution:
 					<a href="https://arxiv.org/abs/2501.14732" target="_blank">Orthrus [ICDE'25]</a>,
-					<a href="https://arxiv.org/abs/2407.09409" target="_blank">Thunderbolt [EDBT'26],
+					<a href="https://arxiv.org/abs/2407.09409" target="_blank">Thunderbolt [EDBT'26]</a>,
 					<a href="https://arxiv.org/abs/2511.05843" target="_blank">Hydra [ICDE'26]</a>
 				</li>
 
@@ -248,7 +307,7 @@
 	<br>
 	 <b style="font-weight: bold">Broader Research Areas:</b>
 <ul align="left" style="margin-bottom: 0px;">
-	<li align="left"> Distributed Workflow Execution (e.g.,
+	<li align="left" data-show> Distributed Workflow Execution (e.g.,
 		<a href="http://ieeexplore.ieee.org/document/7097086/" target="_blank">Deterministic Distributed Workflows</a>,
 		<a href="http://dl.acm.org/citation.cfm?doid=2723372.2735362" target="_blank">D2WORM</a>,
 		<a href="http://dl.acm.org/citation.cfm?id=2988351" target="_blank">Geo Distribution</a>)
@@ -376,19 +435,19 @@
 									<!--<h3>2016</h3> -->
 									<ul style="margin-bottom: 0px;">
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold"><a href="https://cs.ucdavis.edu/news/computer-scientists-new-book-explores-philosophy-ethics-age-ai" target="_blank">Computer Scientist’s New Book Explores Philosophy, Ethics in the Age of AI</a></b>, College of Engineering Newsletter, Jessica Heath, March 4, 2026
 										</li>
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold"><a href="https://cs.ucdavis.edu/news/mohammad-sadoghi-named-chancellors-fellow" target="_blank">Mohammad Sadoghi Named Chancellor’s Fellow</a></b>, College of Engineering Newsletter, March 3, 2026
 										</li>
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold">From Legal Codes to Coding:</b> <a href="https://engineering.ucdavis.edu/news/legal-codes-coding-computer-scientists-tackle-data-privacy-law" target="_blank">Computer Scientists Tackle Data Privacy Law</a>, College of Engineering Newsletter, Jessica Heath, June 12, 2024
 										</li>
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold">Discovering Academia Podcast:</b> Promoting curiosity and making academia more approachable.
 											<ul style="margin-bottom: 0px;">
 												 <a href="https://www.discoveringacademia.com/episodes/mohammad-sadoghi" target="_blank">"#34 - Mohammad Sadoghi: Blockchain Technologies, Decentralization & How to Become an Extraordinary Human."</a> October 27, 2023
@@ -397,7 +456,7 @@
 										</li>
 
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold">Oracle for Research Blog:</b> A research highlight focused on how to reinforce democracy and decentralization in building sustainable blockchain ecosystems. [<a href="handouts/UC Davis boldly reimagine the fabric of blockchain - Flyer.pdf" target="_blank">Highlight</a>]
 											<ul style="margin-bottom: 0px;">
 												 <li><a href="https://blogs.oracle.com/research/post/uc-davis-use-oci-to-boldly-reimagine-the-fabric-of-blockchain" target="_blank">"UC Davis use OCI to boldly reimagine the fabric of blockchain"</a>. Oracle for Research Blog, December 7, 2022.
@@ -414,7 +473,7 @@
 										</ul>
 									</li>
 
-										<li>
+										<li data-show>
 											<b style="font-weight: bold">Stress Management and Well-being Courses:</b> In an effort to cope with the COVID crisis, UC Davis meditation and stress reduction seminars based on the Tamarkoz® method are in now in spotlight.
 											<ul style="margin-bottom: 0px;">
 												<li><a href="https://magazine.ucdavis.edu/how-to-become-an-extraordinary-human/" target="_blank">"How To Become an Extraordinary Human"</a>. Shelby Dioum. UC Davis Magazine. November 22, 2021.
@@ -489,29 +548,29 @@
 									<!--<h3>2016</h3> -->
 									<ul style="margin-bottom: 0px;">
 
-										<li>
+										<li data-show>
 										[April 29, 2026] Pleased to announce our new paper that will appear at <a href="https://www.podc.org/" target="_blank">ACM Symposium on Principles of Distributed Computing (PODC)</a>.
 										<ul style="margin-bottom: 0px;">
 											<li><i>FEAT: Fair and Efficient Adversarial Transaction Ordering</i>. PODC 2026 [TBA]</li>
 										</ul>
 										</li>
 
-										<li>
+										<li data-show>
 										[March 30, 2026] Honored to receive the <b style="font-weight: bold;color:#3399ff"><a href="papers/SIGMOD-Best-Artifact-Honorable-2026.pdf" target="_blank">Best Artifact Award (Honorable Mention)</a></b> for <a href="https://dl.acm.org/doi/10.1145/3725308" target="_blank">HotStuff-1: Linear Consensus with One-Phase Speculation</a> at <a href="https://sigmod.org/sigmod-awards/sigmod-best-artifact-award/" target="_blank">SIGMOD 2025</a>.
 										</li>
 
-										<li>
+										<li data-show>
 										[February 24, 2026] Pleased to announce our new paper that will appear at <a href="https://icde2026.github.io/" target="_blank">IEEE International Conference on Data Engineering (ICDE)</a>.
 										<ul style="margin-bottom: 0px;">
 											<li><i>Hydra: Breaking the Global Ordering Barrier in Multi-BFT Consensus</i>. ICDE 2026 [<a href="https://arxiv.org/abs/2511.05843" target="_blank">Preprint</a>]</li>
 										</ul>
 										</li>
 
-										<li>
+										<li data-show>
 										[February 11, 2026] Honored to receive the <b style="font-weight: bold"><font color="#3399ff">Best Paper Award (Runner Up)</font></b> for <a href="https://www.openproceedings.org/2026/conf/edbt/paper-29.pdf" target="_blank">Thunderbolt: Concurrent Smart Contract Execution with Nonblocking Reconfiguration for Sharded DAGs</a> at <a href="https://edbticdt2026.github.io/?contents=awards_bp_edbt.html" target="_blank">EDBT 2026</a>.
 										</li>
 
-										<li>
+										<li data-show>
 										[November 16, 2025] I am excited to announce my new book. <br>
 
 										<p align="center"><b style="font-weight: bold;color:#643843">The Problems of Consensus: An Ethical Inquiry into Democratic and Decentralized Principles</b>. <br>SpringerBriefs in Philosophy 2025 [<a href="images/problem-of-consensus-flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank">Book</a>, <a href="https://cs.ucdavis.edu/news/computer-scientists-new-book-explores-philosophy-ethics-age-ai" target="_blank">Interview</a>]</p>
@@ -532,7 +591,7 @@
 										of speculative execution. We thought it would be an easy extension of known concurrency techniques in DB!
 										Years later, we are excited to share our theoretical model to formally reason about speculation broadly.
 										<ul style="margin-bottom: 0px;">
-											<li><i>Proof-of-Execution: Low-Latency Consensus via Speculative Execution</i>. TODS'25 [<a href="https://dl.acm.org/doi/10.1145/3774322" target="_blank">Paper</a>]</li>
+											<li><i>Proof-of-Execution: Low-Latency Consensus via Speculative Execution</i>. TODS'26 [<a href="https://dl.acm.org/doi/10.1145/3774322" target="_blank">Paper</a>]</li>
 										</ul>
 										</li>
 
@@ -618,7 +677,7 @@
 										We are grateful for the generous support and our collaborators at Mysten Labs, namely, Alberto Sonnino and Lefteris Kokoris-Kogias.
 										</li>
 
-										<li>
+										<li data-show>
 										[April 16, 2024] Pleased to announce our Bedrock of BFT will appear at <a href="https://www.usenix.org/conference/nsdi24" target="_blank">USENIX Symposium on Networked Systems Design and Implementation (NSDI)</a>.
 										<ul style="margin-bottom: 0px;">
 											<li><i>The Bedrock of Byzantine Fault Tolerance: A Unified Platform for BFT Protocols Analysis, Implementation, and Experimentation.</i> NSDI 2024. [<a href="https://www.usenix.org/system/files/nsdi24-amiri.pdf" target="_blank">Paper</a>, <a href="papers/bedrock.pdf" target="_blank">Slides</a>] <b style="font-weight: 400"><font color="#3399ff">Outstanding Paper Award</font></b></li>
@@ -662,7 +721,7 @@
 										<a href="https://www.discoveringacademia.com/episodes/mohammad-sadoghi" target="_blank">"#34 - Mohammad Sadoghi: Blockchain Technologies, Decentralization & How to Become an Extraordinary Human."</a>
 										</li>
 
-										<li>
+										<li data-show>
 										[October 21, 2023] Six years of resilient journey: <a href="https://resilientdb.com" target="_blank">ResilientDB</a> has
 										been officially accepted into the <a href="https://incubator.apache.org/projects/resilientdb.html" target="_blank">Apache
 										Incubator Program</a>. A heartfelt Congratulations to all the students and collaborators involved over the years. A Blessing... <br>
@@ -696,8 +755,8 @@
 										</ul>
 										</li>
 
-										<li>
-										[May 9, 2023] Honored to receive the <b style="font-weight: bold"><font color="#3399ff">Best Paper Award</font></b></li> for <a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank">Dissecting BFT on Trusted Hardware</a> at <a href="https://2023.eurosys.org/best-paper.html" target="_blank">EuroSys 2023</a>.
+										<li data-show>
+										[May 9, 2023] Honored to receive the <b style="font-weight: bold"><font color="#3399ff">Best Paper Award</font></b> for <a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank">Dissecting BFT on Trusted Hardware</a> at <a href="https://2023.eurosys.org/best-paper.html" target="_blank">EuroSys 2023</a>.
 										<ul style="margin-bottom: 0px;">
 											<li><i>Dissecting BFT Consensus: In Trusted Components we Trust!</i>
 												<blockquote><i>
@@ -707,6 +766,7 @@
 													to TEEs, and finally demonstrating that the presumed gain through TEEs were mostly artifacts of
 													oversimplified implementation of existing BFT protocols that relied on misleading performance metrics.
 												</i></blockquote>
+												</li>
 										</ul>
 										</li>
 
@@ -779,7 +839,7 @@
 										</li>
 
 										<li>
-											[September 9, 2022] Thank you VLDB for my service recognition as <a href="https://vldb.org/2022/?conference-awards" target="_blank">Distinguished Reviewer<a/> in 2022</li>
+											[September 9, 2022] Thank you VLDB for my service recognition as <a href="https://vldb.org/2022/?conference-awards" target="_blank">Distinguished Reviewer</a> in 2022
 										</li>
 
 										<li>
@@ -948,7 +1008,7 @@
 										</li>
 
 										<li>
-										[January 24, 2021] Very pleased to announce that <b style="font-weight: 400">ExpoLab</b> will be presenting the first core blockchain paper at EDBT 2021</a>
+										[January 24, 2021] Very pleased to announce that <b style="font-weight: 400">ExpoLab</b> will be presenting the first core blockchain paper at EDBT 2021
 										<ul style="margin-bottom: 0px;">
 											<li><i>Proof-of-Execution: Reaching Consensus through Fault-Tolerant Speculation</i>. EDBT 2021 [<a href="https://www.researchgate.net/publication/337019762_Proof-of-Execution_Reaching_Consensus_through_Fault-Tolerant_Speculation" target="_blank">Preprint</a>, <a href="papers/PoE-EDBT-21.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/cwHP_e_NOKI" target="_blank">Video</a>]</li>
 										</ul>
@@ -959,7 +1019,7 @@
 										</li>
 
 										<li>
-										[October 2, 2020] Very pleased to announce that <b style="font-weight: 400">ExpoLab</b> will be presenting several papers at ICDE 2021</a>
+										[October 2, 2020] Very pleased to announce that <b style="font-weight: 400">ExpoLab</b> will be presenting several papers at ICDE 2021
 										<ul style="margin-bottom: 0px;">
 											<li><i>RCC: Resilient Concurrent Consensus for High-Throughput Secure Transaction Processing</i>. [<a href="https://www.researchgate.net/publication/352668696_RCC_Resilient_Concurrent_Consensus_for_High-Throughput_Secure_Transaction_Processing" target="_blank">Preprint</a>,  <a href="papers/RCC-ICDE-21.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/l15M1jyTyvo" target="_blank">Video</a>]</li>
 											<li><i>LogStore: A Workload-aware, Adaptable Key-Value Store on Hybrid Storage Systems (Extended Abstract).</i></li>
@@ -1144,7 +1204,7 @@
 										</ul>
 										</li>
 
-										<li>
+										<li data-show>
 											[December 12, 2018] Very pleased to announce that <b style="font-weight: 400">ExpoLab</b> won the Best Paper Award for <a href="https://www.researchgate.net/publication/329625027_QueCC_A_Queue-oriented_Control-free_Concurrency_Architecture" target="_blank">QueCC Paper</a> at Middleware 2018</a>
 										</li>
 
@@ -1281,7 +1341,7 @@
 									<ul style="margin-bottom: 0px;">
 										<h4><b style="font-weight: bold">Principal Investigator</b></h4>
 										<ul>
-											<li><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a></li>
+											<li data-show><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a></li>
 										</ul>
 
 										<!--<h4><b style="font-weight: bold">Postdoctoral Fellow</b></h4>
@@ -1291,19 +1351,19 @@
 
 										<h4><b style="font-weight: bold">Members</b></h4>
 										<ul>
-											<li align="left">
+											<li align="left" data-show>
 											 <a href="https://dakaikang.github.io/" target="_blank">Dakai Kang</a> (Ph.D. Candidate, <i>Global Research Experience In Advanced Technologies [GREAT Program] at UCD in 2021</i>): Low-Latency, Resilience, and Fairness in BFT Consensus
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											 Junchao Chen (Ph.D. Candidate): Hybrid Consensus and Smart Contract Concurrency on ResilientDB
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											 Shaokang Xie (Ph.D. Candidate): Hardware-aware Asynchronous Consensus Protocols on ResilientDB
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Bismanpal Singh Anand (M.Sc. Candidate): ResAI Hub - The AI Tooling Suite ( Beacon, ContractForge, MemLens)
 											</li>
 
@@ -1348,7 +1408,7 @@
 										<b style="font-weight: 400">MSc Students</b>
 										<ul>
 
-											<li align="left">
+											<li align="left" data-show>
 											Harish Krishnakumar (M.Sc.): ResAI Hub - The AI Tooling Suite ( Beacon, ContractForge, MemLens)
 											</li>
 
@@ -1356,11 +1416,11 @@
 											Devang Borkar (M.Sc.): ResShare - Decentralized File Sharing Application with AI Chatbot
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Kunjal Agrawal (M.Sc., First Employment: Cohesity): ResInsight: AI-Driven Developer Ecosystem
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Rajaram Manohar Joshi (M.Sc., Frist Employment: Software Engineer II at Microsoft): ResTier - A Tiered Storage Engine and Native Secondary Indexing
 											</li>
 
@@ -1372,7 +1432,7 @@
 											Aman Dwivedi (M.Sc., First Employment: Lawrence Livermore National Lab): Charitap - Transforming Spare Change into Social Impact (2026)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Jiazhi (Kenny) Sun (M.Sc.): Developing Decentralized Chat and File Sharing Applications on ResilientDB (2026)
 											</li>
 
@@ -1380,7 +1440,7 @@
 											Henry Chou (M.Sc.): ResCanvas - Distributed Sharing &amp; Drawing on ResilientDB (2026)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											<a href="https://apratim.me/" target="_blank">Apratim Shukla</a> (M.Sc., First Employment: Meta): Building the Application Stack on ResilientDB (2025)
 											</li>
 
@@ -1388,23 +1448,23 @@
 											Tarun Tiwari (M.Sc., First Employment: Intuit): Decentralized Food System Designer on ResilientDB (2025)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Amoolya Gali (M.Sc., First Employment: AWS Redshift): Decentralized Food System Designer on ResilientDB (2025)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Gopal Nambiar (M.Sc., First Employment: iOPEX): Building NFT Market Place on ResilientDB (2025)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Saipranav Kotamreddy (M.Sc., First Employment: Intel Corporation): Developing Smart Contract Concurrency Controls in ResilientDB (2024)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Divjeet Singh Jas (M.Sc., First Employment: Amazon): Building NFT Market Place on ResilientDB (2023)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Arindaam Roy (M.Sc., First Employment: Square): Building SDK and API Layer for ResilientDB [<a href="papers/SDK.pdf" target="_blank">Slides</a>, <a href="https://blog.resilientdb.com/2023/02/01/UsingPythonSDK.html" target="_blank">Blog</a>, <a href="https://youtu.be/tdhpWBmqL3c" target="_blank">Talk</a>] (2023)
 											</li>
 
@@ -1420,7 +1480,7 @@
 											Jinxiao Yu (M.Sc., First Employment at Amazon AWS): Building Performance Monitoring Toolkits on ResilientDB (2022)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Rohan	Sogani (M.Sc. - Master Project, First Employment at Oracle): Cerberus - Scaling ResilientDB Fabric via Sharding (2021)
 											</li>
 
@@ -1444,7 +1504,7 @@
 											Shreenath Iyer (M.Sc. - Master Project, First Employment at Amazon): RDMA-Acceleration of Consensus Protocols in ResilientDB Fabric (2019)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Domenic Cianfichi (M.Sc. - Master Project): Fault-tolerant Consensus Protocols in ResilientDB Fabric (2018)
 											</li>
 										</ul>
@@ -1456,11 +1516,11 @@
 											Qingyue Yang (B.Sc. First Employment: METiS Pharmaceuticals): ResCash - A Secure Accounting Solution (2026)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Glenn Chen (B.Sc., First Employment: Nutanix): ResilientDB Durability, Endpoints, and Monitoring (2024)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Julieta Duarte (B.Sc., First Employment: Hackingtons): Building Durable Data Layer in ResilientDB  (2023)
 											</li>
 
@@ -1468,7 +1528,7 @@
 											Steve Chen (B.Sc.): Developing Resilient Wallet for ResilientDB  (2023)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											Erik Linsenmayer (B.Sc., First Employment: General Atomics, DIII-D National Fusion Facility): Fault-tolerant Serverless via ResilientDB Fabric  (2021)
 											</li>
 
@@ -1488,7 +1548,7 @@
 											Xinyuan	Sun (B.Sc., First Employment at CertiK): Accelerating ResilientDB Fabric via RDMAs (2019)
 											</li>
 
-											<li align="left">
+											<li align="left" data-show>
 											 Patrick Liao (B.Sc., First Employment at Juniper Networks): Parallel Fault-tolerant Consensus Protocols in ResilientDB Fabric (2019)
 											</li>
 										</ul>
@@ -1497,11 +1557,11 @@
 
 									<h4><b style="font-weight: bold">Mentorship</b></h4>
 									<ul>
-										<li align="left">
+										<li align="left" data-show>
 										Mariana Tapia (M.Sc.): Decentralized Food System Designer on ResilientDB (2026)
 										</li>
 
-										<li align="left">
+										<li align="left" data-show>
 										Aunsh Bandivadekar (M.Sc.): Visualizing Consensus Flow in ResilientDB (2026)
 										</li>
 
@@ -1683,31 +1743,31 @@
 									<div align="left">
 										<ul style="margin-bottom: 0px;">
 
-											<li><b style="font-weight: bold">FEAT: Fair and Efficient Adversarial Transaction Ordering.</b> [TBA]</br>
+											<li data-show><b style="font-weight: bold">FEAT: Fair and Efficient Adversarial Transaction Ordering.</b> [TBA]</br>
 												D. Kang, A. Dinh, <i>Mohammad Sadoghi</i>. <i>PODC 2026</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Thunderbolt: Concurrent Smart Contract Execution with Nonblocking Reconfiguration for Sharded DAGs.</b>  [<a href="https://arxiv.org/abs/2407.09409" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">Thunderbolt: Concurrent Smart Contract Execution with Nonblocking Reconfiguration for Sharded DAGs.</b>  [<a href="https://arxiv.org/abs/2407.09409" target="_blank">Preprint</a>]</br>
 												J. Chen, A. Sonnino, L. Kokoris-Kogias, <i>Mohammad Sadoghi</i>. <i>EDBT 2026</i>. <b style="font-weight: bold"><font color="#3399ff">Best Paper Award (Runner Up)</font></b>
 											</li>
 
-											<li><b style="font-weight: bold">FairDAG: Consensus Fairness over Multi-Proposer Causal Design.</b>  [<a href="https://arxiv.org/abs/2504.02194" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">FairDAG: Consensus Fairness over Multi-Proposer Causal Design.</b>  [<a href="https://arxiv.org/abs/2504.02194" target="_blank">Preprint</a>]</br>
 												D. Kang, J. Chen, A. Dinh, <i>Mohammad Sadoghi</i>. <i>VLDB 2026</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Hydra: Breaking the Global Ordering Barrier in Multi-BFT Consensus.</b>  [<a href="https://arxiv.org/abs/2511.05843" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">Hydra: Breaking the Global Ordering Barrier in Multi-BFT Consensus.</b>  [<a href="https://arxiv.org/abs/2511.05843" target="_blank">Preprint</a>]</br>
 												H. Lyu, S. Xie, J. Niu, <i>Mohammad Sadoghi</i>, Y. Zhang, C. Wang, I. Beschastnikh, C. Feng. <i>ICDE 2026</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Proof-of-Execution: Low-Latency Consensus via Speculative Execution.</b>  [<a href="https://dl.acm.org/doi/10.1145/3774322" target="_blank">Paper</a>]</br>
-											J. Hellings, S. Gupta, S. Rahnama, J. Chen, C. Sana, <i>Mohammad Sadoghi</i>. <i>TODS 2025</i>.
+											<li data-show><b style="font-weight: bold">Proof-of-Execution: Low-Latency Consensus via Speculative Execution.</b>  [<a href="https://dl.acm.org/doi/10.1145/3774322" target="_blank">Paper</a>]</br>
+											J. Hellings, S. Gupta, S. Rahnama, J. Chen, C. Sana, <i>Mohammad Sadoghi</i>. <i>TODS 2026</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Brief Announcement: Carry the Tail in Consensus Protocols.</b> [<a href="https://arxiv.org/abs/2508.12173" target="_blank">Preprint</a>, <a href="https://decentralizedthoughts.github.io/2025-09-27-carry-the-tail/" target="_blank">Blog</a>]</br>
+											<li data-show><b style="font-weight: bold">Brief Announcement: Carry the Tail in Consensus Protocols.</b> [<a href="https://arxiv.org/abs/2508.12173" target="_blank">Preprint</a>, <a href="https://decentralizedthoughts.github.io/2025-09-27-carry-the-tail/" target="_blank">Blog</a>]</br>
 											S. Gupta, D. Kang, D. Malkhi, <i>Mohammad Sadoghi</i>. <i>DISC 2025</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Securing Consensus from Long-Range Attacks through Collaboration.</b>  [<a href="https://arxiv.org/abs/2302.02325" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">Securing Consensus from Long-Range Attacks through Collaboration.</b>  [<a href="https://arxiv.org/abs/2302.02325" target="_blank">Preprint</a>]</br>
 												J. Chen, S. Gupta, A. Sonnino, L. Kokoris-Kogias, <i>Mohammad Sadoghi</i>. <i>SRDS 2025</i>.
 											</li>
 
@@ -1715,23 +1775,23 @@
 												V. Chakraborty, Y. Kaminsky, S. Mehrotra, F. Naumann, F. Nawab, P. Pappachan, <i>Mohammad Sadoghi</i>, N. Venkatasubramanian. <i>VLDB 2025</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Orthrus: Accelerating Multi-BFT Consensus through Concurrent Partial Ordering of Transactions.</b>  [<a href="https://arxiv.org/abs/2501.14732" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">Orthrus: Accelerating Multi-BFT Consensus through Concurrent Partial Ordering of Transactions.</b>  [<a href="https://arxiv.org/abs/2501.14732" target="_blank">Preprint</a>]</br>
 												H. Lyu, S. Xie, J. Niu, I. Beschastnikh, Y. Zhang, <i>Mohammad Sadoghi</i>, C. Feng. <i>ICDE 2025</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters.</b>  [<a href="https://arxiv.org/abs/2412.01999" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters.</b>  [<a href="https://arxiv.org/abs/2412.01999" target="_blank">Preprint</a>]</br>
 												T. Mane, X. Li, <i>Mohammad Sadoghi</i>, M. Lesani. <i>ICDE 2025</i>.
 											</li>
 
-											<li><b style="font-weight: bold">HotStuff-1: Linear Consensus with One-Phase Speculation.</b>  [<a href="https://arxiv.org/abs/2408.04728" target="_blank">Preprint</a>, <a href="papers/hotstuff-1.pdf" target="_blank">Slides</a>,  <a href="https://youtu.be/7KINgvBNk1U" target="_blank">Video</a>, <a href="https://decentralizedthoughts.github.io/2024-08-24-hotstuff1/" target="_blank">Blog</a>]</br>
+											<li data-show><b style="font-weight: bold">HotStuff-1: Linear Consensus with One-Phase Speculation.</b>  [<a href="https://arxiv.org/abs/2408.04728" target="_blank">Preprint</a>, <a href="papers/hotstuff-1.pdf" target="_blank">Slides</a>,  <a href="https://youtu.be/7KINgvBNk1U" target="_blank">Video</a>, <a href="https://decentralizedthoughts.github.io/2024-08-24-hotstuff1/" target="_blank">Blog</a>]</br>
 											D. Kang, S. Gupta, D. Malkhi, <i>Mohammad Sadoghi</i>. <i>SIGMOD 2025</i>. <b style="font-weight: bold"><font color="#3399ff"><a href="papers/SIGMOD-Best-Artifact-Honorable-2026.pdf" target="_blank">Best Artifact Award (Honorable Mention)</a></font></b>
 											</li>
 
-											<li><b style="font-weight: bold">The Bedrock of Byzantine Fault Tolerance: A Unified Platform for BFT Protocols Analysis, Implementation, and Experimentation.</b> [<a href="https://www.usenix.org/system/files/nsdi24-amiri.pdf" target="_blank">Paper</a>, <a href="papers/bedrock.pdf" target="_blank">Slides</a>]</br>
+											<li data-show><b style="font-weight: bold">The Bedrock of Byzantine Fault Tolerance: A Unified Platform for BFT Protocols Analysis, Implementation, and Experimentation.</b> [<a href="https://www.usenix.org/system/files/nsdi24-amiri.pdf" target="_blank">Paper</a>, <a href="papers/bedrock.pdf" target="_blank">Slides</a>]</br>
 											M. J. Amiri, C. Wu, D. Agrawal, A. Abbadi, B. Thau Loo, <i>Mohammad Sadoghi</i>. <i>NSDI 2024</i>. <b style="font-weight: bold"><font color="#3399ff">Outstanding Paper Award</font></b>
 											</li>
 
-											<li><b style="font-weight: bold">SpotLess: Concurrent Rotational Consensus Made Practical through Rapid View Synchronization.</b> [<a href="https://arxiv.org/abs/2302.02118" target="_blank">Preprint</a>, <a href="papers/SpotLess.pdf" target="_blank">Slides</a>]</br>
+											<li data-show><b style="font-weight: bold">SpotLess: Concurrent Rotational Consensus Made Practical through Rapid View Synchronization.</b> [<a href="https://arxiv.org/abs/2302.02118" target="_blank">Preprint</a>, <a href="papers/SpotLess.pdf" target="_blank">Slides</a>]</br>
 											D. Kang, S. Rahnama, J. Hellings, <i>Mohammad Sadoghi</i>. <i>ICDE 2024</i>.
 											</li>
 
@@ -1743,7 +1803,7 @@
 											M. Najafi, T. Qadah, <i>Mohammad Sadoghi</i>, H.-A. Jacobsen. <i>Transactions on Knowledge and Data Engineering (TKDE 2024)</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Dissecting BFT Consensus: In Trusted Components we Trust!</b> [<a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank">Paper</a>, <a href="papers/trusted-eurosys23.pdf" target="_blank">Slides</a>]</br>
+											<li data-show><b style="font-weight: bold">Dissecting BFT Consensus: In Trusted Components we Trust!</b> [<a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank">Paper</a>, <a href="papers/trusted-eurosys23.pdf" target="_blank">Slides</a>]</br>
 											S. Gupta, S. Rahnama, S. Pandey, N. Crooks, <i>Mohammad Sadoghi</i>. <i>EuroSys 2023</i>. <font color="green">[Artifact Reproducibility Badge]</font> <b style="font-weight: bold"><font color="#3399ff">Best Paper Award</font></b>
 											</li>
 
@@ -1751,12 +1811,12 @@
 											J. Hellings, <i>Mohammad Sadoghi</i>. <i>JSys 2023</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Cerberus: Minimalistic Multi-shard Byzantine-resilient Transaction Processing.</b> [<a href="https://escholarship.org/uc/item/6h427354" target="_blank">Paper</a>]</br>
+											<li data-show><b style="font-weight: bold">Cerberus: Minimalistic Multi-shard Byzantine-resilient Transaction Processing.</b> [<a href="https://escholarship.org/uc/item/6h427354" target="_blank">Paper</a>]</br>
 											J. Hellings, D. Hughes, J. Primero, <i>Mohammad Sadoghi</i>. <i>JSys 2023</i>.
 											</li>
 
 
-											<li><b style="font-weight: bold">ByShard: Sharding in a Byzantine Environment.</b> [<a href="https://link.springer.com/article/10.1007/s00778-023-00794-0" target="_blank">Paper</a>]</br>
+											<li data-show><b style="font-weight: bold">ByShard: Sharding in a Byzantine Environment.</b> [<a href="https://link.springer.com/article/10.1007/s00778-023-00794-0" target="_blank">Paper</a>]</br>
 											J. Hellings, <i>Mohammad Sadoghi</i>. <i>VLDBJ 2023</i>.
 											</li>
 
@@ -1784,7 +1844,7 @@
 											J. Hellings, S. Gupta, S. Rahnama, <i>Mohammad Sadoghi</i>. <i>arXiv 2022</i>.
 											</li>
 
-											<li><b style="font-weight: bold">RingBFT: Resilient Consensus over Sharded Ring Topology.</b> [<a href="https://www.researchgate.net/publication/353544105_RingBFT_Resilient_Consensus_over_Sharded_Ring_Topology" target="_blank">Preprint</a>]</br>
+											<li data-show><b style="font-weight: bold">RingBFT: Resilient Consensus over Sharded Ring Topology.</b> [<a href="https://www.researchgate.net/publication/353544105_RingBFT_Resilient_Consensus_over_Sharded_Ring_Topology" target="_blank">Preprint</a>]</br>
 											S. Rahnama, S. Gupta, R. Sogani, D. Krishnan, <i>Mohammad Sadoghi</i>. <i>EDBT 2022</i>.
 											</li>
 
@@ -1796,11 +1856,11 @@
 											J. Hellings, <i>Mohammad Sadoghi</i>. <i>arXiv 2021</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Proof-of-Execution: Reaching Consensus through Fault-Tolerant Speculation.</b> [<a href="https://www.researchgate.net/publication/337019762_Proof-of-Execution_Reaching_Consensus_through_Fault-Tolerant_Speculation" target="_blank">Paper</a>, <a href="papers/PoE-EDBT-21.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/cwHP_e_NOKI" target="_blank">Video</a>]</br>
+											<li data-show><b style="font-weight: bold">Proof-of-Execution: Reaching Consensus through Fault-Tolerant Speculation.</b> [<a href="https://www.researchgate.net/publication/337019762_Proof-of-Execution_Reaching_Consensus_through_Fault-Tolerant_Speculation" target="_blank">Paper</a>, <a href="papers/PoE-EDBT-21.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/cwHP_e_NOKI" target="_blank">Video</a>]</br>
 											S. Gupta, J. Hellings, S. Rahnama, <i>Mohammad Sadoghi</i>. <i>EDBT 2021</i>.
 											</li>
 
-											<li><b style="font-weight: bold">ResilientDB: Global Scale Resilient Blockchain Fabric.</b> [<a href="https://www.researchgate.net/publication/339866008_ResilientDB_global_scale_resilient_blockchain_fabric" target="_blank">Paper</a>, <a href="papers/GeoBFT-VLDB20.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/FL1KXEvR-84" target="_blank">Video</a>]</br>
+											<li data-show><b style="font-weight: bold">ResilientDB: Global Scale Resilient Blockchain Fabric.</b> [<a href="https://www.researchgate.net/publication/339866008_ResilientDB_global_scale_resilient_blockchain_fabric" target="_blank">Paper</a>, <a href="papers/GeoBFT-VLDB20.pptx" target="_blank">Slides</a>, <a href="https://youtu.be/FL1KXEvR-84" target="_blank">Video</a>]</br>
 											S. Gupta, S. Rahnama, J. Hellings, <i>Mohammad Sadoghi</i>. <i>PVLDB 2020</i>. <font color="green"><a href="http://vldb.org/pvldb/reproducibility/" target="_blank">[pVLDB Reproducibility Badge]</a></font>
 											</li>
 
@@ -1816,7 +1876,7 @@
 											S. Gupta, S. Rahnama, <i>Mohammad Sadoghi</i>. <i>ICDCS 2020</i>.
 											</li>
 
-											<li><b style="font-weight: bold">Coordination-free Byzantine Replication with Minimal Communication Costs. </b>[<a href="https://drops.dagstuhl.de/opus/volltexte/2020/11941/pdf/LIPIcs-ICDT-2020-17.pdf" target="_blank">Paper</a>, <a href="papers/icdt2020_slides.pdf" target="_blank">Slides</a>, <a href="https://youtu.be/tbUNAPiAcYI" target="_blank">Video</a>]</br>
+											<li data-show><b style="font-weight: bold">Coordination-free Byzantine Replication with Minimal Communication Costs. </b>[<a href="https://drops.dagstuhl.de/opus/volltexte/2020/11941/pdf/LIPIcs-ICDT-2020-17.pdf" target="_blank">Paper</a>, <a href="papers/icdt2020_slides.pdf" target="_blank">Slides</a>, <a href="https://youtu.be/tbUNAPiAcYI" target="_blank">Video</a>]</br>
 											J. Hellings, <i>Mohammad Sadoghi</i>. <i>International Conference on Database Theory (ICDT 2020)</i>.
 											</li>
 
@@ -1870,7 +1930,7 @@
 											M. Najafi, <i>Mohammad Sadoghi</i>, H.-A. Jacobsen. <i>Transactions on Knowledge and Data Engineering (TKDE 2019)</i>.
 											</li>
 
-											<li><b style="font-weight: bold">QueCC: A Queue-oriented, Control-free Concurrency Architecture.</b></br>
+											<li data-show><b style="font-weight: bold">QueCC: A Queue-oriented, Control-free Concurrency Architecture.</b></br>
 											T. Qadah, <i>Mohammad Sadoghi</i>. <i>Middleware 2018</i>.
  										  [<a href="https://www.researchgate.net/publication/329625027_QueCC_A_Queue-oriented_Control-free_Concurrency_Architecture" target="_blank">Preprint</a>, <a href="papers/QueCC-mw18.pdf" target="_blank">Slides</a>] <b style="font-weight: bold"><font color="#3399ff">Best Paper Award</font></b>
 									   </li>
@@ -1890,7 +1950,7 @@
  										  [<a href="https://www.researchgate.net/publication/325116198_Blockchain_Transaction_Processing" target="_blank">Preprint</a>]
 									   </li>
 
-											<li>
+											<li data-show>
 											<b style="font-weight: bold"> L-Store: A Real-time OLTP and OLAP System.</b> [<a href="https://www.researchgate.net/publication/324150481_L-Store_A_Real-time_OLTP_and_OLAP_System" target="_blank">Paper</a>, <a href="papers/l-store-slides.pdf" target="_blank">Slides</a> <i>with an alternative abstraction reformulation</i>]<br>
 											<i>Mohammad Sadoghi</i>, S. Bhattacherjee, B. Bhattacharjee, M. Canim. <i>EDBT 2018</i>.
 											</li>
@@ -2001,7 +2061,7 @@
 									T. Rabl, <i>Mohammad Sadoghi</i>, H.-A. Jacobsen, S. Gomez-Villamor, V. Muntes-Mulero, and S. Mankowskii. <i>PVLDB 2012</i>.
 									</li>
 
-									<li>
+									<li data-show>
 									<b style="font-weight: bold">BE-Tree: An Index Structure to Efficiently Match Boolean Expressions over High-dimensional Discrete Space.</b><br>
 									<i>Mohammad Sadoghi</i>, H.-A. Jacobsen. <i>SIGMOD 2011</i>. <font color="green">[Artifact Reproducibility Badge]</font> <b style="font-weight: bold"> <font color="#3399ff">Winner of EPTS Innovative Principles Award 2011.</font></b>
 									</li>
@@ -2061,7 +2121,7 @@
 										<h2>Data Management Courses</h2>
 									</header>
 									<ul class="features" style="margin-bottom: 0px;">
-										<li>
+										<li data-show>
 											<span class="icon major style5 fa-diamond"></span>
 											<h3>Winter 2026<br><b style="font-weight: bold">ECS 88/188: Ethics in an Age of Technology</b></h3>
 											<p>This course examines moral reasoning, ethical theories, and their application to contemporary
@@ -2072,7 +2132,7 @@
 												<a href="https://ethics.expolab.org/" class="button" target="_blank">Course Website</a>
 										</li>
 
-										<li>
+										<li data-show>
 											<span class="icon major style3 fa-copy"></span>
 											<h3>Winter 2026<br><b style="font-weight: bold">ECS 165A: Database Systems</b></h3>
 											<p>
@@ -2092,7 +2152,7 @@
 											<a href="ecs165a-winter2026.html" class="button" target="_blank">Course Website</a>
 										</li>
 
-										<li>
+										<li data-show>
 											<span class="icon major style5 fa-diamond"></span>
 											<h3>Fall 2025<br><b style="font-weight: bold">ECS 265: Distributed Database Systems</b></h3>
 											<p>This graduate seminar course surveys the recent developments in data management
@@ -2164,7 +2224,7 @@
 									</header>
 									<ul class="features" style="margin-bottom: 0px;">
 
-										<li>
+										<li data-show>
 											<span class="icon major style3 fa-diamond"></span>
 											<h3><b style="font-weight: bold">Tamarkoz® Meditation (formerly, called, Student Survival Kit)</b></h3>
 											<p>This new graduate/undergraduate seminar is an introductory experiential class in stress management centered
@@ -2175,6 +2235,7 @@
 												in which students feel free to examine habits and promote positive change.
 												<br>
 												<b style="font-weight: bold">ECS 99/298 Courses</b>:
+												<span class="inline-more-content">
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Winter 2019.jpg" target="_blank">Winter'19</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Spring 2019.jpg" target="_blank">Spring'19</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Fall 2019.jpg" target="_blank">Fall'19</a>,
@@ -2197,13 +2258,15 @@
 												<a href="handouts/ECS 298 - Survival Kit - Level 1 - Winter 2024.jpg" target="_blank">Winter'24 - Level 1 (CRN 21691/21973)</a>,
 												<a href="handouts/ECS 298 - Survival Kit - Level 2 - Winter 2024.jpg" target="_blank">Winter'24 - Level 2 (CRN 21692/21974)</a>,
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Spring 2024.jpg" target="_blank">Spring'24 - Undergrad (CRN 38753)</a>,
-												<a href="handouts/ECS 298 - Graduate Survival Kit - Spring 2024.jpg" target="_blank">Spring'24 - Grad (CRN 39022),
+												<a href="handouts/ECS 298 - Graduate Survival Kit - Spring 2024.jpg" target="_blank">Spring'24 - Grad (CRN 39022)</a>,
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Fall 2024.jpg" target="_blank">Fall'24 - Undergrad (CRN 29344)</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Fall 2024.jpg" target="_blank">Fall'24 - Grad (CRN 29601)</a>,
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Winter 2025.jpg" target="_blank">Winter'25 - Undergrad (CRN 19718)</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Winter 2025.jpg" target="_blank">Winter'25 - Grad (CRN 20010)</a>,
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Spring 2025.jpg" target="_blank">Spring'25 - Undergrad (CRN 38168)</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Spring 2025.jpg" target="_blank">Spring'25 - Grad (CRN 38443)</a>,
+												</span>
+												<a href="#" class="inline-more-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display?'':'inline';this.textContent=this.textContent.includes('more')?'show less ▴':'show more ▾';return false"> show more ▾</a>
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Fall 2025.jpg" target="_blank">Fall'25 - Undergrad (CRN 28944)</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Fall 2025.jpg" target="_blank">Fall'25 - Grad (CRN 29220)</a>,
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Winter 2026.jpg" target="_blank">Winter'26 - Undergrad (CRN 19703)</a>,
@@ -2211,7 +2274,9 @@
 												<a href="handouts/ECS 98 - Undergraduate Survival Kit - Spring 2026.jpg" target="_blank">Spring'26 - Undergrad (CRN 38189)</a>,
 												<a href="handouts/ECS 298 - Graduate Survival Kit - Spring 2026.jpg" target="_blank">Spring'26 - Grad (CRN 38481)</a>.
 												<br>
-												 <b style="font-weight: bold">First-year Seminars</b>: Spring'19 (CRN 74417), Fall'19 (CRN 44453),
+												 <b style="font-weight: bold">First-year Seminars</b>:
+												 <span class="inline-more-content">
+												 Spring'19 (CRN 74417), Fall'19 (CRN 44453),
 												 <a href="handouts/FYS - Survival Kit - Winter 2020.jpg" target="_blank">Winter'20 (CRN 57853)</a>,
 												 <a href="handouts/FYS - Survival Kit - Spring 2020.jpg" target="_blank">Spring'20 (CRN 66553)</a>,
 												 <a href="handouts/FYS - Survival Kit - Fall 2020.jpg" target="_blank">Fall'20 (CRN 34556)</a>,
@@ -2233,13 +2298,15 @@
 												 <a href="handouts/FYS - Tamarkoz - Winter 2025.jpg" target="_blank">Winter'25 (CRN 23890)</a>,
 												 <a href="handouts/FYS - Tamarkoz - Spring 2025.jpg" target="_blank">Spring'25 (CRN 41780)</a>,
 												 <a href="handouts/FYS - Tamarkoz - Summer 2025.jpg" target="_blank">Summer'25 (CRN 71599)</a>,
+											 </span>
+											 <a href="#" class="inline-more-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display?'':'inline';this.textContent=this.textContent.includes('more')?'show less ▴':'show more ▾';return false"> show more ▾</a>
 												<a href="handouts/FYS - Tamarkoz - Fall 2025.jpg" target="_blank">Fall'25 (CRN 32751)</a>,
 												<a href="handouts/FYS - Tamarkoz - Winter 2026.jpg" target="_blank">Winter'26 (CRN 23674)</a>,
 												 <a href="handouts/FYS - Tamarkoz - Spring 2026.jpg" target="_blank">Spring'26 (CRN 41624)</a>.
 											</p>
 										</li>
 
-										<li>
+										<li data-show>
 											<span class="icon major style5 fa-diamond"></span>
 											<h3><b style="font-weight: bold">Becoming an Extraordinary Human</b></h3>
 											<p>No one wants to be ordinary. This course focuses on the personal development
@@ -2249,7 +2316,9 @@
 												of physical awareness and control, and development of positive personal characteristics.
 												Physical activities include movements and visualizations.
 												<br>
-												<b style="font-weight: bold">First-year Seminars</b>: Fall'19 (CRN 64059),
+												<b style="font-weight: bold">First-year Seminars</b>:
+												<span class="inline-more-content">
+												Fall'19 (CRN 64059),
 												<a href="handouts/FYS - Extraordinary - Winter 2020.jpg" target="_blank">Winter'20 (CRN: 57877)</a>,
 												<a href="handouts/FYS - Extraordinary - Spring 2020.jpg" target="_blank">Spring'20 (CRN: 57877)</a>,
 												<a href="handouts/FYS - Extraordinary - Fall 2020.jpg" target="_blank">Fall'20 (CRN: 34537)</a>,
@@ -2267,13 +2336,15 @@
 												<a href="handouts/FYS - Extraordinary - Fall 2024.jpg" target="_blank">Fall'24 (CRN: 33219)</a>,
 												<a href="handouts/FYS - Extraordinary - Winter 2025.jpg" target="_blank">Winter'25 (CRN: 23893)</a>,
 												<a href="handouts/FYS - Extraordinary - Spring 2025.jpg" target="_blank">Spring'25 (CRN: 41781)</a>,
+												</span>
+												<a href="#" class="inline-more-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display?'':'inline';this.textContent=this.textContent.includes('more')?'show less ▴':'show more ▾';return false"> show more ▾</a>
 												<a href="handouts/FYS - Extraordinary - Fall 2025.jpg" target="_blank">Fall'25 (CRN: 33752)</a>,
 												<a href="handouts/FYS - Extraordinary - Winter 2026.jpg" target="_blank">Winter'26 (CRN: 23676)</a>,
 												<a href="handouts/FYS - Extraordinary - Spring 2026.jpg" target="_blank">Spring'26 (CRN: 41625)</a>.
 											</p>
 										</li>
 
-										<li>
+										<li data-show>
 											<span class="icon major style1 fa-diamond"></span>
 											<h3><b style="font-weight: bold">Sufism: The Art and Science of Self-Knowledge</b></h3>
 											<p>Sufism is a 1400 year old discipline that teaches the individual to explore and discover
@@ -2281,7 +2352,9 @@
 												and physical roles, and their definitions and labels of self, has a unique and stable
 												identity. Who are you, really, beneath all the coverings of family, community, and society?
 												<br>
-												<b style="font-weight: bold">First-year Seminars</b>: Spring'21 (CRN 44620),
+												<b style="font-weight: bold">First-year Seminars</b>:
+												<span class="inline-more-content">
+												Spring'21 (CRN 44620),
 												<a href="handouts/FYS - Sufism - Fall 2021.jpg" target="_blank">Fall'21 (CRN 34615)</a>,
 												<a href="handouts/FYS - Sufism - Winter 2022.jpg" target="_blank">Winter'22 (CRN 25946)</a>,
 												<a href="handouts/FYS - Sufism - Spring 2022.jpg" target="_blank">Spring'22 (CRN 44555)</a>,
@@ -2297,11 +2370,18 @@
 												<a href="handouts/FYS - Sufism - Fall 2024.jpg" target="_blank">Fall'24 (CRN 33218)</a>,
 												<a href="handouts/FYS - Sufism - Winter 2025.jpg" target="_blank">Winter'25 (CRN 23891)</a>,
 												<a href="handouts/FYS - Sufism - Spring 2025.jpg" target="_blank">Spring'25 (CRN 41779)</a>,
+												</span>
+												<a href="#" class="inline-more-toggle" onclick="this.previousElementSibling.style.display=this.previousElementSibling.style.display?'':'inline';this.textContent=this.textContent.includes('more')?'show less ▴':'show more ▾';return false"> show more ▾</a>
 												<a href="handouts/FYS - Sufism - Fall 2025.jpg" target="_blank">Fall'25 (CRN 32753)</a>,
-												<a href="handouts/FYS - Sufism - Fall 2025.jpg" target="_blank">Winter'26 (CRN 23675)</a>,
+												<a href="handouts/FYS - Sufism - Winter 2025.jpg" target="_blank">Winter'26 (CRN 23675)</a>,
 												<a href="handouts/FYS - Sufism - Spring 2026.jpg" target="_blank">Spring'26 (CRN 41626)</a>.
 											</p>
 										</li>
+
+
+
+
+
 
 										<li>
 											<span class="icon major style1 fa-diamond"></span>
@@ -2330,19 +2410,19 @@
 										<div align="left">
 											<h3>Organizing Committee</h3>
 											<ul style="margin-bottom: 0px;">
-												<li align="left">
+												<li align="left" data-show>
 													Steering Committee of <a href="https://middleware-conf.github.io/" target="_blank">ACM/IFIP Middleware</a>: 2020-present
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													Program Co-Chair for Middleware (Research Track): 2025
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													Associate Editor for IEEE ICDE (Research Track): 2023, 2025, 2026
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													Associate Editor for The VLDB Journal: 2025-present
 												</li>
 
@@ -2366,7 +2446,7 @@
 													General Chair of <a href="https://scfab.github.io/2021/" target="_blank">FAB 2021</a> <br> [International Symposium on Foundations and Applications of Blockchain]
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													PC Co-Chair for <a href="https://2020.debs.org/" target="_blank">ACM DEBS</a> (Research Track): 2020
 												</li>
 
@@ -2402,7 +2482,7 @@
 												 Co-Chair for the <a href="https://active-conf.github.io/icde-2017/index.html" target="_blank">First Active Workshop</a> at ICDE 2017
 											 </li>
 
-												<li align="left">
+												<li align="left" data-show>
 													PC Chair for <a href="http://www.debs2017.org/call-for-industry-papers/" target="_blank">ACM DEBS</a> (Industry Track): 2017
 												</li>
 
@@ -2421,29 +2501,31 @@
 												<div align="left">
 											<h3>Program Committee</h3>
 											<ul style="margin-bottom: 0px;">
-												<li align="left">
-													PC member for ACM CCS: 2025, 2026
-												</li>
 
-												<li align="left">
-													PC member for VLDB: 2017, 2018, 2021, 2022, 2023, 2025, 2026, 2027 - <b style="font-weight: bold">Recognized as Distinguished Reviewer (2022)</b>
-												</li>
-
-												<li align="left">
+												<li align="left" data-show>
 													PC member for ACM SIGMOD: 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026, 2027 - <b style="font-weight: bold">Recognized as Distinguished PC Member (2021)</b>
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
+													PC member for VLDB: 2017, 2018, 2021, 2022, 2023, 2025, 2026, 2027 - <b style="font-weight: bold">Recognized as Distinguished Reviewer (2022)</b>
+												</li>
+
+												<li align="left" data-show>
 													PC member for EDBT: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027 - <b style="font-weight: bold">Recognized as Honorable Mentions (2023)</b>
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													PC member for ICDE: 2018, 2019, 2020, 2021, 2022, 2023 (Associate Editor), 2024, 2025 (Associate Editor), 2026 (Associate Editor)
 												</li>
 
-												<li align="left">
+												<li align="left" data-show>
 													PC member for ACM Middleware: 2016, 2017, 2018, 2020, 2021, 2023, 2024, 2025 (PC Chair), 2026
 												</li>
+
+												<li align="left" data-show>
+													PC member for ACM CCS: 2025, 2026
+												</li>
+
 
 												<li align="left">
 													PC member for DEBS: 2021, 2023, 2024
@@ -2505,7 +2587,9 @@
 							data management. At UC Davis, he leads the ExpoLab research group with the aim to pioneer a
 							new exploratory data platform—referred to as ResilientDB Blockchain Fabric—a distributed ledger that unifies secure
 							transactional and real-time analytical processing, all centered around a democratic and
-							decentralized computational model. His research on blockchain has received extensive press coverage
+							decentralized computational model. Additionally, he aims to explore the concept of consensus from moral,
+							ethical, epistemological, and religious perspectives grounded in computer science.
+							His research on blockchain has received extensive press coverage
        				and has been covered by Advancements TV - CNBC, Yahoo! Finance, Market Insider, Crypto Media,
 							Times Union, WBOC TV/Radio, Davis Enterprise, CoinDesk.</p>
 
@@ -2541,35 +2625,37 @@
 
 							</p>
 
-							<p align="left" style="font-style: normal">
-							He is serving in the Steering Committee of <a href="https://middleware-conf.github.io/" target="_blank">ACM/IFIP Middleware</a>
-							and <a href="https://scfab.github.io/" target="_blank">International Symposium on Foundations and Applications of Blockchain (FAB)</a>,
-							and served as the Lead-Guest Editor for Springer Distributed and Parallel Databases: <a href="https://www.springer.com/journal/10619/updates/19089506" target="_blank">Special Issue on Blockchain</a>.
-							He has served as the Program Co-Chair for Middleware 2025, Associate PC Chair for <a href="https://icde2023.ics.uci.edu/" target="_blank">IEEE ICDE 2023, 2025, 2026</a>;
-							Program Vice Co-Chair for <a href="https://icdcs2021.us/" target="_blank">IEEE ICDCS'21</a>;
-							Program Vice Co-Chair for <a href="http://bigdataieee.org/BigData2021/" target="_blank">IEEE Big Data'21</a>;
-							General Chair of <a href="https://scfab.github.io/2021/" target="_blank">FAB'21</a>;
-							PC Co-Chair for <a href="https://2020.debs.org/" target="_blank">ACM DEBS'20</a>;
-							General Co-chair of <a href="http://2019.middleware-conference.org/" target="_blank">ACM/IFIP Middleware'19</a>;
-							Workshop/Tutorial Co-Chairs of <a href="http://2018.middleware-conference.org/" target="_blank">ACM/IFIP Middleware'18</a>; and
-							PC Chair (Industry Track) for <a href="http://www.debs2017.org/" target="_blank">ACM DEBS'17</a>,
-							co-chaired a new workshop at ICDE'17 entitled
-							<a href="https://active-conf.github.io/icde-2017/index.html" target="_blank">"Active:
-							First International Workshop on Data Management on Virtualized Active Systems"</a> (and again at ICDE'18,
-							ICDE'19, ICDE'20, and ICDE'21), and co-chaired a new workshop at DEBS'17 entitled
-							<a href="https://epbpm.github.io/" target="_blank">"First International Workshop on Events Meet Processes"</a>.
-							He co-chaired the
-							<a href="http://2017.middleware-conference.org/call-for-doctoral-symposium-papers.html" target="_blank">Doctoral
-							Symposium</a> and <a href="https://active-conf.github.io/" target="_blank">"Active: Second
-							International Workshop on Active Middleware on Modern Hardware"</a> at
-							<a href="http://2017.middleware-conference.org/" target="_blank">ACM/IFIP/USENIX Middleware'17</a>.
-							Furthermore, he has served as the Area Editor for <i>Transaction Processing</i> in Encyclopedia
-							of Big Data Technologies by Springer. He has served as
-							the publicity co-chair of ACM DEBS (2015-16). He regularly serves on the program committee of SIGMOD,
-							VLDB, ICDE, EDBT, IJCAI, ICDCS, ECOOP, ICSOC, DEBS, and ADMS; and has been invited reviewers for
-							TKDE and TPDS.
-							</p>
-
+							<details class="bio-details">
+							  <summary class="bio-details-toggle">Service &amp; Committee Roles <span class="bio-details-hint">(show more)</span></summary>
+								<p align="left" style="font-style: normal">
+								He is serving in the Steering Committee of <a href="https://middleware-conf.github.io/" target="_blank">ACM/IFIP Middleware</a>
+								and <a href="https://scfab.github.io/" target="_blank">International Symposium on Foundations and Applications of Blockchain (FAB)</a>,
+								and served as the Lead-Guest Editor for Springer Distributed and Parallel Databases: <a href="https://www.springer.com/journal/10619/updates/19089506" target="_blank">Special Issue on Blockchain</a>.
+								He has served as the Program Co-Chair for Middleware 2025, Associate PC Chair for <a href="https://icde2023.ics.uci.edu/" target="_blank">IEEE ICDE 2023, 2025, 2026</a>;
+								Program Vice Co-Chair for <a href="https://icdcs2021.us/" target="_blank">IEEE ICDCS'21</a>;
+								Program Vice Co-Chair for <a href="http://bigdataieee.org/BigData2021/" target="_blank">IEEE Big Data'21</a>;
+								General Chair of <a href="https://scfab.github.io/2021/" target="_blank">FAB'21</a>;
+								PC Co-Chair for <a href="https://2020.debs.org/" target="_blank">ACM DEBS'20</a>;
+								General Co-chair of <a href="http://2019.middleware-conference.org/" target="_blank">ACM/IFIP Middleware'19</a>;
+								Workshop/Tutorial Co-Chairs of <a href="http://2018.middleware-conference.org/" target="_blank">ACM/IFIP Middleware'18</a>; and
+								PC Chair (Industry Track) for <a href="http://www.debs2017.org/" target="_blank">ACM DEBS'17</a>,
+								co-chaired a new workshop at ICDE'17 entitled
+								<a href="https://active-conf.github.io/icde-2017/index.html" target="_blank">"Active:
+								First International Workshop on Data Management on Virtualized Active Systems"</a> (and again at ICDE'18,
+								ICDE'19, ICDE'20, and ICDE'21), and co-chaired a new workshop at DEBS'17 entitled
+								<a href="https://epbpm.github.io/" target="_blank">"First International Workshop on Events Meet Processes"</a>.
+								He co-chaired the
+								<a href="http://2017.middleware-conference.org/call-for-doctoral-symposium-papers.html" target="_blank">Doctoral
+								Symposium</a> and <a href="https://active-conf.github.io/" target="_blank">"Active: Second
+								International Workshop on Active Middleware on Modern Hardware"</a> at
+								<a href="http://2017.middleware-conference.org/" target="_blank">ACM/IFIP/USENIX Middleware'17</a>.
+								Furthermore, he has served as the Area Editor for <i>Transaction Processing</i> in Encyclopedia
+								of Big Data Technologies by Springer. He has served as
+								the publicity co-chair of ACM DEBS (2015-16). He regularly serves on the program committee of SIGMOD,
+								VLDB, ICDE, EDBT, IJCAI, ICDCS, ECOOP, ICSOC, DEBS, and ADMS; and has been invited reviewers for
+								TKDE and TPDS.
+								</p>
+							</details>
 							</section>
 
 
@@ -2708,5 +2794,49 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
+			<!-- Show selected items -->
+			<script>
+			(function () {
+				var LIMIT = 5;
+				document.querySelectorAll('#main section ul').forEach(function (ul) {
+					if (ul.classList.contains('icons') || ul.classList.contains('actions')) return;
+
+					var items = Array.from(ul.children).filter(function (n) {
+						return n.tagName === 'LI';
+					});
+					if (items.length === 0) return;
+
+					var hasPinned = items.some(function (li) {
+						return li.hasAttribute('data-show');
+					});
+
+					var hidden;
+					if (hasPinned) {
+						hidden = items.filter(function (li) { return !li.hasAttribute('data-show'); });
+					} else {
+						if (items.length <= LIMIT) return;
+						hidden = items.slice(LIMIT);
+					}
+
+					if (hidden.length === 0) return;
+					hidden.forEach(function (li) { li.classList.add('collapsed-item'); });
+
+					var toggle = document.createElement('li');
+					toggle.className = 'list-toggle';
+					var link = document.createElement('a');
+					link.href = '#'; link.className = 'list-toggle-link';
+					link.textContent = 'Show ' + hidden.length + ' more \u25be';
+					var open = false;
+					link.addEventListener('click', function (e) {
+						e.preventDefault();
+						open = !open;
+						hidden.forEach(function (li) { li.classList.toggle('collapsed-item', !open); });
+						link.textContent = open ? 'Show less \u25b4' : 'Show ' + hidden.length + ' more \u25be';
+					});
+					toggle.appendChild(link);
+					ul.appendChild(toggle);
+				});
+			})();
+			</script>
 	</body>
 </html>
