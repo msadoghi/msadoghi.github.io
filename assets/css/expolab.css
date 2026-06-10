@@ -100,35 +100,7 @@ img { max-width: 100%; height: auto; }
   padding: 2rem 1.5rem 5rem;
   background: var(--bg-dark);
   color: var(--text-on-dark);
-  overflow: hidden;
-}
-
-.xl-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 75% 55% at 50% 0%, rgba(184, 169, 204, 0.22) 0%, transparent 58%),
-    radial-gradient(ellipse 55% 40% at 88% 100%, rgba(227, 160, 175, 0.14) 0%, transparent 52%),
-    linear-gradient(165deg, #6b5b82 0%, var(--bg-dark) 48%, var(--bg-dark-deep) 100%);
-  pointer-events: none;
-}
-
-.xl-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.03) 0%, transparent 1px),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0%, transparent 1px);
-  background-size: 60px 60px, 90px 90px;
-  pointer-events: none;
-  animation: xl-drift 60s linear infinite;
-}
-
-@keyframes xl-drift {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-30px, -20px); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .xl-hero-inner {
@@ -137,18 +109,28 @@ img { max-width: 100%; height: auto; }
   max-width: 720px;
 }
 
+.xl-hero-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 1.25rem;
+}
+
 .xl-hero-logo {
   width: min(380px, 85vw);
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.4));
 }
 
 .xl-hero-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 400;
-  margin: 0 0 0.65rem;
-  letter-spacing: 0;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.01em;
   line-height: var(--leading-tight);
   color: var(--text-on-dark);
 }
@@ -157,9 +139,54 @@ img { max-width: 100%; height: auto; }
   font-family: var(--font-sans);
   font-size: var(--text-lg);
   color: var(--text-muted-dark);
-  margin: 0;
+  margin: 0 auto;
+  max-width: 32rem;
+  line-height: 1.6;
   font-weight: 400;
   letter-spacing: 0.02em;
+}
+
+.xl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin-top: 1.75rem;
+}
+
+.xl-hero-pill {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.xl-hero-pill:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.xl-hero-pill--outline {
+  background: transparent;
+  border-color: rgba(184, 169, 204, 0.45);
+  color: var(--accent-soft);
+}
+
+.xl-hero-pill--outline:hover {
+  background: rgba(184, 169, 204, 0.12);
+  border-color: var(--accent-soft);
+  color: #fff;
 }
 
 .xl-scroll-hint {
@@ -167,31 +194,127 @@ img { max-width: 100%; height: auto; }
   bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--text-muted-dark);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   text-decoration: none;
-  animation: xl-bounce 2s ease infinite;
-  transition: color var(--transition);
+  opacity: 0.7;
+  transition: color var(--transition), opacity var(--transition);
   z-index: 1;
 }
 
 .xl-scroll-hint:hover {
   color: var(--text-on-dark);
+  opacity: 1;
   text-decoration: none;
 }
 
-.xl-scroll-hint::after {
-  content: ' ↓';
-  font-size: 1rem;
-  letter-spacing: 0;
+.xl-scroll-hint-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-@keyframes xl-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
+.xl-scroll-hint-chevron {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: 0.1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xl-scroll-hint-chevron {
+    animation: xl-scroll-pulse 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes xl-scroll-pulse {
+  0%, 100% { opacity: 0.5; transform: rotate(45deg) translateY(0); }
+  50% { opacity: 1; transform: rotate(45deg) translateY(4px); }
+}
+
+/* Hero entrance animations */
+.xl-hero:not(.is-loaded) .xl-hero-eyebrow,
+.xl-hero:not(.is-loaded) .xl-hero-logo,
+.xl-hero:not(.is-loaded) .xl-hero-title,
+.xl-hero:not(.is-loaded) .xl-hero-tagline,
+.xl-hero:not(.is-loaded) .xl-hero-actions,
+.xl-hero:not(.is-loaded) .xl-scroll-hint {
+  opacity: 0;
+}
+
+.xl-hero.is-loaded .xl-hero-eyebrow,
+.xl-hero.is-loaded .xl-hero-logo,
+.xl-hero.is-loaded .xl-hero-title,
+.xl-hero.is-loaded .xl-hero-tagline,
+.xl-hero.is-loaded .xl-hero-actions,
+.xl-hero.is-loaded .xl-scroll-hint {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xl-hero.is-loaded .xl-hero-eyebrow {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.1s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-logo {
+    animation: xl-hero-logo-in 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.2s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-title {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.35s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-tagline {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.5s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-actions {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.65s both;
+  }
+
+  .xl-hero.is-loaded .xl-scroll-hint {
+    animation: xl-hero-scroll-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.85s both;
+  }
+}
+
+@keyframes xl-hero-scroll-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes xl-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes xl-hero-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ── Fixed top nav (hidden on hero, slides in on scroll) ── */

@@ -35,6 +35,15 @@
     document.querySelectorAll('.xl-details, .xl-pub-card').forEach(wrapAccordionPanel);
   }
 
+  /* ── Hero entrance animation ── */
+  function initHero() {
+    var hero = document.getElementById('top');
+    if (!hero || !hero.classList.contains('xl-hero')) return;
+    requestAnimationFrame(function () {
+      hero.classList.add('is-loaded');
+    });
+  }
+
   /* ── Sticky nav visibility ── */
   function initStickyNav() {
     var nav = document.querySelector('.xl-nav');
@@ -896,6 +905,7 @@
   }
 
   function init() {
+    initHero();
     initStickyNav();
     initNavScroll();
     initNews();
