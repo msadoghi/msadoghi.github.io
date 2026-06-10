@@ -1,161 +1,60 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Mohammad Sadoghi - ExpoLab</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- Show selected items -->
-		<style>
-			li.collapsed-item  { display: none; }
-			li.list-toggle     { list-style: none; margin-top: 0.6em; }
-			a.list-toggle-link {
-				font-size: 0.8em; font-weight: 700;
-				letter-spacing: 0.08em; text-transform: uppercase;
-				cursor: pointer; border-bottom: 1px dotted currentColor;
-				text-decoration: none;
-			}
-		</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mohammad Sadoghi - ExpoLab</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Exploratory Systems Lab at UC Davis — pioneering resilient and sustainable data platforms." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="assets/css/expolab.css?v=22" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/expolab-icon-only.png"/>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
 
-		<style>
-			  /* Bio / paragraph show-more using native <details> */
-			  details.bio-details {
-			    margin: 1em 0;
-			  }
+	<header class="xl-hero" id="top">
+		<div class="xl-hero-inner">
+			<img class="xl-hero-logo" src="images/expolab-icon.png" alt="ExpoLab" />
+			<h1 class="xl-hero-title">Exploratory Systems Lab</h1>
+			<p class="xl-hero-tagline">UC Davis · Resilient data platforms at scale</p>
+		</div>
+		<a href="#intro" class="xl-scroll-hint">Scroll to explore</a>
+	</header>
 
-			  summary.bio-details-toggle {
-			    display: inline-block;
-			    cursor: pointer;
-			    list-style: none;
-			    font-size: 0.85em;
-			    font-weight: 700;
-			    letter-spacing: 0.08em;
-			    text-transform: uppercase;
-			    color: #555;
-			    margin-bottom: 0.4em;
-			  }
+	<nav class="xl-nav" aria-label="Sticky navigation">
+		<div class="xl-nav-inner">
+			<a class="xl-nav-brand" href="#top">ExpoLab</a>
+			<button class="xl-nav-toggle" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+			<ul class="xl-nav-links">
+				<li><a href="#intro">About</a></li>
+				<li><a href="#book">Books</a></li>
+				<li><a href="#press">Press</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#people">People</a></li>
+				<li><a href="#pub">Publications</a></li>
+				<li><a href="#teach">Teaching</a></li>
+				<li><a href="#service">Service</a></li>
+				<li><a href="#bio">Bio</a></li>
+				<li><a href="#apply">Join</a></li>
+				<li><a href="#sponsors">Sponsors</a></li>
+			</ul>
+		</div>
+	</nav>
 
-			  summary.bio-details-toggle::-webkit-details-marker { display: none; }
-
-			  summary.bio-details-toggle .bio-details-hint { font-size: 0; }
-
-			  summary.bio-details-toggle .bio-details-hint::after {
-			    font-size: 0.85rem;
-			    font-weight: 400;
-			    text-transform: none;
-			    letter-spacing: 0;
-			    content: '\25BE  show more';
-			  }
-
-			  details.bio-details[open] summary .bio-details-hint::after {
-			    content: '\25B4  show less';
-			  }
-			</style>
-
-			<style>
-		  span.inline-more-content { display: none; }
-		  a.inline-more-toggle {
-		    font-size: 0.8em;
-		    font-weight: 700;
-		    letter-spacing: 0.08em;
-		    text-transform: uppercase;
-		    white-space: nowrap;
-		    cursor: pointer;
-		    border-bottom: 1px dotted currentColor;
-		    text-decoration: none;
-		  }
-		</style>
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<link rel="shortcut icon" type="image/x-icon" href="images/expolab-icon-only.png"/>
-		<!-- Place this tag in your head or just before your close body tag. -->
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-	</head>
-	<body>
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/expolab-icon.png" alt="" style="width: 450px"/></span>
-						<!--
-						<h1>Exploratory Systems Lab</h1>
-						<p><b style="font-weight: bold">Mohammad Sadoghi</b>, Assistant Professor @ <a href="https://www.ucdavis.edu/" target="_blank">UC Davis</a></p>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">About</a></li>
-							<li><a href="#book">Books</a></li>
-							<li><a href="#press">Press</a></li>
-							<li><a href="#news">News</a></li>
-							<li><a href="#people">People</a></li>
-							<li><a href="#pub">Publications</a></li>
-							<li><a href="#teach">Teaching</a></li>
-							<li><a href="#service">Service</a></li>
-							<li><a href="#bio">Bio</a></li>
-							<!--<li><a href="#apply">Apply</a></li>
-							 <li><a href="#sponsors">Sponsors</a></li> -->
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-<!--
-						<section id="stance" class="main special">
-							<header class="major">
-						</header>
-
-							<div>
-								<div align="left">
-									<h3>2016</h3>
-
-									<blockquote>
-
-									<p align="center" style="color:#2471A3;">
-									<i>
-									We stand in solidarity with the brave and determined Iranian women and Iranian people.
-									We are committed to upholding fundamental human rights, maintaining equity and justice,
-									and standing against the use of violence, repression, and discrimination.
-									We condemn the barbaric acts and brutal killings in Iranian streets,
-									<a href="https://www.ucdavis.edu/news/chancellors-statement-crisis-ukraine" target="_blank">of innocent people in Ukraine</a>,
-									and everywhere globally.
-									</i>
-								  </p>
-
-									<div align="center" style="color:#2471A3;">
-									<b style="font-weight: bold;color:#2471A3">Statements by UC Davis:</b> <a href="https://www.ucdavis.edu/news/statement-resources-and-support-impacted-unrest-iran" target="_blank">Chancellor Gary S. May</a>,
-									<a href="https://engineering.ucdavis.edu/news/statement-resources-and-support-those-impacted-unrest-iran" target="_blank">Dean Corsi (College of Engineering)</a>,
-									<a href="https://mesa.ucdavis.edu/public-statements/state-violence-against-student-protesters-iran" target="_blank">Middle East/South Asia Studies</a>
-									</div>
-									</blockquote>
+	<main class="xl-main">
 
 
-								</div>
-							</div>
-
-						</section>
-
- -->
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Exploratory Systems Lab<br>
-											</h2>
-										</header>
+		<section id="intro" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Overview</span>
+					<h2>About</h2>
+					<p class="xl-section-lead">Pioneering resilient and sustainable data platforms at scale</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<div class="xl-card xl-about-card">
+				<div class="xl-about-grid"><div class="xl-prose">
 										<p>Welcome to the Exploratory Systems Lab (<b style="font-weight: bold"><a href="papers/ResilientDB-2021.pdf" target="_blank">ExpoLab</a></b>)
 											at the Computer Science Department at UC Davis. Our mission led by Prof.
 											<b style="font-weight: bold"><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a></b>, <a href="https://www.ucdavis.edu/news/2025-26-chancellors-fellows-rise-top" target="_blank">Chancellor's Fellow</a>,
@@ -189,10 +88,10 @@
 											undergraduates. Broadly speaking, the related research topics/projects to fulfill our
 											ResilientDB	vision are: <br>
 										</p>
-</div>
-	<span class="image"><img src="images/msadoghi-2022.jpg" alt="" /></span>
-</div>
+</div><div class="xl-about-image"><img src="images/msadoghi-2022.jpg" alt="Mohammad Sadoghi" /></div></div>
+				</div>
 
+				<div class="xl-about-areas">
  <b style="font-weight: bold">Core Research Areas:</b>
 
 <ul align="left" style="margin-bottom: 0px;">
@@ -352,78 +251,55 @@
 	</li>
 
 </ul>
+				</div>
 <br>
-							</section>
+			</div>
+		</section>
 
-<!--
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Exploratory System Lab</h2>
-										</header>
-										<p>Welcome to Exploratory System Lab at the Computer Science Department at Purdue University.  Our mission is to develop a new data science platform to enable real-time fusion and exploration of data at Web scale.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-
-									</div>
-									<span class="image"><img src="images/mo.bmp"  style="width: 150px"  alt="" /></span>
-								</div>
-							</section>
--->
-						<!-- First Section -->
-
-						<section id="book" class="main special">
-							<header class="major">
-								<h2>Books</h2>
-							</header>
-
-							<div class="row">
-								<div align="left">
-
-									<ul style="margin-bottom: 0px;">
-										<li><a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank"><b style="font-weight: bold">The Problems of Consensus: An Ethical Inquiry into Democratic and Decentralized Principles.</a></b>
+		<section id="book" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Research</span>
+					<h2>Books</h2>
+					<p class="xl-section-lead">Textbooks on blockchain, consensus, and transaction processing</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<div class="xl-book-card"><img src="images/problem-of-consensus-banner-hq.png" alt="" /><div class="xl-prose"><a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank"><b style="font-weight: bold">The Problems of Consensus: An Ethical Inquiry into Democratic and Decentralized Principles.</a></b>
 											[<a href="images/problem-of-consensus-flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank">Book</a>, <a href="https://cs.ucdavis.edu/news/computer-scientists-new-book-explores-philosophy-ethics-age-ai" target="_blank">Interview</a>]</br>
 											<i>Mohammad Sadoghi</i>.
 											<i><a href="https://link.springer.com/series/10082" target="_blank">SpringerBriefs in Philosophy</a></i>. 2025.<br>
-										</li>
-
-										<li><a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank"><b style="font-weight: bold">Consensus in Data Management: From Distributed Commit to Blockchain.</a> [<a href="images/Sadoghi_CBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank">eBook/Print</a>]</b></br>
+										</div></div>
+<div class="xl-book-card"><img src="images/consensus-book-banner.png" alt="" /><div class="xl-prose"><a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank"><b style="font-weight: bold">Consensus in Data Management: From Distributed Commit to Blockchain.</a> [<a href="images/Sadoghi_CBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank">eBook/Print</a>]</b></br>
 											F. Nawab and <i>Mohammad Sadoghi</i>.
 											<i><a href="https://www.nowpublishers.com/DBS" target="_blank">Foundations and Trends® in Databases</a></i>. 2023.<br>
 											<i><b style="font-weight: bold">Book Slides:</b> <a href="https://nawab.me/main/consensus-in-data-management-book/" target="_blank">here</a> </i>| <b style="font-weight: bold">Book Slides:</b> <a href="https://www.youtube.com/playlist?list=PLJnEiCFA9YRmbuLimCUd9L2EmABNaVMNJ" target="_blank">Lecture Recordings</a>
-										</li>
-
-										<li><a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank"><b style="font-weight: bold">Fault-tolerant Distributed Transactions on Blockchain. </a>[<a href="images/Sadoghi_BBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank">eBook/Print</a>]</b></br>
+										</div></div>
+<div class="xl-book-card"><img src="images/blockchain-book-banner.png" alt="" /><div class="xl-prose"><a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank"><b style="font-weight: bold">Fault-tolerant Distributed Transactions on Blockchain. </a>[<a href="images/Sadoghi_BBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank">eBook/Print</a>]</b></br>
 											S. Gupta, J. Hellings, and <i>Mohammad Sadoghi</i>.
 											<i><a href="https://www.springer.com/series/16903" target="_blank">Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2021. <br>
 											<i><b style="font-weight: bold">Book Slides:</b> <a href="papers/BB-chapter1.pdf" target="_blank">Chapter 1</a>, <a href="papers/BB-chapter2.pdf" target="_blank">Chapter 2</a>, <a href="papers/BB-chapter3.pdf" target="_blank">Chapter 3</a>, <a href="papers/BB-chapter4.pdf" target="_blank">Chapter 4</a>, </i> [...] |
 											<b style="font-weight: bold">Book Slides:</b> <a href="https://www.youtube.com/playlist?list=PLJnEiCFA9YRmbuLimCUd9L2EmABNaVMNJ" target="_blank">Lecture Recordings</a>
-										</li>
-
-										<li><a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank"><b style="font-weight: bold">Transaction Processing on Modern Hardware.</a> [<a href="images/Sadoghi_TBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank">eBook/Print</a>]</b></br>
+										</div></div>
+<div class="xl-book-card"><img src="images/transaction-book-banner.png" alt="" /><div class="xl-prose"><a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank"><b style="font-weight: bold">Transaction Processing on Modern Hardware.</a> [<a href="images/Sadoghi_TBook_Flyer.pdf" target="_blank">Flyer</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank">eBook/Print</a>]</b></br>
 										<i>Mohammad Sadoghi</i>, S. Blanas.
 										<i><a href="https://www.springer.com/series/16903" target="_blank">Morgan &amp; Claypool Synthesis Lectures on Data Management</a></i>. 2019.
-										</li>
+										</div></div>
+			</div>
+		</section>
 
-									</ul>
-								</div>
-							</div>
+		<section id="press" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Media</span>
+					<h2>In the Press</h2>
+					<p class="xl-section-lead">Media coverage and interviews</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				
 
-						</section>
-
-
-
-						<section id="press" class="main special">
-							<header class="major">
-								<h2>In the Press</h2>
-							</header>
-
-							<div class="row">
-								<div align="left">
+							<div class="xl-prose">
 									<!--<h3>2016</h3> -->
-									<ul style="margin-bottom: 0px;">
+									<ul class="xl-press-source" style="margin-bottom: 0px;">
 
 										<li data-show>
 											<b style="font-weight: bold"><a href="https://cs.ucdavis.edu/news/computer-scientists-new-book-explores-philosophy-ethics-age-ai" target="_blank">Computer Scientist’s New Book Explores Philosophy, Ethics in the Age of AI</a></b>, College of Engineering Newsletter, Jessica Heath, March 4, 2026
@@ -524,19 +400,22 @@
 										</li>
 									</ul>
 									</div>
-							</div>
-						</section>
+			</div>
+		</section>
 
+		<section id="news" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">News</span>
+					<h2>What's Happening</h2>
+					<p class="xl-section-lead">Latest updates from the lab</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				
 
-						<section id="news" class="main special">
-							<header class="major">
-								<h2>What's Happening Now</h2>
-							</header>
-
-							<div class="row">
-								<div align="left">
+							<div class="xl-prose">
 									<!--<h3>2016</h3> -->
-									<ul style="margin-bottom: 0px;">
+									<ul class="xl-news-source" style="margin-bottom: 0px;">
 
 										<li data-show>
 										[April 29, 2026] Pleased to announce our new paper that will appear at <a href="https://www.podc.org/" target="_blank">ACM Symposium on Principles of Distributed Computing (PODC)</a>.
@@ -1320,32 +1199,28 @@
 
 									</ul>
 								</div>
-							</div>
-						</section>
+			</div>
+		</section>
 
-
-						<section id="people" class="main special">
-							<header class="major">
-								<h2>People</h2>
-						</header>
-
-
-							<div class="row">
-								<div align="left">
-									<!--<h3>2016</h3> -->
-									<ul style="margin-bottom: 0px;">
-										<h4><b style="font-weight: bold">Principal Investigator</b></h4>
-										<ul>
-											<li data-show><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a></li>
-										</ul>
-
-										<!--<h4><b style="font-weight: bold">Postdoctoral Fellow</b></h4>
-										<ul>
-										</ul>-->
-
-
-										<h4><b style="font-weight: bold">Members</b></h4>
-										<ul>
+		<section id="people" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Team</span>
+					<h2>People</h2>
+					<p class="xl-section-lead">Current members and alumni</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				
+<div class="xl-people-pi">
+	<img class="xl-people-pi-photo" src="images/msadoghi-2022.jpg" alt="Mohammad Sadoghi" />
+	<div>
+		<h3><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi</a></h3>
+		<div class="xl-role">Principal Investigator</div>
+		<p class="xl-project">Associate Professor, UC Davis · Chancellor's Fellow · Director of ExpoLab</p>
+	</div>
+</div>
+<h3 class="xl-section-subtitle">Current Members</h3>
+										<ul class="xl-members-source">
 											<li align="left" data-show>
 											 <a href="https://dakaikang.github.io/" target="_blank">Dakai Kang</a> (Ph.D. Candidate, <i>Global Research Experience In Advanced Technologies [GREAT Program] at UCD in 2021</i>): Low-Latency, Resilience, and Fairness in BFT Consensus
 											</li>
@@ -1378,11 +1253,8 @@
 											Dhairye Gala (M.Sc. Candidate): Charitap - Transforming Spare Change into Social Impact
 											</li>
 										</ul>
-
-										<h4><b style="font-weight: bold">Alumni</b></h4>
-										<ul>
-											<b style="font-weight: 400">Postdoc &amp; PhD Fellow</b>
-											<ul>
+<h3 class="xl-section-subtitle xl-section-subtitle--spaced">Alumni &amp; Mentorship</h3>
+<div class="xl-alumni-group" data-group-title="Postdoc & PhD"><ul>
 											<li align="left">
 											 <a href="https://sajjadrahnama.com/" target="_blank">Sajjad Rahnama</a> (Ph.D., Interned at Apple &amp; MSR, <i>2021 Best Teaching Assistant Awards</i>, First Employment: Senior Member of Technical Staff at Oracle Lab): Global Scale Consensus in ResilientDB Fabric (2022)
 											</li>
@@ -1398,10 +1270,8 @@
 											<li align="left">
 											 <a href="http://thamir.qadah.com/" target="_blank">Thamir Qadah</a> (Ph.D., Interned at Datometry, First Employment: Assistant Professor at Umm Al-Qura University): Distributed Deterministic Transactions in ResilientDB Fabric (2021)
 											</li>
-										</ul>
-
-										<b style="font-weight: 400">MSc Students</b>
-										<ul>
+										</ul></div>
+<div class="xl-alumni-group" data-group-title="MSc Students"><ul>
 
 											<li align="left" data-show>
 											Harish Krishnakumar (M.Sc.): ResAI Hub - The AI Tooling Suite ( Beacon, ContractForge, MemLens)
@@ -1502,10 +1372,8 @@
 											<li align="left" data-show>
 											Domenic Cianfichi (M.Sc. - Master Project): Fault-tolerant Consensus Protocols in ResilientDB Fabric (2018)
 											</li>
-										</ul>
-
-										<b style="font-weight: 400">BSc Students</b>
-										<ul>
+										</ul></div>
+<div class="xl-alumni-group" data-group-title="BSc Students"><ul>
 
 											<li align="left">
 											Qingyue Yang (B.Sc. First Employment: METiS Pharmaceuticals): ResCash - A Secure Accounting Solution (2026)
@@ -1546,12 +1414,8 @@
 											<li align="left" data-show>
 											 Patrick Liao (B.Sc., First Employment at Juniper Networks): Parallel Fault-tolerant Consensus Protocols in ResilientDB Fabric (2019)
 											</li>
-										</ul>
-										</ul>
-
-
-									<h4><b style="font-weight: bold">Mentorship</b></h4>
-									<ul>
+										</ul></div>
+<div class="xl-alumni-group" data-group-title="Mentorship"><ul>
 										<li align="left" data-show>
 										Mariana Tapia (M.Sc.): Decentralized Food System Designer on ResilientDB (2026)
 										</li>
@@ -1717,26 +1581,25 @@
 									</li>
 
 
-								</ul>
+								</ul></div>
+			</div>
+		</section>
 
+		<section id="pub" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Research</span>
+					<h2>Publications</h2>
+					<p class="xl-section-lead">Selected papers from the lab</p>
+					<div class="xl-section-links">
+						<a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank">DBLP</a>
+						<a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank">Google Scholar</a>
+						<a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank">ResearchGate</a>
+					</div>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
 
-
-									</ul>
-								</div>
-							</div>
-						</section>
-
-
-							<section id="pub" class="main special">
-								<header class="major">
-									<h2>Publications</h2>
-							</header>
-
-
-								<h2>Selected Papers (Available via <a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" style="text-decoration: none;">DBLP</a>, <a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" style="text-decoration: none;">Google Scholar</a>, <a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" style="text-decoration: none;">ResearchGate</a>)</h2>
-								<div>
-									<div align="left">
-										<ul style="margin-bottom: 0px;">
+										<ul class="xl-pub-source" style="margin-bottom: 0px;">
 
 											<li data-show><b style="font-weight: bold">FEAT: Fair and Efficient Adversarial Transaction Ordering.</b> [TBA]</br>
 												D. Kang, A. Dinh, <i>Mohammad Sadoghi</i>. <i>PODC 2026</i>.
@@ -2071,54 +1934,22 @@
 
 
 										</ul>
-									</div>
-								</div>
+								<p style="text-align:center;margin-top:2rem">
+									<a href="publications.html" class="xl-btn" target="_blank">Complete List of Papers/Patents</a>
+								</p>
+			</div>
+		</section>
 
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="publications.html" class="button" target="_blank">Complete List of Papers/Patents</a></li>
-									</ul>
-								</footer>
-
-							</section>
-<!--
-
-								<ul class="features">
-									<li>
-										<span class="icon major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-diamond"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-						-->
-
-
-
-
-
-
-							<!-- Second Section -->
-								<section id="teach" class="main special">
-									<header class="major">
-										<h2>Data Management Courses</h2>
-									</header>
-									<ul class="features" style="margin-bottom: 0px;">
+		<section id="teach" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Education</span>
+					<h2>Teaching</h2>
+					<p class="xl-section-lead">Data management and well-being courses</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<h3 class="xl-section-subtitle">Data Management Courses</h3>
+									<ul class="xl-course-source features" style="margin-bottom: 0px;">
 										<li data-show>
 											<span class="icon major style5 fa-copy"></span>
 											<h3>Winter 2026<br><b style="font-weight: bold">ECS 88/188: Ethics in an Age of Technology</b></h3>
@@ -2127,7 +1958,7 @@
 												decisions in an era of rapid innovation.
 												[Past offerings:
 												<a href="https://ethics.expolab.org/#/2025" target="_blank">Winter'25</a>]</p>
-												<a href="https://ethics.expolab.org/" class="button" target="_blank">Course Website</a>
+												<a href="https://ethics.expolab.org/" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 
 										<li data-show>
@@ -2147,7 +1978,7 @@
 												<a href="ecs165a-winter2023.html" target="_blank">Winter'23</a>,
 												<a href="ecs165a-winter2024.html" target="_blank">Winter'24</a>,
 											<a href="ecs165a-winter2025.html" target="_blank">Winter'25</a>]</p>
-											<a href="ecs165a-winter2026.html" class="button" target="_blank">Course Website</a>
+											<a href="ecs165a-winter2026.html" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 
 										<li data-show>
@@ -2166,7 +1997,7 @@
 												<a href="ecs265-fall2022.html" target="_blank">Fall'22</a>,
 												<a href="ecs265-fall2023.html" target="_blank">Fall'23</a>,
 												<a href="ecs265-fall2024.html" target="_blank">Fall'24</a>]</p>
-												<a href="ecs265-fall2025.html" class="button" target="_blank">Course Website</a>
+												<a href="ecs265-fall2025.html" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 
 										<li>
@@ -2180,7 +2011,7 @@
 											[Past offerings: <a href="ecs189f-fall-2020/index.html" target="_blank">Fall'20</a>,
 											<a href="ecs189f-fall-2023/index.html" target="_blank">Fall'23</a>]
 										</p>
-											<a href="ecs189f-fall-2024/index.html" class="button" target="_blank">Course Website</a>
+											<a href="ecs189f-fall-2024/index.html" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 
 									<li>
@@ -2202,7 +2033,7 @@
 											<h3>Spring 2017<br><b style="font-weight: bold">CS 590: Topics in Big Data Systems</b></h3>
 											<p>This new graduate seminar course surveys the recent developments in data management such as NoSQL (e.g., distributed key-value stores) and NewSQL (e.g., geo-distributed data stores) with respect to storage architecture (e.g., log-structured, row-oriented, and column-oriented layouts), concurrency controls (e.g., ranging from eventual consistency to full serializability), cloud computing and virtualization, the emerging commodity hardware trends (e.g., many-core and distributed main memory), modern hardware accelerators (e.g., GPUs, FPGAs, and SSDs), and types of workloads (e.g., OLTP and OLAP).</p>
 										</p>
-											<a href="cs590-spring2017.html" class="button" target="_blank">Course Website</a>
+											<a href="cs590-spring2017.html" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 
 										<li>
@@ -2210,17 +2041,12 @@
 											<h3>Fall 2016<br><b style="font-weight: bold">CS 541: Database Systems</b></h3>
 											<p>This graduate course provides an introduction to the design and development of fundemental concepts in relational database management systems (DBMS). You will learn the theory behind database systems, the issues that affect their functionality and performance, and most importantly, what it takes to build the engine of a relational database management system and to explore the role of modern data processing platforms, e.g., Apache Spark/Hadoop.
 											</p>
-											<a href="cs541-fall2016.html" class="button" target="_blank">Course Website</a>
+											<a href="cs541-fall2016.html" class="xl-btn" target="_blank">Course Website</a>
 										</li>
 									</ul>
 
-									<br>
-									<br>
-									<br>
-									<header class="major">
-										<h2>Stress Management and Well-being Courses</h2>
-									</header>
-									<ul class="features" style="margin-bottom: 0px;">
+									<h3 class="xl-section-subtitle xl-section-subtitle--spaced">Stress Management and Well-being Courses</h3>
+									<ul class="xl-course-source features" style="margin-bottom: 0px;">
 
 										<li data-show>
 											<span class="icon major style3 fa-diamond"></span>
@@ -2395,17 +2221,21 @@
 										</li>
 
 									</ul>
-								</section>
+			</div>
+		</section>
+
+		<section id="service" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Service</span>
+					<h2>Recent Services</h2>
+					<p class="xl-section-lead">Organizing committees and editorial roles</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				
 
 
-								<section id="service" class="main special">
-									<header class="major">
-										<h2>Recent Services</h2>
-								</header>
-
-
-									<div class="row">
-										<div align="left">
+									<div class="xl-service-source xl-prose">
 											<h3>Organizing Committee</h3>
 											<ul style="margin-bottom: 0px;">
 												<li align="left" data-show>
@@ -2492,11 +2322,7 @@
 													Publicity Co-Chair for ACM DEBS: 2016
 												</li>
 											</ul>
-										</div>
-									</div>
-										<br>
-											<div class="row">
-												<div align="left">
+
 											<h3>Program Committee</h3>
 											<ul style="margin-bottom: 0px;">
 
@@ -2557,17 +2383,19 @@
 													PC member for ICSOC: 2016
 												</li>
 											</ul>
-										</div>
 									</div>
-								</section>
+			</div>
+		</section>
 
-
-
-						<!-- Thrid Section -->
-							<section id="bio" class="main special">
-								<header class="major">
-									<h2>Bio</h2>
-								</header>
+		<section id="bio" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Profile</span>
+					<h2>Biography</h2>
+					<p class="xl-section-lead">Mohammad Sadoghi</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<div class="xl-prose">
 							<p align="left" style="font-style: normal">
 							Mohammad Sadoghi is an Associate Professor and
 							<a href="https://www.ucdavis.edu/news/2025-26-chancellors-fellows-rise-top" target="_blank"><b style="font-weight: bold;color:#2471A3">Chancellor's Fellow</b></a>
@@ -2655,187 +2483,109 @@
 								Times Union, WBOC TV/Radio, Davis Enterprise, CoinDesk.
 								</p>
 							</details>
-							</section>
+				</div>
+			</div>
+		</section>
 
+		<section id="apply" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Opportunities</span>
+					<h2>Join Us</h2>
+					<p class="xl-section-lead">Students and postdoctoral fellows welcome</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<div class="xl-card xl-join-card xl-prose">
+					<p>I am always looking for motivated and creative
+						<i>students</i> and <i>postdoctoral fellows</i> to push the boundary of distributed
+						database and blockchain systems. If you are interested, please email me a brief summary of your
+						qualifications and research interests.</p>
+				</div>
+			</div>
+		</section>
 
-						<!-- Get Started -->
-							<section id="apply" class="main special">
-								<header class="major">
-									<h2>Join Us</h2>
-								</header>
-									<p align="left" style="font-style: normal">I am always looking for motivated and creative
-										<i>students</i> and <i>postdoctoral fellows</i> to push the boundary of	distributed
-										database and blockchain systems. If you are interested, please email me a brief summary of your
-										qualifications and research interests.</p>
+		<section id="sponsors" class="xl-section">
+			<div class="xl-container">
+				<header class="xl-section-header">
+					<span class="xl-section-eyebrow">Support</span>
+					<h2>Sponsors</h2>
+					<p class="xl-section-lead">We are grateful for the continued support from our sponsors</p>
+					<div class="xl-section-rule" aria-hidden="true"></div>
+				</header>
+				<div class="xl-sponsors-grid">
+					<img src="images/nsf.png" alt="National Science Foundation" width="100" height="auto" />
+					<img src="images/radix.png" alt="Radix" width="190" height="auto" />
+					<img src="images/moka.png" alt="Moka" width="130" height="auto" />
+					<img src="images/oracle.png" alt="Oracle" width="180" height="auto" />
+					<img src="images/microsoft.png" alt="Microsoft" width="160" height="auto" />
+					<img src="images/google.png" alt="Google" width="120" height="auto" />
+					<img src="images/aws.png" alt="Amazon Web Services" width="65" height="auto" />
+					<img src="images/logo_mousebelt.svg" alt="Mousebelt" width="160" height="auto" />
+					<img src="images/Sui-Foundation.png" alt="Sui Foundation" width="160" height="auto" />
+					<img src="images/mystenlabs.png" alt="Mysten Labs" width="210" height="auto" />
+					<img src="images/doe.png" alt="U.S. Department of Energy" width="280" height="auto" />
+				</div>
+			</div>
+		</section>
 
+	</main>
 
-								<!--
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button special">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							-->
-
-							</section>
-
-
-							<section id="sponsors" class="main special">
-								<header class="major">
-									<h2>Sponsors</h2>
-								</header>
-									<p align="center" style="font-style: normal">
-										Acknowledgements: We are grateful for the continued support from our following sponsors.</p>
-
-										<ul class="icons">
-											<li><img src="images/nsf.png" style="width: 100px"/></li><br>
-											<li><img src="images/radix.png" style="width: 190px"/></li>
-											<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/moka.png" style="width: 130px"/></li><br><br>
-											<li><img src="images/oracle.png" style="width: 180px"/></li>
-											<li><img src="images/microsoft.png" style="width: 160px"/></li>
-											<li><img src="images/google.png" style="width: 120px"/></li>
-											<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/aws.png" style="width: 65px"/></li>
-											<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/logo_mousebelt.svg" style="width: 160px"/></li><br><br>
-											<li><img src="images/Sui-Foundation.png" style="width: 160px"/></li>
-											<li><img src="images/mystenlabs.png" style="width: 210px"/></li><br><br>
-											<li><img src="images/doe.png" style="width: 280px"/></li>
-										</ul>
-
-
-								<!--
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button special">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							-->
-
-							</section>
-
+	<footer class="xl-footer">
+		<div class="xl-footer-inner xl-container">
+			<div class="xl-footer-grid">
+				<div class="xl-footer-col">
+					<h3 class="xl-footer-heading">About</h3>
+					<p class="xl-footer-text">
+						<strong><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi, PhD</a></strong><br>
+						Associate Professor, <a href="https://www.ucdavis.edu/news/2025-26-chancellors-fellows-rise-top" target="_blank">Chancellor's Fellow</a><br>
+						<a href="https://www.ucdavis.edu/" target="_blank">Department of Computer Science</a><br>
+						<a href="https://www.ucdavis.edu/" target="_blank">University of California, Davis</a>
+					</p>
+					<div class="xl-footer-social" aria-label="Academic profiles">
+						<a href="https://philpeople.org/profiles/mohammad-sadoghi" target="_blank" title="PhilPeople"><img src="images/phil.png" alt="PhilPeople" width="42" height="42" /></a>
+						<a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" title="DBLP"><img src="images/dblp-logo.png" alt="DBLP" width="120" height="auto" /></a>
+						<a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" title="Google Scholar"><img src="images/google-scholar-logo.png" alt="Google Scholar" width="120" height="auto" /></a>
+						<a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" title="ResearchGate"><img src="images/researchgate-logo-small.png" alt="ResearchGate" width="45" height="45" /></a>
+						<a href="https://twitter.com/ExploratoryLab" target="_blank" class="xl-footer-twitter" title="Twitter">@ExploratoryLab</a>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>About me &nbsp;&nbsp;<a href="https://twitter.com/ExploratoryLab" target="_blank" class="icon fa-twitter alt"><span class="label">Twitter</span></a></h2>
-							<p>
-							<b style="font-weight: bold"><a href="https://cs.ucdavis.edu/directory/mohammad-sadoghi" target="_blank">Mohammad Sadoghi, PhD</a></b><br>
-							Associate Professor, <a href="https://www.ucdavis.edu/news/2025-26-chancellors-fellows-rise-top" target="_blank">Chancellor's Fellow</a><br>
-							<a href="https://www.ucdavis.edu/" target="_blank">Department of Computer Science</a><br>
-							<a href="https://www.ucdavis.edu/" target="_blank">University of California, Davis</a><br><br>
-
-
-							<ul class="icons">
-								<li><a href="https://philpeople.org/profiles/mohammad-sadoghi" target="_blank" style="text-decoration:none"><img src="images/phil.png" style="width: 42px"/></a></li>
-								<li><a href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad" target="_blank" style="text-decoration:none"><img src="images/dblp-logo.png" style="width: 120px"/></a></li>
-								<li><a href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ" target="_blank" style="text-decoration: none;"><img src="images/google-scholar-logo.png" style="width: 120px"/></a></li>
-								<li><a href="https://www.researchgate.net/profile/Mohammad_Sadoghi" target="_blank" style="text-decoration: none;"><img src="images/researchgate-logo-small.png" style="width: 45px"/></a></li>
-
-								<!--
-								<ul class="icons">
-									<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-								</ul>
-							-->
-							</ul>
-						 </p>
-
-						 <!--
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						-->
-
-						</section>
-						<section>
-							<h2>Contact Information</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>Kemper Hall &bull; One Shields Avenue &bull; Davis &bull; 95616</dd>
-								<dt>Office</dt>
-								<dd>Kemper 3055</dd>
-								<dt>ExpoLab</dt> <dd>Academic Surge 2392</dd>
-								<dt>Email</dt>
-								<dd><a href="#">msadoghi@ucdavis.edu</a></dd>
-
-								<br>
-								<ul class="icons">
-								<li><span align="center" class="logo"><a href="https://www.ucdavis.edu/" target="_blank"><img src="images/ucdavis-logo-text.png" alt="" style="width: 180px"/></a></span></li>
-								</ul>
-							</dl>
-						</section>
-
-						<p class="copyright">
-						<span align="center" class="logo">
-							<a href="https://resilientdb.com/" target="_blank"><img align="center" src="images/apache-resilientdb-white.svg"  style="width: 220px"/></a>
-							<a href="https://resilientdb.com/" target="_blank"><img align="center" src="images/apache-resdb.png"  style="width: 80px"/></a>
-							<a href="https://resilientdb.com/" target="_blank"><img align="center" src="images/apache-incubator.png"  style="width: 250px"/></a><br><br>
-							<a class="github-button" href="https://github.com/resilientdb/resilientdb/fork" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Fork resilientdb/resilientdb on GitHub">Fork</a>
-							<a class="github-button" href="https://github.com/resilientdb/resilientdb" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Star resilientdb/resilientdb on GitHub">Star</a>
-						</span>  <br><br>
-						<a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank" style="text-decoration:none"><img src="images/problem-of-consensus-banner-hq.png" style="width: 300px"/></a><br>
-						&copy; 2016-2026 <b style="font-weight: bold">Mohammad Sadoghi</b> - <a href="https://html5up.net">HTML5 UP</a>. <br>
-						</p>
-					</footer>
-
+				</div>
+				<div class="xl-footer-col">
+					<h3 class="xl-footer-heading">Contact</h3>
+					<dl class="xl-footer-contact">
+						<dt>Address</dt>
+						<dd>Kemper Hall · One Shields Avenue · Davis · 95616</dd>
+						<dt>Office</dt>
+						<dd>Kemper 3055</dd>
+						<dt>ExpoLab</dt>
+						<dd>Academic Surge 2392</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:msadoghi@ucdavis.edu">msadoghi@ucdavis.edu</a></dd>
+					</dl>
+					<a class="xl-footer-ucd" href="https://www.ucdavis.edu/" target="_blank">
+						<img src="images/ucdavis-logo-text.png" alt="UC Davis" width="180" height="auto" />
+					</a>
+				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<div class="xl-footer-resilient">
+				<a href="https://resilientdb.com/" target="_blank"><img src="images/apache-resilientdb-dark.svg" alt="Apache ResilientDB" width="220" height="auto" /></a>
+				<a href="https://resilientdb.com/" target="_blank"><img src="images/apache-resdb.png" alt="Apache ResilientDB" width="80" height="auto" /></a>
+				<a href="https://resilientdb.com/" target="_blank"><img src="images/apache-incubator.png" alt="Apache Incubator" width="250" height="auto" /></a>
+				<div class="xl-footer-github">
+					<a class="github-button" href="https://github.com/resilientdb/resilientdb/fork" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Fork resilientdb/resilientdb on GitHub">Fork</a>
+					<a class="github-button" href="https://github.com/resilientdb/resilientdb" data-color-scheme="no-preference: light; light: light; dark: light" data-show-count="true" aria-label="Star resilientdb/resilientdb on GitHub">Star</a>
+				</div>
+			</div>
 
-			<!-- Show selected items -->
-			<script>
-			(function () {
-				var LIMIT = 5;
-				document.querySelectorAll('#main section ul').forEach(function (ul) {
-					if (ul.classList.contains('icons') || ul.classList.contains('actions')) return;
+			<div class="xl-footer-books">
+				<a href="https://link.springer.com/book/10.1007/978-3-032-07282-5" target="_blank"><img src="images/problem-of-consensus-banner-hq.png" alt="The Problems of Consensus" /></a>
+				<a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank"><img src="images/blockchain-book-banner.png" alt="Fault-tolerant Distributed Transactions on Blockchain" onerror="this.parentElement.style.display='none'" /></a>
+			</div>
 
-					var items = Array.from(ul.children).filter(function (n) {
-						return n.tagName === 'LI';
-					});
-					if (items.length === 0) return;
+			<p class="xl-footer-copy">&copy; 2016–2026 <strong>Mohammad Sadoghi</strong> · <a href="https://expolab.org">ExpoLab</a> · UC Davis</p>
+		</div>
+	</footer>
 
-					var hasPinned = items.some(function (li) {
-						return li.hasAttribute('data-show');
-					});
-
-					var hidden;
-					if (hasPinned) {
-						hidden = items.filter(function (li) { return !li.hasAttribute('data-show'); });
-					} else {
-						if (items.length <= LIMIT) return;
-						hidden = items.slice(LIMIT);
-					}
-
-					if (hidden.length === 0) return;
-					hidden.forEach(function (li) { li.classList.add('collapsed-item'); });
-
-					var toggle = document.createElement('li');
-					toggle.className = 'list-toggle';
-					var link = document.createElement('a');
-					link.href = '#'; link.className = 'list-toggle-link';
-					link.textContent = 'Show ' + hidden.length + ' more \u25be';
-					var open = false;
-					link.addEventListener('click', function (e) {
-						e.preventDefault();
-						open = !open;
-						hidden.forEach(function (li) { li.classList.toggle('collapsed-item', !open); });
-						link.textContent = open ? 'Show less \u25b4' : 'Show ' + hidden.length + ' more \u25be';
-					});
-					toggle.appendChild(link);
-					ul.appendChild(toggle);
-				});
-			})();
-			</script>
-	</body>
+	<script src="assets/js/expolab.js?v=19"></script>
+</body>
 </html>
