@@ -1,0 +1,2336 @@
+/* ExpoLab — soft lavender / mauve theme (inspired by original Stellar palette) */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap');
+
+:root {
+  --bg-dark: #4f4563;
+  --bg-dark-deep: #3f374f;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf8fc;
+  --bg-light: #f3f0f7;
+  --bg-section: #f8f6fa;
+  --text-primary: #2e2838;
+  --text-secondary: #5e5769;
+  --text-on-dark: #f5f2f8;
+  --text-muted-dark: #c8c0d4;
+  --accent: #8f7aad;
+  --accent-hover: #7a6896;
+  --accent-dark: #655674;
+  --accent-rgb: 143, 122, 173;
+  --accent-soft: #b8a9cc;
+  --accent-sky: #a8bdd4;
+  --accent-gold: #b8956a;
+  --award: #7d6b9e;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-light: #e6e0ee;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(74, 64, 96, 0.08);
+  --shadow-lg: 0 12px 48px rgba(74, 64, 96, 0.12);
+  --nav-height: 3.5rem;
+  --max-width: 1100px;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.375rem;
+  --leading-tight: 1.3;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.75;
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+  background: var(--bg-section);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+b, strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+i, em { font-style: italic; }
+
+img { max-width: 100%; height: auto; }
+
+/* ── Hero ── */
+.xl-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem 5rem;
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.xl-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.xl-hero-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 1.25rem;
+}
+
+.xl-hero-logo {
+  width: min(380px, 85vw);
+  margin-bottom: 1.5rem;
+}
+
+.xl-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.01em;
+  line-height: var(--leading-tight);
+  color: var(--text-on-dark);
+}
+
+.xl-hero-tagline {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--text-muted-dark);
+  margin: 0 auto;
+  max-width: 32rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.xl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin-top: 1.75rem;
+}
+
+.xl-hero-pill {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.xl-hero-pill:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.xl-hero-pill--outline {
+  background: transparent;
+  border-color: rgba(184, 169, 204, 0.45);
+  color: var(--accent-soft);
+}
+
+.xl-hero-pill--outline:hover {
+  background: rgba(184, 169, 204, 0.12);
+  border-color: var(--accent-soft);
+  color: #fff;
+}
+
+.xl-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted-dark);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: color var(--transition), opacity var(--transition);
+  z-index: 1;
+}
+
+.xl-scroll-hint:hover {
+  color: var(--text-on-dark);
+  opacity: 1;
+  text-decoration: none;
+}
+
+.xl-scroll-hint-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.xl-scroll-hint-chevron {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: 0.1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xl-scroll-hint-chevron {
+    animation: xl-scroll-pulse 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes xl-scroll-pulse {
+  0%, 100% { opacity: 0.5; transform: rotate(45deg) translateY(0); }
+  50% { opacity: 1; transform: rotate(45deg) translateY(4px); }
+}
+
+/* Hero entrance animations */
+.xl-hero:not(.is-loaded) .xl-hero-eyebrow,
+.xl-hero:not(.is-loaded) .xl-hero-logo,
+.xl-hero:not(.is-loaded) .xl-hero-title,
+.xl-hero:not(.is-loaded) .xl-hero-tagline,
+.xl-hero:not(.is-loaded) .xl-hero-actions,
+.xl-hero:not(.is-loaded) .xl-scroll-hint {
+  opacity: 0;
+}
+
+.xl-hero.is-loaded .xl-hero-eyebrow,
+.xl-hero.is-loaded .xl-hero-logo,
+.xl-hero.is-loaded .xl-hero-title,
+.xl-hero.is-loaded .xl-hero-tagline,
+.xl-hero.is-loaded .xl-hero-actions,
+.xl-hero.is-loaded .xl-scroll-hint {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xl-hero.is-loaded .xl-hero-eyebrow {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.1s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-logo {
+    animation: xl-hero-logo-in 0.8s cubic-bezier(0.32, 0.72, 0, 1) 0.2s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-title {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.35s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-tagline {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.5s both;
+  }
+
+  .xl-hero.is-loaded .xl-hero-actions {
+    animation: xl-hero-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.65s both;
+  }
+
+  .xl-hero.is-loaded .xl-scroll-hint {
+    animation: xl-hero-scroll-in 0.6s cubic-bezier(0.32, 0.72, 0, 1) 0.85s both;
+  }
+}
+
+@keyframes xl-hero-scroll-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes xl-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes xl-hero-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Fixed top nav (hidden on hero, slides in on scroll) ── */
+.xl-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(63, 55, 79, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.xl-nav.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Publications / inner pages: nav always shown */
+.xl-nav.is-always-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.xl-nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--nav-height);
+}
+
+.xl-nav-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-on-dark);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.xl-nav-brand:hover { color: var(--accent); text-decoration: none; }
+
+.xl-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.xl-nav-links a {
+  display: block;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted-dark);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.xl-nav-links a:hover,
+.xl-nav-links a.is-active {
+  color: var(--text-on-dark);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.xl-nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-on-dark);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ── Main content ── */
+.xl-main { padding-bottom: 3rem; }
+
+.xl-section {
+  padding: 4rem 1.5rem;
+}
+
+.xl-section:nth-child(even) { background: var(--bg-light); }
+
+.xl-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.xl-section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 1rem 0;
+  margin: 0 auto 2.75rem;
+  max-width: 40rem;
+}
+
+.xl-section-eyebrow {
+  display: block;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.xl-section-header h2 {
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.xl-section-header p,
+.xl-section-lead {
+  width: 100%;
+  max-width: 28rem;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: var(--leading-normal);
+  text-align: center;
+}
+
+.xl-section-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+  margin-top: 1rem;
+}
+
+.xl-section-links a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.xl-section-links a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.xl-section-rule {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2px;
+  margin: 1.5rem 0 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: 1px;
+}
+
+/* Subsection titles beneath main section headers */
+.xl-section h3.xl-section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: var(--leading-tight);
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+.xl-section h3.xl-section-subtitle--spaced {
+  margin-top: 2.5rem;
+}
+
+/* ── Cards ── */
+.xl-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.xl-section:nth-child(even) .xl-card {
+  background: #fff;
+}
+
+.xl-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.xl-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── About spotlight ── */
+.xl-about-card {
+  margin-bottom: 2rem;
+}
+
+.xl-about-card:hover {
+  transform: none;
+}
+
+.xl-about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+
+.xl-about-image {
+  width: 220px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.xl-about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.xl-about-areas {
+  margin-top: 0.5rem;
+}
+
+.xl-about-areas > b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.xl-about-areas > ul {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.xl-about-areas > ul > li {
+  margin-bottom: 0.85em;
+}
+
+.xl-about-areas ul ul {
+  margin-top: 0.35em;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .xl-about-grid { grid-template-columns: 1fr; }
+  .xl-about-image { width: 180px; margin: 0 auto; }
+}
+
+/* ── Animated accordions ── */
+@keyframes xl-acc-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.xl-details {
+  --acc-accent: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 4px 16px rgba(16, 24, 40, 0.04);
+  transition:
+    box-shadow 0.35s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.35s ease,
+    transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.xl-details:hover {
+  border-color: rgba(var(--accent-rgb), 0.22);
+  box-shadow:
+    0 4px 12px rgba(var(--accent-rgb), 0.08),
+    0 8px 28px rgba(16, 24, 40, 0.06);
+}
+
+.xl-details[open] {
+  border-color: rgba(var(--accent-rgb), 0.28);
+  box-shadow:
+    0 8px 24px rgba(var(--accent-rgb), 0.1),
+    0 16px 40px rgba(16, 24, 40, 0.06);
+}
+
+.xl-details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  font-size: 0.975rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  background: transparent;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.xl-details summary::-webkit-details-marker { display: none; }
+
+.xl-details summary:hover {
+  background: rgba(var(--accent-rgb), 0.04);
+}
+
+.xl-details[open] > summary {
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.07) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
+}
+
+.xl-acc-marker {
+  width: 4px;
+  height: 1.35rem;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--acc-accent) 0%, var(--accent-soft) 100%);
+  flex-shrink: 0;
+  transition: height 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.xl-details[open] .xl-acc-marker {
+  height: 1.65rem;
+}
+
+.xl-acc-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.xl-acc-count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.xl-acc-chevron {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+  transition:
+    transform 0.4s cubic-bezier(0.32, 0.72, 0, 1),
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.xl-acc-chevron::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.xl-details[open] .xl-acc-chevron {
+  background: var(--accent);
+  color: #fff;
+}
+
+.xl-details[open] .xl-acc-chevron::after {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+/* Smooth height animation panel */
+.xl-details-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.xl-details[open] .xl-details-panel {
+  grid-template-rows: 1fr;
+}
+
+.xl-details-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.xl-details-body {
+  padding: 1rem 1.2rem 1.2rem;
+  color: var(--text-secondary);
+}
+
+.xl-details-body > *:first-child {
+  margin-top: 0;
+}
+
+.xl-details[open] .xl-details-inner .xl-news-card,
+.xl-details[open] .xl-details-inner .xl-alumni-entry {
+  animation: xl-acc-item-in 0.45s cubic-bezier(0.32, 0.72, 0, 1) backwards;
+}
+
+.xl-details[open] .xl-details-inner .xl-news-card:nth-child(1),
+.xl-details[open] .xl-details-inner .xl-alumni-entry:nth-child(1) { animation-delay: 0.04s; }
+.xl-details[open] .xl-details-inner .xl-news-card:nth-child(2),
+.xl-details[open] .xl-details-inner .xl-alumni-entry:nth-child(2) { animation-delay: 0.08s; }
+.xl-details[open] .xl-details-inner .xl-news-card:nth-child(3),
+.xl-details[open] .xl-details-inner .xl-alumni-entry:nth-child(3) { animation-delay: 0.12s; }
+.xl-details[open] .xl-details-inner .xl-news-card:nth-child(4),
+.xl-details[open] .xl-details-inner .xl-alumni-entry:nth-child(4) { animation-delay: 0.16s; }
+.xl-details[open] .xl-details-inner .xl-news-card:nth-child(5),
+.xl-details[open] .xl-details-inner .xl-alumni-entry:nth-child(5) { animation-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .xl-details-panel { transition: none; }
+  .xl-details[open] .xl-details-inner .xl-news-card,
+  .xl-details[open] .xl-details-inner .xl-alumni-entry {
+    animation: none;
+  }
+  .xl-acc-chevron,
+  .xl-acc-chevron::after { transition: none; }
+}
+
+/* Year timeline (news) */
+.xl-year-group {
+  --acc-accent: var(--accent);
+}
+
+.xl-year-group > summary .xl-acc-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.xl-acc--people {
+  --acc-accent: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.14);
+}
+
+.xl-acc--people .xl-acc-count {
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+}
+
+.xl-acc--people .xl-acc-chevron {
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+}
+
+.xl-acc--people[open] .xl-acc-chevron {
+  background: var(--accent);
+  color: #fff;
+}
+
+.xl-acc--service {
+  --acc-accent: #9a7fa3;
+  border-color: rgba(154, 127, 163, 0.14);
+}
+
+.xl-acc--service .xl-acc-chevron {
+  color: #9a7fa3;
+  background: rgba(154, 127, 163, 0.08);
+}
+
+.xl-acc--service[open] .xl-acc-chevron {
+  background: #9a7fa3;
+  color: #fff;
+}
+
+.xl-news-timeline-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 2rem 0 1rem;
+  padding-left: 2.25rem;
+}
+
+.xl-news-timeline {
+  position: relative;
+  padding-left: 2.25rem;
+  margin-top: 0.5rem;
+}
+
+.xl-news-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.45rem;
+  top: 0.35rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent) 0%, rgba(var(--accent-rgb), 0.15) 100%);
+  border-radius: 1px;
+}
+
+.xl-year-block {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.xl-year-block:last-child {
+  margin-bottom: 0;
+}
+
+.xl-year-block::before {
+  content: '';
+  position: absolute;
+  left: -1.95rem;
+  top: 0.55rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.15);
+}
+
+.xl-year-label {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+.xl-year-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.xl-year-more {
+  margin-top: 0.25rem;
+}
+
+.xl-year-more > summary .xl-acc-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ── News cards ── */
+.xl-news-featured-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.xl-news-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .xl-news-featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .xl-news-featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+.xl-news-card--featured {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.xl-news-card--wide {
+  grid-column: 1 / -1;
+}
+
+.xl-news-card-header {
+  flex-shrink: 0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+
+.xl-news-card-body {
+  flex: 1;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.xl-news-card-body p {
+  margin: 0 0 0.75em;
+}
+
+.xl-news-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.xl-news-card--wide .xl-news-card-body {
+  font-size: var(--text-base);
+}
+
+.xl-news-card--wide .xl-news-card-body blockquote {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(var(--accent-rgb), 0.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.xl-news-card--wide .xl-news-card-body img {
+  display: block;
+  max-width: 220px;
+  margin: 0.75rem auto 0;
+  border-radius: var(--radius-sm);
+}
+
+.xl-news-card {
+  background: linear-gradient(135deg, #fff 0%, #f9f7fc 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.14);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 12px rgba(var(--accent-rgb), 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.xl-news-card--highlight {
+  border-left-color: var(--accent-gold);
+  background: linear-gradient(135deg, #fff 0%, #fffdf5 100%);
+  box-shadow: 0 2px 12px rgba(184, 149, 106, 0.1);
+}
+
+.xl-news-card:hover {
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.1);
+  transform: translateY(-1px);
+}
+
+.xl-news-card .xl-news-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.xl-news-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+/* ── People cards ── */
+.xl-people-pi {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: linear-gradient(135deg, #fff 0%, #f7f5fa 100%);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.xl-people-pi-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.xl-people-pi h3 {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.xl-people-pi .xl-role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.xl-people-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .xl-people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .xl-people-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.xl-person-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.25rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.xl-person-card:hover {
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.1);
+  transform: translateY(-2px);
+}
+
+.xl-person-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin: 0 0 0.35rem;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+}
+
+.xl-person-name a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.xl-person-name a:hover {
+  color: var(--accent);
+}
+
+.xl-person-role {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.xl-person-project {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.xl-person-more {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(var(--accent-rgb), 0.1);
+}
+
+.xl-person-more summary {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  list-style: none;
+}
+
+.xl-person-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.xl-person-more .xl-prose {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.xl-alumni-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.xl-alumni-card {
+  background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.14);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 2px 12px rgba(var(--accent-rgb), 0.06);
+}
+
+.xl-alumni-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+
+.xl-alumni-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: var(--leading-tight);
+  color: var(--text-primary);
+}
+
+.xl-alumni-card-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.xl-alumni-entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.xl-alumni-entries--preview {
+  margin-bottom: 0.25rem;
+}
+
+.xl-alumni-entry {
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid rgba(107, 92, 231, 0.1);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+}
+
+.xl-alumni-entry b {
+  font-weight: 600;
+}
+
+.xl-alumni-entry a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.3);
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.xl-alumni-entry a:first-of-type {
+  font-weight: 600;
+}
+
+.xl-alumni-entry a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.xl-alumni-more {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.xl-alumni-more > summary {
+  padding: 0.75rem 1rem;
+}
+
+.xl-alumni-more > summary .xl-acc-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.xl-alumni-more .xl-details-body {
+  padding-top: 0.25rem;
+}
+
+/* ── Publication list (homepage) ── */
+.xl-pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.xl-pub-entry {
+  background: linear-gradient(145deg, #fff 0%, #f9fafb 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-radius: 12px;
+  padding: 0.95rem 1.15rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.xl-pub-entry:hover {
+  border-color: rgba(var(--accent-rgb), 0.2);
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.08);
+}
+
+.xl-pub-entry > b:first-child {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.xl-pub-entry i {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.xl-pub-hidden {
+  display: none;
+}
+
+.xl-pub-toggle {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.3);
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.xl-pub-toggle:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+/* ── Publication cards (publications page) ── */
+.xl-pub-card {
+  background: linear-gradient(145deg, #fff 0%, #f9fafb 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-radius: 12px;
+  margin-bottom: 0.65rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.xl-pub-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.2);
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.08);
+}
+
+.xl-pub-card summary {
+  padding: 0.95rem 1.15rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  font-family: var(--font-sans);
+  transition: background 0.25s ease;
+}
+
+.xl-pub-card summary:hover {
+  background: rgba(var(--accent-rgb), 0.04);
+}
+
+.xl-pub-card summary::-webkit-details-marker { display: none; }
+
+.xl-pub-card .xl-details-panel {
+  border-top: 1px solid rgba(var(--accent-rgb), 0.08);
+}
+
+.xl-pub-title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  flex: 1 1 100%;
+  color: var(--text-primary);
+}
+
+.xl-pub-venue {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.xl-pub-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--award);
+}
+
+.xl-pub-card .xl-pub-links {
+  padding: 0 1.15rem 0.9rem;
+  font-size: 0.88rem;
+}
+
+.xl-pub-card .xl-pub-links a {
+  margin-right: 0.75rem;
+}
+
+/* ── Book cards ── */
+.xl-book-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.xl-book-card img {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.xl-book-card h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: var(--leading-tight);
+}
+
+.xl-book-card .xl-book-meta {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ── Press: open editorial entries ── */
+.xl-press-transformed {
+  margin-top: 0.5rem;
+}
+
+.xl-press-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.xl-press-entry {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.xl-press-entry:last-child {
+  border-bottom: none;
+}
+
+.xl-press-entry-content {
+  border-left: 3px solid rgba(var(--accent-rgb), 0.2);
+  padding-left: 1.25rem;
+}
+
+.xl-press-entry-content > ul,
+.xl-press-entry-content > ol {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.xl-press-entry-content iframe {
+  display: block;
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.xl-press-archive {
+  margin-top: 0.5rem;
+}
+
+.xl-press-archive-body {
+  padding-top: 0.25rem;
+}
+
+/* ── Course cards ── */
+.xl-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 960px) {
+  .xl-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .xl-course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.xl-course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #fafbfc 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.xl-course-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.2);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.1);
+  transform: translateY(-2px);
+}
+
+.xl-course-source .icon {
+  display: none;
+}
+
+.xl-course-card .xl-course-term {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.xl-course-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  color: var(--text-primary);
+}
+
+.xl-course-title b {
+  font-weight: 600;
+}
+
+.xl-course-desc {
+  flex: 1 1 auto;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.xl-course-bottom {
+  margin-top: auto;
+  flex-shrink: 0;
+  width: 100%;
+  padding-top: 0.85rem;
+}
+
+.xl-course-archive {
+  padding: 0.75rem 0.85rem;
+  background: rgba(var(--accent-rgb), 0.04);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.xl-course-archive-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.xl-course-archive-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.xl-course-archive-links a {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  background: #fff;
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.xl-course-archive-links a:hover {
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.xl-course-offerings {
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.xl-course-offering-block + .xl-course-offering-block {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(var(--accent-rgb), 0.08);
+}
+
+.xl-course-offering-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.xl-course-offering-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.45rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.xl-course-offering-links a:not(.inline-more-toggle) {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  background: #fff;
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.xl-course-offering-links a:not(.inline-more-toggle):hover {
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: var(--accent);
+}
+
+.xl-course-offering-links .inline-more-content[style*="inline"] {
+  display: contents;
+}
+
+.xl-course-card .inline-more-toggle {
+  display: inline-block;
+  margin-left: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.35);
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.xl-course-footer {
+  padding-top: 1rem;
+}
+
+.xl-course-bottom > .xl-course-footer:first-child {
+  padding-top: 0;
+}
+
+.xl-course-hidden {
+  display: none;
+}
+
+.xl-course-toggle {
+  grid-column: 1 / -1;
+  justify-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.3);
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.xl-course-toggle:hover {
+  color: var(--accent-hover);
+  text-decoration-color: currentColor;
+}
+
+.xl-btn {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.xl-btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.xl-btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.xl-btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Service accordion groups ── */
+.xl-service-group h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem;
+}
+
+/* ── Research pills ── */
+.xl-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.xl-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  border-radius: 999px;
+}
+
+/* ── Section typography (content + legacy markup) ── */
+.xl-section {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.xl-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: var(--leading-tight);
+  margin: 2rem 0 1rem;
+  color: var(--text-primary);
+}
+
+.xl-section h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--text-secondary);
+}
+
+.xl-section p {
+  margin: 0 0 1.15em;
+  color: var(--text-primary);
+}
+
+.xl-section ul,
+.xl-section ol {
+  margin: 0 0 1.15em;
+  padding-left: 1.35rem;
+}
+
+.xl-section li {
+  margin-bottom: 0.45em;
+  color: var(--text-primary);
+}
+
+.xl-section li::marker {
+  color: var(--accent);
+}
+
+/* ── Content prose (legacy content inside sections) ── */
+.xl-prose {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+}
+
+.xl-prose p {
+  margin: 0 0 1.15em;
+}
+
+.xl-prose ul,
+.xl-prose ol {
+  padding-left: 1.35rem;
+  margin: 0 0 1.15em;
+}
+
+.xl-prose li {
+  margin-bottom: 0.45em;
+}
+
+.xl-prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.xl-prose h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Muted inline links in content areas */
+.xl-prose a,
+.xl-section > .xl-container > ul a,
+.xl-section > .xl-container > ol a,
+.xl-about-areas a,
+.xl-pub-links a,
+.xl-pub-entry a,
+.xl-details-body a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.3);
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.xl-prose a:hover,
+.xl-section > .xl-container > ul a:hover,
+.xl-section > .xl-container > ol a:hover,
+.xl-about-areas a:hover,
+.xl-pub-links a:hover,
+.xl-pub-entry a:hover,
+.xl-details-body a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.xl-prose b a,
+.xl-prose a b,
+.xl-about-areas b a {
+  font-weight: 600;
+}
+
+.xl-news-card a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.45);
+  text-underline-offset: 3px;
+}
+
+.xl-news-card a:hover {
+  text-decoration-color: var(--accent);
+}
+
+font[color="#3399ff"] a,
+font[color="#2471A3"] a,
+.xl-award a {
+  color: var(--award);
+  text-decoration-color: rgba(var(--accent-rgb), 0.45);
+}
+
+.xl-prose blockquote {
+  margin: 1.25rem 0;
+  padding: 1rem 1.35rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(var(--accent-rgb), 0.06);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+}
+
+.xl-prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Legacy list toggle (fallback) */
+li.collapsed-item { display: none; }
+li.list-toggle { list-style: none; margin-top: 0.6em; }
+a.list-toggle-link {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px dotted currentColor;
+  text-decoration: none;
+}
+
+span.inline-more-content { display: none; }
+a.inline-more-toggle {
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 1px dotted currentColor;
+  text-decoration: none;
+}
+
+/* Award color in content */
+font[color="#3399ff"],
+font[color="#2471A3"],
+.xl-award { color: var(--award) !important; }
+
+/* Soften legacy inline bold tags */
+b[style*="font-weight"],
+.xl-section b,
+.xl-prose b {
+  font-weight: 600;
+}
+
+/* ── Join Us ── */
+.xl-join-card {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.xl-join-card p {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* ── Sponsors ── */
+.xl-sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 2.5rem;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.xl-sponsors-grid img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.88;
+  filter: grayscale(15%);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.xl-sponsors-grid img:hover {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.03);
+}
+
+/* ── Footer ── */
+.xl-footer {
+  background: linear-gradient(180deg, #f5f2f8 0%, #ede8f4 100%);
+  color: var(--text-secondary);
+  padding: 3.5rem 1.5rem 2.5rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.xl-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.xl-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+  text-align: left;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+@media (max-width: 720px) {
+  .xl-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.xl-footer-heading {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.xl-footer-text {
+  margin: 0 0 1.25rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.xl-footer-text strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.xl-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.xl-footer a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.xl-footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+}
+
+.xl-footer-social img {
+  display: block;
+  height: auto;
+  transition: transform var(--transition);
+}
+
+.xl-footer-social a:hover img {
+  transform: translateY(-1px);
+}
+
+.xl-footer-contact {
+  margin: 0 0 1.25rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.xl-footer-contact dt {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.xl-footer-contact dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.xl-footer-ucd {
+  display: inline-block;
+}
+
+.xl-footer-ucd img {
+  transition: transform var(--transition);
+}
+
+.xl-footer-ucd:hover img {
+  transform: scale(1.02);
+}
+
+.xl-footer-resilient {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem 1.75rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.xl-footer-resilient img {
+  height: auto;
+  transition: transform var(--transition);
+}
+
+.xl-footer-resilient a:hover img {
+  transform: scale(1.03);
+}
+
+.xl-footer-github {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.xl-footer-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0 1.5rem;
+}
+
+.xl-footer-books img {
+  max-width: min(300px, 90vw);
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(16, 24, 40, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.xl-footer-books a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12);
+}
+
+.xl-footer-copy {
+  text-align: center;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.xl-footer-copy strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Publications page ── */
+.xl-pub-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 50;
+  background: var(--bg-section);
+  padding: 0.75rem 0;
+}
+
+.xl-pub-page-nav a {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.xl-pub-page-nav a:hover,
+.xl-pub-page-nav a.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.xl-pub-category h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 2.5rem 0 1.25rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  color: var(--text-primary);
+}
+
+.xl-pub-category h2[data-eyebrow]::before {
+  content: attr(data-eyebrow);
+  display: block;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.xl-pub-category h2[data-eyebrow]::after {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 2px;
+  margin: 1rem 0 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: 1px;
+}
+
+.xl-pub-category {
+  margin-bottom: 2.5rem;
+}
+
+.xl-pub-category .xl-pub-list {
+  margin-top: 0.25rem;
+}
+
+.xl-pub-count {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  margin-top: 0.65rem;
+}
+
+.xl-pub-entry font[color="red"] {
+  color: #b45309;
+  font-weight: 600;
+}
+
+.xl-pub-entry font[color="#3399ff"],
+.xl-pub-entry font[color="green"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .xl-nav-toggle { display: block; }
+
+  .xl-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(63, 55, 79, 0.98);
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+  }
+
+  .xl-nav-links.is-open { display: flex; }
+
+  .xl-nav-inner { position: relative; flex-wrap: wrap; }
+
+  .xl-section { padding: 2.5rem 1rem; }
+
+  .xl-book-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .xl-book-card img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+
+  .xl-people-pi {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .xl-people-pi-photo { margin: 0 auto; }
+}
