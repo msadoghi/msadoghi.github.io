@@ -2097,22 +2097,6 @@ b[style*="font-weight"],
   transform: translateY(-1px);
 }
 
-.xl-footer-twitter {
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(var(--accent-rgb), 0.25);
-  border-radius: 999px;
-  text-decoration: none !important;
-  background: #fff;
-}
-
-.xl-footer-twitter:hover {
-  border-color: var(--accent);
-  background: rgba(var(--accent-rgb), 0.06);
-}
-
 .xl-footer-contact {
   margin: 0 0 1.25rem;
   display: grid;
