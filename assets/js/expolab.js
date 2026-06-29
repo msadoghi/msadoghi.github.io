@@ -637,9 +637,22 @@
       links.innerHTML = restHtml.replace(/>\s*,\s*/g, '>');
 
       var toggle = links.querySelector('.inline-more-toggle');
+      var moreContent = links.querySelector('.inline-more-content');
       if (toggle) {
         toggle.remove();
         links.appendChild(toggle);
+
+        // Moving the toggle to the end breaks its original inline onclick,
+        // which relied on previousElementSibling being the hidden content.
+        // Rewire it to toggle the .inline-more-content in this block.
+        toggle.removeAttribute('onclick');
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (!moreContent) return;
+          var willShow = moreContent.style.display !== 'inline';
+          moreContent.style.display = willShow ? 'inline' : 'none';
+          toggle.textContent = willShow ? ' show less \u25b4' : ' show more \u25be';
+        });
       }
 
       block.appendChild(links);
