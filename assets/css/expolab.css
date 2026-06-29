@@ -126,24 +126,34 @@ img { max-width: 100%; height: auto; }
 }
 
 .xl-hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-family: "Lora", serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 400;
+  font-style: normal;
   margin: 0 0 0.75rem;
-  letter-spacing: 0.01em;
-  line-height: var(--leading-tight);
-  color: var(--text-on-dark);
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  color: #F0EDE8;
 }
 
 .xl-hero-tagline {
-  font-family: var(--font-sans);
-  font-size: var(--text-lg);
-  color: var(--text-muted-dark);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: rgba(240, 237, 232, 0.6);
   margin: 0 auto;
-  max-width: 32rem;
+  max-width: none;
   line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-weight: 200;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Allow the tagline to wrap on narrow screens where one line won't fit */
+@media (max-width: 600px) {
+  .xl-hero-tagline {
+    white-space: normal;
+    max-width: 32rem;
+  }
 }
 
 .xl-hero-actions {
