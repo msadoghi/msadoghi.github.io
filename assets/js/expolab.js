@@ -116,6 +116,7 @@
 
   function isNewsHighlight(el) {
     var text = el.textContent || '';
+    if (el.hasAttribute('data-no-highlight')) return false;
     if (el.hasAttribute('data-show')) return true;
     if (el.querySelector('font[color="#3399ff"], font[color="#2471A3"]')) return true;
     if (/Best (Paper|Artifact)|Outstanding Paper|Honorable Mention/i.test(text)) return true;
@@ -518,8 +519,11 @@
     var items = Array.from(group.querySelectorAll('li')).filter(function (li) {
       return li.textContent.trim();
     });
-    var previewItems = items.slice(0, 2);
-    var moreItems = items.slice(2);
+    var pinned = items.filter(function (li) { return li.hasAttribute('data-show'); });
+    var previewItems = pinned.length ? pinned : items.slice(0, 2);
+    var moreItems = pinned.length
+        ? items.filter(function (li) { return !li.hasAttribute('data-show'); })
+        : items.slice(2);
 
     var card = document.createElement('article');
     card.className = 'xl-alumni-card';
