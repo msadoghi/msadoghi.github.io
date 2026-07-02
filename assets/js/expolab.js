@@ -214,7 +214,7 @@
     if (featured.length) {
       var featLabel = document.createElement('div');
       featLabel.className = 'xl-news-featured-label';
-      featLabel.textContent = 'Latest';
+      featLabel.textContent = 'Highlight';
       container.appendChild(featLabel);
 
       var featWrap = document.createElement('div');
