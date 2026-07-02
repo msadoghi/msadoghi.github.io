@@ -2,7 +2,7 @@
   'use strict';
 
   var NAV_SECTIONS = ['intro', 'book', 'press', 'news', 'people', 'pub', 'teach', 'service', 'bio', 'apply', 'sponsors'];
-  var FEATURED_NEWS_COUNT = 4;
+  var FEATURED_NEWS_COUNT = 3;
 
   function buildAccordionSummary(label, countText) {
     var summary = document.createElement('summary');
@@ -196,7 +196,10 @@
       var dateStr = match ? match[1] : '';
       var entry = { el: li.cloneNode(true), date: dateStr, year: year, sourceLi: li };
 
-      if (li.hasAttribute('data-show') && featured.length < FEATURED_NEWS_COUNT) {
+      if (li.hasAttribute('data-force-latest')) {
+        featured.push(entry);
+        featuredSource.add(li);
+      } else if (li.hasAttribute('data-show') && featured.length < FEATURED_NEWS_COUNT) {
         featured.push(entry);
         featuredSource.add(li);
       }
