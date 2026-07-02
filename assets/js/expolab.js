@@ -203,6 +203,7 @@
         featured.push(entry);
         featuredSource.add(li);
       }
+      
 
       if (!byYear[year]) byYear[year] = [];
       byYear[year].push(entry);
