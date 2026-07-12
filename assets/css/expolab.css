@@ -2164,6 +2164,7 @@ b[style*="font-weight"],
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .xl-footer-books {
